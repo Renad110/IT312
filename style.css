@@ -456,3 +456,81 @@ footer {
   margin-top: 5px;
 }
 
+/* ===== SP-DB Page Styling ===== */
+
+.breadcrumb {
+  margin: 25px 0 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.spdb-header {
+  margin-bottom: 25px;
+}
+
+.spdb-header h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.spdb-header h3 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.spdb-content {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.service-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0 15px;
+}
+
+.service-table th {
+  text-align: left;
+  background-color: #f4f4f4;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.service-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  vertical-align: middle;
+}
+
+.service-table img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.spdb-buttons {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.spdb-buttons button {
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  margin: 0 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.spdb-buttons button:hover {
+  background-color: #6a0dad;
+  color: white;
+}
+
+.spdb-buttons a {
+  text-decoration: none;
+  color: inherit;
+}
