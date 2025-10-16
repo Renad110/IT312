@@ -683,3 +683,94 @@ select {
 .join-btn:hover {
   background-color: #0091dd;
 }
+/*PageSer-RegForm styles*/
+.registration-form {
+    background-color: #1c2541;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #3a506b;
+    background-color: #0b132b;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+/* Checkbox and radio styling */
+.checkbox-group,
+.service-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-group input,
+.service-option input {
+    margin-right: 10px;
+    accent-color: #00aaff; /* modern checkbox color */
+}
+
+.service-types {
+    display: flex;
+    gap: 20px;
+}
+
+/* Button styling */
+.register-btn {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #0091dd;
+}
+
+
+
+/* Form row for gender and age */
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+    .service-types {
+        flex-direction: column;
+    }
+}
