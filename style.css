@@ -181,8 +181,6 @@ header {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 15px 5px;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
   width: 100%;
 }
 
