@@ -458,76 +458,82 @@ footer {
 
 /* ===== SP-DB Page Styling ===== */
 
-.breadcrumb {
-  margin: 25px 0 10px 0;
-  font-size: 14px;
-  color: #555;
-}
-
 .spdb-header {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .spdb-header h2 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 8px;
+  color: #fff;
 }
 
 .spdb-header h3 {
   font-size: 18px;
-  color: #444;
-  margin-bottom: 10px;
-}
-
-.spdb-content {
-  margin-top: 30px;
-  margin-bottom: 40px;
+  color: #b8b8b8;
+  margin-bottom: 15px;
 }
 
 .service-table {
   width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0 15px;
+  border-collapse: separate;
+  border-spacing: 0 20px; /* 🔹 يفصل كل صف عن الثاني بمسافة */
 }
 
 .service-table th {
   text-align: left;
-  background-color: #f4f4f4;
-  padding: 12px;
+  background-color: #0e1630;
+  padding: 14px;
   font-size: 16px;
+  color: #ccc;
+}
+
+.service-table tr {
+  background-color: #111c3b; /* 🔹 لون الخلفية لكل كرت */
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.service-table tr:hover {
+  background-color: #16244d;
 }
 
 .service-table td {
-  padding: 15px;
-  border-bottom: 1px solid #ccc;
+  padding: 28px 20px; /* 🔹 زدت المساحة الداخلية عشان يصير الكرت أطول */
   vertical-align: middle;
+  color: #eee;
 }
 
 .service-table img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 8px;
-  border-radius: 6px;
+  width: 110px;   /* 🔹 كبرت الصورة */
+  height: 110px;  /* 🔹 كبرت الصورة */
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+  vertical-align: middle;
 }
+
 
 .spdb-buttons {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 .spdb-buttons button {
-  background-color: white;
-  border: 1px solid #333;
-  padding: 10px 20px;
-  margin: 0 15px;
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  color: #fff;
+  padding: 10px 22px;
+  margin: 0 20px;
   font-size: 15px;
+  border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .spdb-buttons button:hover {
-  background-color: #6a0dad;
-  color: white;
+  background-color: #f54e00;
+  border-color: #f54e00;
 }
 
 .spdb-buttons a {
