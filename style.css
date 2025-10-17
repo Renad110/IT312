@@ -780,7 +780,10 @@ select {
         flex-direction: column;
     }
 }
-/* ===== ABOUT US SECTION ===== */
+
+
+/* ====== ABOUT US SECTION ====== */
+
 .about {
   text-align: center;
   padding: 40px 0;
