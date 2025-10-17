@@ -538,7 +538,10 @@ footer {
   text-decoration: none;
   color: inherit;
 }
-/*Service page styles*/
+
+
+/* ======= Service page styles ======== */
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0b132b;
@@ -683,7 +686,10 @@ select {
 .join-btn:hover {
   background-color: #0091dd;
 }
-/*PageSer-RegForm styles*/
+
+
+/* ====== PageSer-RegForm styles ======= */
+
 .registration-form {
     background-color: #1c2541;
     padding: 30px;
