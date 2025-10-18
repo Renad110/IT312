@@ -783,6 +783,22 @@ select {
 
 
 /* ====== ABOUT US SECTION ====== */
+.breadcrumb {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a{
+	color: var(--muted);
+  text-decoration: none;	
+  }
+
+.breadcrumb span {
+  color: var(--accent);
+}
+
 .about-section {
   text-align: center;
   color: var(--text);
