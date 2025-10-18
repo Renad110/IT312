@@ -799,7 +799,7 @@ select {
   color: var(--accent);
 }
 
-.about-section {
+.about-section{
   text-align: center;
   color: var(--text);
   margin: 60px auto;
