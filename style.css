@@ -808,7 +808,7 @@ select {
 
 .about-section h2 {
   font-size: 28px;
-  color: var(--accent);
+  color: var(--text);
   margin-bottom: 10px;
 }
 
@@ -882,7 +882,7 @@ select {
 
 .join-btn {
   display: inline-block;
-  background-color: transparent;
+  background-color: #4a7fc1;
   color: var(--text);
   border: 2px solid var(--text);
   padding: 12px 40px;
@@ -912,7 +912,7 @@ select {
 .join-team h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--accent); /* نفس لون العنوان في About Us */
+  color: var(--text);
   font-size: 1.8rem;
 }
 
