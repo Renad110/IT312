@@ -1059,12 +1059,10 @@ select {
 }
 
 /* ==== PHOTO BOX ==== */
-.profile-photo {
+.profile-photo img {
   width: 100px;
   height: 120px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* ==== STAFF PROFILE (nested table) ==== */
