@@ -53,9 +53,7 @@ header {
   font-weight: 600;
 }
 
-.center-nav a.active,
-.center-nav a:hover,
-.right-nav a:hover {
+.center-nav a.active , .center-nav a:hover , right-nav a.active,  .right-nav a:hover {
   color: var(--accent);
 }
 
