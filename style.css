@@ -1062,14 +1062,9 @@ select {
 .profile-photo {
   width: 100px;
   height: 120px;
-  background: #222;
-  border: 2px dashed var(--muted);
-  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--muted);
-  font-size: 0.8rem;
 }
 
 /* ==== STAFF PROFILE (nested table) ==== */
