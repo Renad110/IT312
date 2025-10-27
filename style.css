@@ -1006,22 +1006,6 @@ select {
   text-align: center;
 }
 
-.breadcrumb {
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.breadcrumb a{
-	color: var(--muted);
-  text-decoration: none;	
-  }
-
-.breadcrumb span {
-  color: var(--accent);
-}
-
 .staff-profile h1 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
