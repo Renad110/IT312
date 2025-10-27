@@ -844,6 +844,7 @@ select {
   width: 120px;
   height: 120px;
   object-fit: cover;
+  border-radius: 15%;
   margin-bottom: 15px;
 }
 
