@@ -1044,8 +1044,8 @@ select {
 
 /* ==== PHOTO BOX ==== */
 .profile-photo img {
-  width: 110px;
-  height: 105px;
+  width: 90px;
+  height: 130px;
   display: flex;
 }
 
