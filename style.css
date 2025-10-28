@@ -25,7 +25,6 @@ body.homepage .container {
 }
 
 .services hr, .testimonials hr {
-  width: 77.5%;
   max-width: 1200px;
   height: 1.5px;
   background: #ccc;
