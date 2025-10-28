@@ -130,8 +130,8 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 77.5%;          /* نفس عرض الخدمات ffffffffffffffffffffff*/
-  max-width: 1200px;
+  width: 95%;          /* نفس عرض الخدمات ffffffffffffffffffffff*/
+  max-width: 940px;
   margin: 0 auto;
 }
 
@@ -532,6 +532,7 @@ footer {
 /* End of Sp-dp Page */
 
 /* ======= Service page styles ======== */
+
 
 
 .container {
