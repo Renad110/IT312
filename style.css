@@ -169,8 +169,22 @@ header {
 
 /* ✅ شريط التمرير */
 .testi-list::-webkit-scrollbar {
-    display: none;
+  display: none; 			/* يخفيه في كروم وسفاري */
 }
+
+  /*height: 8px;
+
+}
+.testi-list::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+.testi-list::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+*/
+
 
 /* ✅ الكروت بنفس حجم بطاقات الخدمات */
 .testi-card {
@@ -296,6 +310,7 @@ header {
   border-radius: 6px;
   width: 75%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  /*border: 1px solid #777;  يضيف خط حول كل سؤال */
   transition: 0.3s ease;
 }
 
@@ -304,14 +319,14 @@ header {
   font-weight: bold;
   font-size: 1.05rem;
   position: relative;
-  list-style: none;
-  padding-right: 25px;
+  list-style: none; /* يخفي السهم الافتراضي */
+  padding-right: 25px; /* مساحة للسهم */
   cursor: pointer;
 }
 
 /* السهم المغلق */
 .faq summary::after {
-  content: "\25BC";
+  content: "\25BC"; /* سهم ▼ */
   position: absolute;
   right: 5px;
   top: 50%;
@@ -322,7 +337,7 @@ header {
 
 /* السهم عند الفتح */
 .faq details[open] summary::after {
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg); /* سهم للأعلى */
 }
 
 .faq details p {
@@ -348,7 +363,7 @@ footer {
 
 .footer-sections {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* توسيط الأقسام */
   align-items: flex-start;
   flex-wrap: wrap;
   width: 80%;
@@ -359,9 +374,9 @@ footer {
 
 /* الخط الفاصل الأنيق */
 .footer-divider {
-  width: 1.5px;
+  width: 1.5px; /* تخليه أنحف أو أسمك حسب رغبتك */
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.723);
+  background-color: rgba(255, 255, 255, 0.723); /* أبيض شفاف واضح */
   margin: 0 35px;
   border-radius: 2px;
 }
