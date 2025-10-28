@@ -1079,3 +1079,151 @@ select {
 }
 
 
+/* ===== C-DB (Customer Dashboard) ===== */
+.cdb-section {
+  margin: 40px auto 60px;
+}
+
+.cdb-title {
+  text-align: center;
+  margin-bottom: 14px;
+}
+.cdb-hr {
+  width: 120px;
+  height: 2px;
+  margin: 10px auto 0;
+  border: none;
+  background: var(--accent); 
+}
+
+.cdb-table-wrap {
+  overflow-x: auto;
+}
+
+.cdb-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px; 
+}
+
+.cdb-table thead th {
+  text-align: left;
+  padding: 12px;
+  background: #0e1630; 
+  color: #ccc;
+}
+
+.cdb-table tbody tr {
+  background: #111c3b;
+}
+
+.cdb-table tbody td {
+  padding: 16px 14px;
+  color: #eee;
+}
+
+.cdb-table td.price       { color: #00aaff; }
+.cdb-table td.status-ok   { color: #22c55e; }
+.cdb-table td.status-no   { color: #ef4444; }
+
+.cdb-actions {
+  margin-top: 28px;
+  text-align: center;
+}
+.cdb-actions button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cdb-actions button:hover {
+  background-color: #0090dd;
+}
+
+/* ===== end C-DB (Customer Dashboard) ===== */
+
+/* ===== Evaluation Page ===== */
+.eval-title {
+  text-align: center;
+}
+
+.eval-hr {
+  width: 140px; height: 2px; border: none;
+  background: var(--accent); margin: 10px auto 0;
+}
+
+.rating-types .service-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-types .service-option input[type="range"] {
+  width: 250px;
+  accent-color: var(--accent); 
+}
+
+#ratingValue {
+  font-weight: bold;
+}
+
+/* === (Submit and Reset botton ) === */
+.eval-actions button {
+  background-color: #00aaff; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.eval-actions button:hover {
+  background-color: #0090dd; 
+}
+.eval-section textarea {
+  background-color: var(--input-bg, #111c3b);
+  color: white;
+}
+
+
+
+
+/* ===== end Evaluation Page ===== */
+
+
+
+/* ===== Request a Service Page ===== */
+.req-section { margin: 40px auto 60px; }
+
+.req-title { text-align: center; margin-bottom: 14px; }
+.req-hr {
+  width: 160px; height: 2px; border: none;
+  background: var(--accent); margin: 10px auto 0;
+}
+.req-section textarea {
+  background-color: var(--input-bg, #111c3b);
+  color: white;
+}
+.req-actions button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.req-actions button:hover {
+  background-color: #0090dd;
+}
+
+.req-actions { margin-top: 20px; text-align: center; }
+/* ===== end Request a Service Page ===== */
+
+
