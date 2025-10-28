@@ -1,17 +1,9 @@
 /* Home Page Styles */
-:root {
-  --primary: #0a1f44;
-  --secondary: #132c5b;
-  --accent: #2b6ef2;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --card-bg: #1c253a;
-  --bg: #0b1629;
-}
 
+/* ===== BODY ===== */
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #0b1629; 
+  color: #e5e7eb; 
   font-family: "Tajawal", "Poppins", sans-serif;
   margin: 0;
   padding: 0;
@@ -22,7 +14,7 @@ body {
 /* ===== HEADER ===== */
 
 header {
-  background: var(--primary);
+  background: #0a1f44; 
   padding: 1rem 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
@@ -32,6 +24,7 @@ header {
   max-width: 1200px;
   margin: auto;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -46,7 +39,7 @@ header {
 }
 
 .center-nav a, .right-nav a {
-  color: var(--text);
+  color: #e5e7eb; 
   text-decoration: none;
   margin: 0 10px;
   font-size: 18px;
@@ -54,7 +47,7 @@ header {
 }
 
 .center-nav a.active , .center-nav a:hover , .right-nav a.active,  .right-nav a:hover {
-  color: var(--accent);
+  color: #2b6ef2; 
 }
 
 /* ===== BANNER ===== */
@@ -89,7 +82,7 @@ header {
 }
 
 .card {
-  background: var(--card-bg);
+  background: #1c253a; 
   border-radius: 8px;
   width: 300px;
   overflow: hidden;
@@ -113,13 +106,14 @@ header {
 }
 
 .card-body p {
-  color: var(--muted);
+  color: #9ca3af;
   font-size: 0.9rem;
 }
 
 /* ===============================
    Testimonials
    =============================== */
+
 .testimonials {
   margin-top: 3rem;
   text-align: left
@@ -143,7 +137,7 @@ header {
 
 /* ✅ أزرار الأسهم */
 .testi-nav {
-  background: var(--accent);
+  background: #2b6ef2; 
   color: white;
   border: none;
   border-radius: 10%;
@@ -175,29 +169,14 @@ header {
 
 /* ✅ شريط التمرير */
 .testi-list::-webkit-scrollbar {
-    display: none; 			/* يخفيه في كروم وسفاري */
+    display: none;
 }
-
-  /*height: 8px;
-
-}
-.testi-list::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 10px;
-}
-.testi-list::-webkit-scrollbar-track {
-  background: var(--primary);
-}
-
-*/
-
-
 
 /* ✅ الكروت بنفس حجم بطاقات الخدمات */
 .testi-card {
-  width: 265px; 			/*fffffffffffffffff*/
+  width: 265px;
   height: 190px;
-  background: var(--card-bg);
+  background: #1c253a; 
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -254,7 +233,7 @@ header {
 
 /* اسم الخدمه */
 .service-name {
-  color: var(--accent);
+  color: #2b6ef2; 
   font-weight: bold;
   margin: 15px 0px -2px 0px;
   font-size: 0.8rem;
@@ -263,7 +242,7 @@ header {
 /* النص داخل الكرت */
 .testi-text {
   margin-top: 10px;
-  color: var(--text);
+  color: #e5e7eb; 
   border: 1px dashed #ccc;
   border-radius: 6px;
   padding: 10px;
@@ -294,12 +273,10 @@ header {
   transition: 0.3s;
 }
 .dot.active {
-  background: var(--accent);
+  background: #2b6ef2; 
 }
 
-
 /* ===== FAQ ===== */
-
 .faq {
   margin-top: 4em;
   text-align: left;
@@ -312,14 +289,13 @@ header {
 
 /* ✅ تصميم كل سؤال */
 .faq details {
-  background: var(--card-bg);
-  color: var(--text);
+  background: #1c253a; 
+  color: #e5e7eb; 
   margin: 15px auto;
   padding: 12px 10px;
   border-radius: 6px;
   width: 75%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  /*border: 1px solid #777;  يضيف خط حول كل سؤال */
   transition: 0.3s ease;
 }
 
@@ -328,42 +304,40 @@ header {
   font-weight: bold;
   font-size: 1.05rem;
   position: relative;
-  list-style: none; /* يخفي السهم الافتراضي */
-  padding-right: 25px; /* مساحة للسهم */
+  list-style: none;
+  padding-right: 25px;
   cursor: pointer;
 }
 
 /* السهم المغلق */
 .faq summary::after {
-  content: "\25BC"; /* سهم ▼ */
+  content: "\25BC";
   position: absolute;
   right: 5px;
   top: 50%;
   transform: translateY(-50%) rotate(0deg);
-  color: var(--accent);
+  color: #2b6ef2; 
   transition: transform 0.3s ease;
 }
 
 /* السهم عند الفتح */
 .faq details[open] summary::after {
-  transform: translateY(-50%) rotate(180deg); /* سهم للأعلى */
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .faq details p {
   margin-top: 10px;
   padding: 10px 12px;
   border-radius: 5px;
-  color: var(--muted);
-  background: var(--card-bg); 
+  color: #9ca3af; 
+  background: #1c253a; 
 }
 
-
 /* ===== FOOTER ===== */
-
 footer {
   margin-top: 4em;
-  background-color: var(--primary);
-  color: var(--text);
+  background-color: #0a1f44; 
+  color: #e5e7eb; 
   padding: 2rem 0;
   text-align: center;
   width: 100%;
@@ -374,7 +348,7 @@ footer {
 
 .footer-sections {
   display: flex;
-  justify-content: center;        /* توسيط الأقسام */
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 80%;
@@ -385,9 +359,9 @@ footer {
 
 /* الخط الفاصل الأنيق */
 .footer-divider {
-  width: 1.5px; /* تخليه أنحف أو أسمك حسب رغبتك */
+  width: 1.5px;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.723); /* أبيض شفاف واضح */
+  background-color: rgba(255, 255, 255, 0.723);
   margin: 0 35px;
   border-radius: 2px;
 }
@@ -404,14 +378,14 @@ footer {
 .footer-left h4,
 .footer-right h4 {
   font-size: 1.1rem;
-  color: var(--accent);
+  color: #2b6ef2; 
   margin-bottom: 0.8rem;
 }
 
 .footer-center a,
 .footer-left a,
 .footer-right a {
-  color: var(--text);
+  color: #e5e7eb; 
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -419,7 +393,7 @@ footer {
 .footer-center a:hover,
 .footer-left a:hover,
 .footer-right a:hover {
-  color: var(--accent);
+  color: #2b6ef2;
   transform: scale(1.05);
 }
 
@@ -431,13 +405,13 @@ footer {
 }
 
 .social-icons a {
-  color: var(--text);
+  color: #e5e7eb; 
   font-size: 1.3rem;
   transition: 0.3s;
 }
 
 .social-icons a:hover {
-  color: var(--accent);
+  color: #2b6ef2; 
 }
 
 .footer-line {
@@ -454,8 +428,8 @@ footer {
   margin-top: 0.5rem;
 }
 
-
 /* End of Home Page */
+
 /* ===== SP-DB Page Styling Amani Page ===== */
 
 .spdb-header {
@@ -767,422 +741,3 @@ select {
         flex-direction: column;
     }
 }
-
-
-/* ===== ABOUT US PAGE ===== */
-.about-section {
-  width: 85%;
-  max-width: 1200px;
-  margin: 3rem auto 5rem auto;
-  text-align: center;
-  color: var(--text);
-}
-
-.breadcrumb {
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.breadcrumb a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.breadcrumb span {
-  color: var(--accent);
-}
-
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text);
-}
-
-.about-desc {
-  font-size: 1rem;
-  margin-bottom: 3rem;
-  color: var(--muted);
-}
-
-/* === FLEXBOX مثل السلايد === */
-.team-flex {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;  /* يسمح لهم ينزلون صف ثاني لو ضاق المكان */
-  gap: 25px;        /* المسافة بين الكروت */
-}
-
-.team-card {
-  background: var(--card-bg);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 10px;
-  padding: 20px;
-  width: 240px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-5px);
-}
-
-.team-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 15%;
-  margin-bottom: 15px;
-}
-
-.team-card h3 {
-  margin-bottom: 10px;
-  color: var(--text);
-}
-
-.profile-btn {
-  display: inline-block;
-  background:  #4a7fc1;  ;
-  border: none;
-  color: #ffffff;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.profile-btn:hover {
-  background-color: #3b6da8;
-}
-
-/* === JOIN BUTTON === */
-.join-btn-container {
-  display: flex;
-  justify-content: center;
-  margin: 60px 0;
-}
-
-.join-btn {
-  display: inline-block;
-  width: min(520px, 90%);
-  padding: 14px 28px;
-  background: #1d4ed8;
-  color: var(--text);
-
- 
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: background-color .2s ease, border-color .2s ease;
-}
-
-.join-btn:hover {
-   background-color: #3b6da8;
-  
-}
-/* ===============================
-   JOIN OUR TEAM PAGE
-   =============================== */
-
-.join-team {
-  width: 85%;
-  max-width: 800px;
-  margin: 3rem auto 5rem auto;
-  text-align: left;
-  color: var(--text);
-}
-
-.join-team h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--text);
-  font-size: 1.8rem;
-}
-
-/* ===== FORM ===== */
-.join-form {
-  background: var(--card-bg); /* نفس خلفية الكرت في About Us */
-  padding: 2.5rem;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.join-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text);
-}
-
-/* ===== INPUT FIELDS ===== */
-.join-form input[type="text"],
-.join-form input[type="email"],
-.join-form input[type="date"],
-.join-form input[type="file"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: rgba(255,255,255,0.1);
-  color: white;
-  margin-bottom: 20px;
-}
-
-.join-form input::placeholder {
-  color: rgba(255,255,255,0.6);
-}
-
-/* ===== ROWS (SPACING) ===== */
-.form-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  flex: 1;
-}
-
-/* ===== SUBMIT BUTTON ===== */
-.submit-btn {
-  display: block;
-  margin: 2rem auto 0 auto;
-  background: #1d4ed8 ;
-  color: white;
-  border: none;
-  padding: 10px 45px;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.submit-btn:hover {
-  background-color: #3b6da8;
-}
-
-/* ===============================
-   STAFF PROFILE PAGE
-   =============================== */
-.staff-profile {
-  width: 85%;
-  max-width: 1200px;
-  margin: 3rem auto 5rem auto;
-  text-align: center;
-}
-
-.staff-profile h1 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  color: var(--text);
-}
-
-/* ==== TABLE ==== */
-.profile-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  overflow: hidden;
-}
-
-.profile-table th,
-.profile-table td {
-  border: 1px solid #aaa;
-  padding: 12px 15px;
-  text-align: left;
-  vertical-align: top;
-}
-
-.profile-table th {
-  background: var(--secondary);
-  color: var(--text);
-  font-weight: 600;
-  text-align: center;
-}
-
-.profile-table ul {
-  margin: 0;
-  padding-left: 20px;
-  list-style: disc;
-}
-
-/* ==== PHOTO BOX ==== */
-.profile-photo img {
-  width: 90px;
-  height: 125px;
-  display: flex;
-}
-
-/* ==== STAFF PROFILE (nested table) ==== */
-.profile-table ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.profile-table ul ul {
-  list-style-type: circle;
-  margin-left: 20px;
-}
-
-.profile-table td:nth-child(6), .profile-table th:nth-child(6) {
-  width: 200px; 
-}
-
-
-/* ===== C-DB (Customer Dashboard) ===== */
-.cdb-section {
-  margin: 40px auto 60px;
-}
-
-.cdb-title {
-  text-align: center;
-  margin-bottom: 14px;
-}
-.cdb-hr {
-  width: 120px;
-  height: 2px;
-  margin: 10px auto 0;
-  border: none;
-  background: var(--accent); 
-}
-
-.cdb-table-wrap {
-  overflow-x: auto;
-}
-
-.cdb-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 12px; 
-}
-
-.cdb-table thead th {
-  text-align: left;
-  padding: 12px;
-  background: #0e1630; 
-  color: #ccc;
-}
-
-.cdb-table tbody tr {
-  background: #111c3b;
-}
-
-.cdb-table tbody td {
-  padding: 16px 14px;
-  color: #eee;
-}
-
-.cdb-table td.price       { color: #00aaff; }
-.cdb-table td.status-ok   { color: #22c55e; }
-.cdb-table td.status-no   { color: #ef4444; }
-
-.cdb-actions {
-  margin-top: 28px;
-  text-align: center;
-}
-.cdb-actions button {
-  background-color: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 24px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.cdb-actions button:hover {
-  background-color: #0090dd;
-}
-
-/* ===== end C-DB (Customer Dashboard) ===== */
-
-/* ===== Evaluation Page ===== */
-.eval-title {
-  text-align: center;
-}
-
-.eval-hr {
-  width: 140px; height: 2px; border: none;
-  background: var(--accent); margin: 10px auto 0;
-}
-
-.rating-types .service-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.rating-types .service-option input[type="range"] {
-  width: 250px;
-  accent-color: var(--accent); 
-}
-
-#ratingValue {
-  font-weight: bold;
-}
-
-/* === (Submit and Reset botton ) === */
-.eval-actions button {
-  background-color: #00aaff; 
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 24px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.eval-actions button:hover {
-  background-color: #0090dd; 
-}
-.eval-section textarea {
-  background-color: var(--input-bg, #111c3b);
-  color: white;
-}
-
-
-
-
-/* ===== end Evaluation Page ===== */
-
-
-
-/* ===== Request a Service Page ===== */
-.req-section { margin: 40px auto 60px; }
-
-.req-title { text-align: center; margin-bottom: 14px; }
-.req-hr {
-  width: 160px; height: 2px; border: none;
-  background: var(--accent); margin: 10px auto 0;
-}
-.req-section textarea {
-  background-color: var(--input-bg, #111c3b);
-  color: white;
-}
-.req-actions button {
-  background-color: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 24px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.req-actions button:hover {
-  background-color: #0090dd;
-}
-
-.req-actions { margin-top: 20px; text-align: center; }
-/* ===== end Request a Service Page ===== */
-
-
