@@ -1,3 +1,4 @@
+/* Home Page Styles */
 :root {
   --primary: #0a1f44;
   --secondary: #132c5b;
@@ -31,7 +32,6 @@ header {
   max-width: 1200px;
   margin: auto;
 }
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -53,19 +53,8 @@ header {
   font-weight: 600;
 }
 
-.center-nav a.active,
-.center-nav a:hover,
-.right-nav a:hover {
+.center-nav a.active , .center-nav a:hover , .right-nav a.active,  .right-nav a:hover {
   color: var(--accent);
-}
-
-/* ===== QUOTE ===== */
-
-.quote {
-  text-align: center;
-  font-style: italic;
-  color: var(--muted);
-  margin: 2rem 0;
 }
 
 /* ===== BANNER ===== */
@@ -75,7 +64,7 @@ header {
   max-width: 1000px;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 4em auto 0 auto;
   border-radius: 12px;
 }
 
@@ -375,59 +364,70 @@ footer {
   margin-top: 4em;
   background-color: var(--primary);
   color: var(--text);
-  padding: 1.5rem 0 1rem 0;  /* 🔹 قللنا الارتفاع */
+  padding: 2rem 0;
   text-align: center;
   width: 100%;
-  position: relative;         /* ✅ مو ثابت */
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-sections {
   display: flex;
-  justify-content: center;     
-  align-items: center;
-  gap: 40px;                   
+  justify-content: center;        /* توسيط الأقسام */
+  align-items: flex-start;
   flex-wrap: wrap;
-  width: 85%;                  
+  width: 80%;
   margin: 0 auto;
+  gap: 40px;
+  position: relative;
 }
 
-.footer-left {
-  flex: 0 0 auto;
-  text-align: left;
+/* الخط الفاصل الأنيق */
+.footer-divider {
+  width: 1.5px; /* تخليه أنحف أو أسمك حسب رغبتك */
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.723); /* أبيض شفاف واضح */
+  margin: 0 35px;
+  border-radius: 2px;
 }
 
-.footer-center {
+.footer-left,
+.footer-center,
+.footer-right {
   flex: 0 0 auto;
+  min-width: 220px;
   text-align: center;
 }
 
-.footer-center a {
+.footer-center h4,
+.footer-left h4,
+.footer-right h4 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.footer-center a,
+.footer-left a,
+.footer-right a {
   color: var(--text);
   text-decoration: none;
   transition: 0.3s ease;
 }
-.footer-center a:hover {
+
+.footer-center a:hover,
+.footer-left a:hover,
+.footer-right a:hover {
   color: var(--accent);
-  transform: scale(1.1);
-}
-
-.footer-divider {
-  width: 1px;
-  height: 40px;
-  background: #ccc;
-  opacity: 0.6;
-}
-
-.footer-right {
-  flex: 0 0 auto;
-  text-align: right;
+  transform: scale(1.05);
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
-  justify-content: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 0.5rem;
 }
 
 .social-icons a {
@@ -441,20 +441,22 @@ footer {
 }
 
 .footer-line {
-  margin: 20px auto;
-  background: #ccc;
-  height: 0.5px;
+  margin: 2rem auto 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  height: 1px;
   border: none;
-  width: 80%;
+  width: 85%;
 }
 
 .copyright {
   font-size: 0.85rem;
   color: #aaa;
-  margin-top: 5px;
+  margin-top: 0.5rem;
 }
 
-/* ===== SP-DB Page Styling ===== */
+
+/* End of Home Page */
+/* ===== SP-DB Page Styling Amani Page ===== */
 
 .spdb-header {
   margin-bottom: 30px;
@@ -538,7 +540,7 @@ footer {
   text-decoration: none;
   color: inherit;
 }
-
+/* End of Sp-dp Page */
 
 /* ======= Service page styles ======== */
 
@@ -782,7 +784,15 @@ select {
 }
 
 
-/* ====== ABOUT US SECTION ====== */
+/* ===== ABOUT US PAGE ===== */
+.about-section {
+  width: 85%;
+  max-width: 1200px;
+  margin: 3rem auto 5rem auto;
+  text-align: center;
+  color: var(--text);
+}
+
 .breadcrumb {
   color: var(--muted);
   font-size: 0.9rem;
@@ -790,112 +800,104 @@ select {
   margin-bottom: 1.5rem;
 }
 
-.breadcrumb a{
-	color: var(--muted);
-  text-decoration: none;	
-  }
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
 
 .breadcrumb span {
   color: var(--accent);
 }
 
-.about-section {
-  text-align: center;
-  color: var(--text);
-  margin: 60px auto;
-  max-width: 1200px;
-}
-
 .about-section h2 {
-  font-size: 28px;
-  color: var(--accent);
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
 }
 
-.about-section p {
+.about-desc {
+  font-size: 1rem;
+  margin-bottom: 3rem;
   color: var(--muted);
-  margin-bottom: 40px;
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-items: center;
+/* === FLEXBOX مثل السلايد === */
+.team-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  /* يسمح لهم ينزلون صف ثاني لو ضاق المكان */
+  gap: 25px;        /* المسافة بين الكروت */
 }
 
 .team-card {
   background: var(--card-bg);
-  border-radius: 6px;
-  width: 280px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
   padding: 20px;
+  width: 240px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .team-card img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  margin-bottom: 15px;
   object-fit: cover;
+  border-radius: 15%;
+  margin-bottom: 15px;
 }
 
 .team-card h3 {
+  margin-bottom: 10px;
   color: var(--text);
-  margin-bottom: 5px;
 }
 
-.team-card p {
-  color: var(--muted);
-  margin-bottom: 15px;
-}
-
-/* زر Employee Profile */
 .profile-btn {
   display: inline-block;
-  background-color: #4a7fc1; /* اللون الأزرق من الصورة */
-  color: #ffffff;
+  background:  #4a7fc1;  ;
   border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 15px;
-  font-weight: 500;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 6px;
   text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
 .profile-btn:hover {
   background-color: #3b6da8;
 }
 
-/* زر Join our team */
+/* === JOIN BUTTON === */
 .join-btn-container {
-  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
 }
 
 .join-btn {
   display: inline-block;
-  background-color: transparent;
+  width: min(520px, 90%);
+  padding: 14px 28px;
+  background: #1d4ed8;
   color: var(--text);
-  border: 2px solid var(--text);
-  padding: 12px 40px;
-  border-radius: 8px;
+
+ 
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color .2s ease, border-color .2s ease;
 }
 
 .join-btn:hover {
-  background-color: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+   background-color: #3b6da8;
+  
 }
 /* ===============================
    JOIN OUR TEAM PAGE
@@ -912,7 +914,7 @@ select {
 .join-team h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--accent); /* نفس لون العنوان في About Us */
+  color: var(--text);
   font-size: 1.8rem;
 }
 
@@ -967,7 +969,7 @@ select {
 .submit-btn {
   display: block;
   margin: 2rem auto 0 auto;
-  background: #4a7fc1; /* نفس لون زر Employee Profile */
+  background: #1d4ed8 ;
   color: white;
   border: none;
   padding: 10px 45px;
@@ -982,22 +984,6 @@ select {
   background-color: #3b6da8;
 }
 
-/* ===== BREADCRUMB ===== */
-.breadcrumb {
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: left;
-  margin-bottom:1.5rem;
-}
-
-.breadcrumb a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.breadcrumb span {
-  color: var(--accent);
-}
 /* ===============================
    STAFF PROFILE PAGE
    =============================== */
@@ -1006,22 +992,6 @@ select {
   max-width: 1200px;
   margin: 3rem auto 5rem auto;
   text-align: center;
-}
-
-.breadcrumb {
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.breadcrumb a{
-	color: var(--muted);
-  text-decoration: none;	
-  }
-
-.breadcrumb span {
-  color: var(--accent);
 }
 
 .staff-profile h1 {
@@ -1061,18 +1031,12 @@ select {
 }
 
 /* ==== PHOTO BOX ==== */
-.profile-photo {
-  width: 100px;
-  height: 120px;
-  background: #222;
-  border: 2px dashed var(--muted);
-  border-radius: 6px;
+.profile-photo img {
+  width: 90px;
+  height: 125px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-size: 0.8rem;
 }
+
 /* ==== STAFF PROFILE (nested table) ==== */
 .profile-table ul {
   list-style-type: disc;
@@ -1087,5 +1051,153 @@ select {
 .profile-table td:nth-child(6), .profile-table th:nth-child(6) {
   width: 200px; 
 }
+
+
+/* ===== C-DB (Customer Dashboard) ===== */
+.cdb-section {
+  margin: 40px auto 60px;
+}
+
+.cdb-title {
+  text-align: center;
+  margin-bottom: 14px;
+}
+.cdb-hr {
+  width: 120px;
+  height: 2px;
+  margin: 10px auto 0;
+  border: none;
+  background: var(--accent); 
+}
+
+.cdb-table-wrap {
+  overflow-x: auto;
+}
+
+.cdb-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px; 
+}
+
+.cdb-table thead th {
+  text-align: left;
+  padding: 12px;
+  background: #0e1630; 
+  color: #ccc;
+}
+
+.cdb-table tbody tr {
+  background: #111c3b;
+}
+
+.cdb-table tbody td {
+  padding: 16px 14px;
+  color: #eee;
+}
+
+.cdb-table td.price       { color: #00aaff; }
+.cdb-table td.status-ok   { color: #22c55e; }
+.cdb-table td.status-no   { color: #ef4444; }
+
+.cdb-actions {
+  margin-top: 28px;
+  text-align: center;
+}
+.cdb-actions button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cdb-actions button:hover {
+  background-color: #0090dd;
+}
+
+/* ===== end C-DB (Customer Dashboard) ===== */
+
+/* ===== Evaluation Page ===== */
+.eval-title {
+  text-align: center;
+}
+
+.eval-hr {
+  width: 140px; height: 2px; border: none;
+  background: var(--accent); margin: 10px auto 0;
+}
+
+.rating-types .service-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-types .service-option input[type="range"] {
+  width: 250px;
+  accent-color: var(--accent); 
+}
+
+#ratingValue {
+  font-weight: bold;
+}
+
+/* === (Submit and Reset botton ) === */
+.eval-actions button {
+  background-color: #00aaff; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.eval-actions button:hover {
+  background-color: #0090dd; 
+}
+.eval-section textarea {
+  background-color: var(--input-bg, #111c3b);
+  color: white;
+}
+
+
+
+
+/* ===== end Evaluation Page ===== */
+
+
+
+/* ===== Request a Service Page ===== */
+.req-section { margin: 40px auto 60px; }
+
+.req-title { text-align: center; margin-bottom: 14px; }
+.req-hr {
+  width: 160px; height: 2px; border: none;
+  background: var(--accent); margin: 10px auto 0;
+}
+.req-section textarea {
+  background-color: var(--input-bg, #111c3b);
+  color: white;
+}
+.req-actions button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.req-actions button:hover {
+  background-color: #0090dd;
+}
+
+.req-actions { margin-top: 20px; text-align: center; }
+/* ===== end Request a Service Page ===== */
 
 
