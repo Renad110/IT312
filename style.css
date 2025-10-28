@@ -1,3 +1,4 @@
+/* Home Page Styles */
 :root {
   --primary: #0a1f44;
   --secondary: #132c5b;
@@ -373,59 +374,70 @@ footer {
   margin-top: 4em;
   background-color: var(--primary);
   color: var(--text);
-  padding: 1.5rem 0 1rem 0;  /* 🔹 قللنا الارتفاع */
+  padding: 2rem 0;
   text-align: center;
   width: 100%;
-  position: relative;         /* ✅ مو ثابت */
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-sections {
   display: flex;
-  justify-content: center;     
-  align-items: center;
-  gap: 40px;                   
+  justify-content: center;        /* توسيط الأقسام */
+  align-items: flex-start;
   flex-wrap: wrap;
-  width: 85%;                  
+  width: 80%;
   margin: 0 auto;
+  gap: 40px;
+  position: relative;
 }
 
-.footer-left {
-  flex: 0 0 auto;
-  text-align: left;
+/* الخط الفاصل الأنيق */
+.footer-divider {
+  width: 1.5px; /* تخليه أنحف أو أسمك حسب رغبتك */
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.723); /* أبيض شفاف واضح */
+  margin: 0 35px;
+  border-radius: 2px;
 }
 
-.footer-center {
+.footer-left,
+.footer-center,
+.footer-right {
   flex: 0 0 auto;
+  min-width: 220px;
   text-align: center;
 }
 
-.footer-center a {
+.footer-center h4,
+.footer-left h4,
+.footer-right h4 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.footer-center a,
+.footer-left a,
+.footer-right a {
   color: var(--text);
   text-decoration: none;
   transition: 0.3s ease;
 }
-.footer-center a:hover {
+
+.footer-center a:hover,
+.footer-left a:hover,
+.footer-right a:hover {
   color: var(--accent);
-  transform: scale(1.1);
-}
-
-.footer-divider {
-  width: 1px;
-  height: 40px;
-  background: #ccc;
-  opacity: 0.6;
-}
-
-.footer-right {
-  flex: 0 0 auto;
-  text-align: right;
+  transform: scale(1.05);
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
-  justify-content: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 0.5rem;
 }
 
 .social-icons a {
@@ -439,20 +451,22 @@ footer {
 }
 
 .footer-line {
-  margin: 20px auto;
-  background: #ccc;
-  height: 0.5px;
+  margin: 2rem auto 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  height: 1px;
   border: none;
-  width: 80%;
+  width: 85%;
 }
 
 .copyright {
   font-size: 0.85rem;
   color: #aaa;
-  margin-top: 5px;
+  margin-top: 0.5rem;
 }
 
-/* ===== SP-DB Page Styling ===== */
+
+/* End of Home Page */
+/* ===== SP-DB Page Styling Amani Page ===== */
 
 .spdb-header {
   margin-bottom: 30px;
@@ -536,7 +550,7 @@ footer {
   text-decoration: none;
   color: inherit;
 }
-
+/* End of Sp-dp Page */
 
 /* ======= Service page styles ======== */
 
