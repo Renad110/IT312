@@ -899,61 +899,55 @@ select {
    background-color: #3b6da8;
   
 }
-/* ===============================
-   JOIN OUR TEAM PAGE
-   =============================== */
+
+/* ===== JOIN OUR TEAM PAGE (same as Evaluation Page) ===== */
 
 .join-team {
+  margin: 40px auto 60px;
   width: 85%;
   max-width: 800px;
-  margin: 3rem auto 5rem auto;
+  color: white;
   text-align: left;
-  color: var(--text);
 }
 
 .join-team h1 {
   text-align: center;
-  margin-bottom: 2rem;
-  color: var(--text);
-  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: white;
 }
 
-/* ===== FORM ===== */
+/* خلفية النموذج */
 .join-form {
-  background: var(--card-bg); /* نفس خلفية الكرت في About Us */
-  padding: 2.5rem;
+  background-color: #111c3b;
+  padding: 40px;
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* الحقول */
 .join-form label {
   display: block;
   font-weight: 600;
   margin-bottom: 6px;
-  color: var(--text);
+  color: white;
 }
 
-/* ===== INPUT FIELDS ===== */
 .join-form input[type="text"],
 .join-form input[type="email"],
 .join-form input[type="date"],
-.join-form input[type="file"] {
+.join-form input[type="file"],
+.join-form textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: rgba(255,255,255,0.1);
+  background-color: #111c3b;
+  border: 1px solid #444;
   color: white;
+  border-radius: 4px;
+  padding: 10px;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 
-.join-form input::placeholder {
-  color: rgba(255,255,255,0.6);
-}
-
-/* ===== ROWS (SPACING) ===== */
+/* صفين بجانب بعض (مثل DoB + Email) */
 .form-row {
   display: flex;
   justify-content: space-between;
@@ -965,15 +959,15 @@ select {
   flex: 1;
 }
 
-/* ===== SUBMIT BUTTON ===== */
+/* زر الإرسال */
 .submit-btn {
   display: block;
   margin: 2rem auto 0 auto;
-  background: #1d4ed8 ;
+  background-color: #00aaff;
   color: white;
   border: none;
-  padding: 10px 45px;
   border-radius: 6px;
+  padding: 10px 45px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -981,8 +975,20 @@ select {
 }
 
 .submit-btn:hover {
-  background-color: #3b6da8;
+  background-color: #0090dd;
 }
+
+/* يخلي الرسالة (textarea) تحت الـ Education */
+.join-form textarea {
+  display: block;
+  height: 100px;
+  resize: none;
+}
+
+
+
+
+
 
 /* ===============================
    STAFF PROFILE PAGE
