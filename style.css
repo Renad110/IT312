@@ -1044,7 +1044,7 @@ select {
 /* ===============================
    STAFF PROFILE PAGE
    =============================== */
-   
+
 .staff-profile {
   width: 85%;
   max-width: 1200px;
@@ -1193,6 +1193,12 @@ select {
   align-items: center;
   gap: 10px;
 }
+#feedback {
+  background-color: #041127;
+  border: 1px #3e4960  solid  ;
+  border-radius: 6px;
+  color: white;
+}
 
 .rating-types .service-option input[type="range"] {
   width: 250px;
@@ -1225,15 +1231,26 @@ select {
 /* ===== end Evaluation Page ===== */
 
 /* ===== Request a Service Page ===== */
-.req-section { margin: 40px auto 60px; }
 
-.req-title { text-align: center; margin-bottom: 14px; }
+.req-section {
+   margin: 40px auto 60px; 
+  }
+
+.req-title { 
+  text-align: center; 
+  margin-bottom: 14px; 
+}
 .req-hr {
-  width: 160px; height: 2px; border: none;
-  background: #2b6ef2; margin: 10px auto 0;
+  width: 160px; 
+  height: 2px; 
+  border: none;
+  background: #2b6ef2; 
+  margin: 10px auto 0;
 }
 .req-section textarea {
-  background-color: #111c3b;
+  background-color: #041127;
+  border: 1px #3e4960  solid  ;
+  border-radius: 10px;
   color: white;
 }
 .req-actions button {
@@ -1250,7 +1267,10 @@ select {
   background-color: #0090dd;
 }
 
-.req-actions { margin-top: 20px; text-align: center; }
+.req-actions { 
+  margin-top: 20px; 
+  text-align: center; 
+}
 /* ===== end Request a Service Page ===== */
 
 
