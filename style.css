@@ -984,7 +984,6 @@ select {
 .join-group label { 
   display:block; 
   margin-bottom:6px; 
-  font-weight:600; 
   color:#e5e7eb; }
 
 .join-group input,
@@ -996,27 +995,16 @@ select {
   border:1.5px solid #3e4960; 
   border-radius:6px;
   padding:12px; 
-  font-size:15px; 
+  font-size:13px; 
   box-sizing:border-box;
-  transition:0.2s;
 }
 
 .join-group input:focus,
 .join-group textarea:focus {
   outline:none; 
-  border-color:#00aaff;
-  box-shadow:0 0 6px #00aaff80;
+  border-color:#ffff;
 }
 
-.join-group input::file-selector-button {
-  background:#2b6ef2; 
-  color:#fff;
-   border:none;
-  padding:8px 16px; 
-  border-radius:5px; 
-  cursor:pointer; 
-  font-weight:600;
-}
 
 .join-group textarea { 
   resize:vertical; 
