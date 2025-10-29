@@ -31,12 +31,12 @@
   </header>
   <!-- ===== MAIN CONTENT ===== -->
   <main class="join-team">
-   
-    <h1>Join our team</h1>
+       <h1>Join our team</h1>
 
     <form class="join-form" action="#" method="post">
+
       <label for="name">Name :</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
       <label for="photo">Photo :</label>
       <input type="file" id="photo" name="photo" accept="image/*">
@@ -49,30 +49,37 @@
 
         <div class="form-group">
           <label for="email">Email :</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" placeholder="example@domain.com" required>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
           <label for="expertise">Area of Expertise :</label>
-          <input type="text" id="expertise" name="expertise">
+          <input type="text" id="expertise" name="expertise" placeholder="e.g., Web Design, Marketing">
         </div>
 
         <div class="form-group">
           <label for="skills">Skills :</label>
-          <input type="text" id="skills" name="skills">
+          <input type="text" id="skills" name="skills" placeholder="e.g., HTML, CSS, Teamwork">
         </div>
       </div>
 
       <label for="education">Education :</label>
-      <input type="text" id="education" name="education">
-      <label for="education">Education :</label>
-      <input type="text" id="education" name="education">
+      <input type="text" id="education" name="education" placeholder="e.g., Bachelor in Computer Science">
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
 
 
       <button type="submit" class="submit-btn">Submit</button>
     </form>
+
+  </main>
+
+</body>
+</html>
+ 
   </main>
   <!-- ===== FOOTER ===== -->
   <footer>
