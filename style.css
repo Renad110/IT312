@@ -463,45 +463,105 @@ footer {
   margin-bottom: 15px;
 }
 
+.spdb-table-content {
+  margin-top: 30px;  
+  border-radius: 12px;        /* ✅ الحواف المنحنية هنا */
+  overflow: hidden;           /* ✅ يخفي الزوايا */
+  margin-bottom: 25px;        /* مسافة بين كل جدول */
+}
+
+
+.service-card{
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(43,110,242,0.3);
+}
+
 .service-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 20px; /* 🔹 يفصل كل صف عن الثاني بمسافة */
+  border-collapse: collapse;
 }
 
 .service-table th {
+  color: #ffffff;
   text-align: left;
-  background-color: #0e1630;
-  padding: 14px;
-  font-size: 16px;
-  color: #ccc;
+  font-size: 19px;
+  padding-left: 30px;
 }
 
-.service-table tr {
-  background-color: #111c3b; /* 🔹 لون الخلفية لكل كرت */
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.service-table tr:hover {
-  background-color: #16244d;
+.service-table tr:hover th{
+  background-color: #24304d;
+  
 }
 
 .service-table td {
-  padding: 28px 20px; /* 🔹 زدت المساحة الداخلية عشان يصير الكرت أطول */
+  font-size: 18px;
+  color: #ffffff;
+  padding: 22px 20px;
   vertical-align: middle;
-  color: #eee;
+  text-align: justify;
+}
+
+/* To make sure that the column widths are consistent across all tables */
+.service-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* To ensure consistent column widths */
+.service-table th:nth-child(1),
+.service-table td:nth-child(1) {
+  width: 40%;
+}
+
+.service-table th:nth-child(2),
+.service-table td:nth-child(2) {
+  width: 15%;
+}
+
+.service-table th:nth-child(3),
+.service-table td:nth-child(3) {
+  width: 45%;
+}
+
+/* To control text alignment within the header */
+
+/* The second column (Price) */
+.service-table th:nth-child(2) {
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* The third column (Description) */
+.service-table th:nth-child(3) {
+  text-align: left;
+}
+
+.service-table tr:hover td {
+  background-color: #24304d;
+  transition: 0.3s;
+  
+}
+
+.service-table tr:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(43,110,242,0.3);
 }
 
 .service-table img {
-  width: 110px;   /* 🔹 كبرت الصورة */
-  height: 110px;  /* 🔹 كبرت الصورة */
+  width: 100px;  
+  height: 100px; 
   object-fit: cover;
   margin-right: 20px;
   border-radius: 10px;
   vertical-align: middle;
 }
-
 
 .spdb-buttons {
   text-align: center;
@@ -509,25 +569,26 @@ footer {
 }
 
 .spdb-buttons button {
-  background-color: transparent;
-  border: 1.5px solid #fff;
-  color: #fff;
+  background-color: #00aaff; /*erfrfr*/
+  color: white;
+  border: none solid #ffff;
+  
   padding: 10px 22px;
   margin: 0 20px;
   font-size: 15px;
+  font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s; /**/
 }
 
 .spdb-buttons button:hover {
-  background-color: #f54e00;
-  border-color: #f54e00;
+  background-color: #0090dd;
 }
 
 .spdb-buttons a {
   text-decoration: none;
-  color: inherit;
+  color: #ffff;
 }
 /* End of Sp-dp Page */
 
