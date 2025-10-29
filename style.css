@@ -947,99 +947,104 @@ select {
 }
 
 
-/* ===== JOIN OUR TEAM PAGE (same as Evaluation Page) ===== */
+/* ===== JOIN OUR TEAM PAGE ===== */
 
-
-
-.join-team {
-  margin: 1rem auto 2rem auto;
-  width: 85%;
-  max-width: 800px;
-  color: white;
-  text-align: left;
-
+.join-wrapper {
+  margin: 40px auto 60px;
+  background: #1a2240;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  max-width: 900px;
 }
 
-.join-team h1 {
-  text-align: center;
-
-  margin-bottom: 10px;
-  color: white;
-
+.join-header { 
+  text-align: center; 
+  margin-bottom: 25px; 
+}
+.join-title { 
+  font-size: 1.9rem; 
+  font-weight: 700; 
+  color: #e5e7eb; 
 }
 
-/* خلفية النموذج */
-.join-form {
-
-  background-color: #111c3b;
-  padding: 40px;
-
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.join-row {
+  display:flex; 
+  gap:25px; 
+  flex-wrap:wrap;
+  margin-bottom:20px; 
+  justify-content:space-between;
 }
 
-/* الحقول */
-.join-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 6px;
-
-  color: white;
-
+.join-group { 
+  flex:1; 
+  min-width:250px; 
 }
 
-.join-form input[type="text"],
-.join-form input[type="email"],
-.join-form input[type="date"],
-.join-form input[type="file"],
-.join-form textarea {
-  width: 100%;
-  background-color: #111c3b;
-  border: 1px solid #444;
-  color: white;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 6px;
-  font-size: 1rem;
+.join-group label { 
+  display:block; 
+  margin-bottom:6px; 
+  font-weight:600; 
+  color:#e5e7eb; }
+
+.join-group input,
+.join-group textarea,
+.join-group select {
+  width:100%; 
+  background:#0e1426; 
+  color:#fff;
+  border:1.5px solid #3e4960; 
+  border-radius:6px;
+  padding:12px; 
+  font-size:15px; 
+  box-sizing:border-box;
+  transition:0.2s;
 }
 
-/* صفين بجانب بعض (مثل DoB + Email) */
-.form-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 3px;
+.join-group input:focus,
+.join-group textarea:focus {
+  outline:none; 
+  border-color:#00aaff;
+  box-shadow:0 0 6px #00aaff80;
 }
 
-.form-group {
-  flex: 1;
+.join-group input::file-selector-button {
+  background:#2b6ef2; 
+  color:#fff;
+   border:none;
+  padding:8px 16px; 
+  border-radius:5px; 
+  cursor:pointer; 
+  font-weight:600;
 }
 
-/* زر الإرسال */
-.submit-btn {
-  display: block;
-  margin: 2rem auto 0 auto;
-  background-color: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 45px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+.join-group textarea { 
+  resize:vertical; 
+  min-height:100px; 
 }
 
-.submit-btn:hover {
-  background-color: #0090dd;
+/* Buttons */
+.join-actions { 
+  text-align:center; 
+  margin-top:25px;
+ }
+ 
+.join-actions button {
+  background:#00aaff; 
+  color:#fff; 
+  border:none;
+  border-radius:6px; 
+  padding:10px 24px;
+  font-weight:600; 
+  margin:0 8px;
+  font-size:16px; 
+  transition:0.3s;
 }
+.join-actions button:hover { 
+  background:#0090dd; }
 
-/* يخلي الرسالة (textarea) تحت الـ Education */
-.join-form textarea {
-  display: block;
-  height: 100px;
-  resize: none;
-}
+/* ===== END JOIN PAGE ===== */
+
 
 /* ===============================
    STAFF PROFILE PAGE
