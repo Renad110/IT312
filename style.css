@@ -1041,14 +1041,10 @@ select {
   resize: none;
 }
 
-
-
-
-
-
 /* ===============================
    STAFF PROFILE PAGE
    =============================== */
+   
 .staff-profile {
   width: 85%;
   max-width: 1200px;
