@@ -465,9 +465,9 @@ footer {
 
 .spdb-table-content {
   margin-top: 30px;  
-  border-radius: 12px;        /* ✅ الحواف المنحنية هنا */
-  overflow: hidden;           /* ✅ يخفي الزوايا */
-  margin-bottom: 25px;        /* مسافة بين كل جدول */
+  border-radius: 12px;        
+  overflow: hidden;           
+  margin-bottom: 25px;        
 }
 
 
