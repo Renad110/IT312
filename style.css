@@ -135,7 +135,7 @@ header {
   margin: 0 auto;
 }
 
-/* ✅ أزرار الأسهم */
+/*  أزرار الأسهم */
 .testi-nav {
   background: #2b6ef2; 
   color: white;
@@ -157,7 +157,7 @@ header {
 .testi-nav.left { left: -60px; } 
 .testi-nav.right { right: -60px; }
 
-/* ✅ الصف الأفقي للكروت */
+/*  الصف الأفقي للكروت */
 .testi-list {
   display: flex;
   gap: 20px;
@@ -167,7 +167,7 @@ header {
   width: 100%;
 }
 
-/* ✅ شريط التمرير */
+/*  شريط التمرير */
 .testi-list::-webkit-scrollbar {
   display: none; 			/* يخفيه في كروم وسفاري */
 }
@@ -186,7 +186,7 @@ header {
 */
 
 
-/* ✅ الكروت بنفس حجم بطاقات الخدمات */
+/*  الكروت بنفس حجم بطاقات الخدمات */
 .testi-card {
   width: 265px;
   height: 190px;
@@ -301,7 +301,7 @@ header {
   margin-bottom: 1rem;
 }
 
-/* ✅ تصميم كل سؤال */
+/*  تصميم كل سؤال */
 .faq details {
   background: #1c253a; 
   color: #e5e7eb; 
@@ -314,7 +314,7 @@ header {
   transition: 0.3s ease;
 }
 
-/* ✅ شكل السهم باليمين */
+/*  شكل سهم الاسئلة باليمين */
 .faq summary {
   font-weight: bold;
   font-size: 1.05rem;
@@ -622,7 +622,7 @@ select {
 .service-header i {
   font-size: 1.1rem;
   color: #00aaff;
-  cursor: pointer;
+  cursor: pointer;  /* شيكككككككككككككككككي*/
   transition: color 0.3s ease;
 }
 
@@ -633,7 +633,7 @@ select {
 .service-card img {
   width: 100%;
   height: 230px;
-  object-fit: cover;
+  object-fit: cover;  /* شيكككككككككككككككككي*/
   border-radius: 10px; /* شيكككككككككككككككككي*/
   margin-bottom: 15px;
 }
