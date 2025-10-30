@@ -1235,6 +1235,7 @@ select {
   border-radius: 6px;
   padding: 10px 24px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .req-actions button:hover {
