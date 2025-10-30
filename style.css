@@ -960,13 +960,6 @@ select {
   font-weight: 700; 
   color: #e5e7eb; 
 }
-.join-hr{
-  width: 160px; 
-  height: 2px; 
-  border: none;
-  background: #00aaff; 
-  margin: 10px auto 0; 
-}
 
 .join-row {
   display:flex; 
@@ -1291,7 +1284,7 @@ select {
   padding: 35px;
   border-radius: 12px;
   max-width: 700px; 
-  margin: 10px;
+  margin: 10px auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
@@ -1305,4 +1298,5 @@ select {
   display: inline-block; 
   text-decoration: none; 
 }
-/* ===== end Add Service Page ===== */
+
+
