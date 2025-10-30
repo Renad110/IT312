@@ -1307,3 +1307,169 @@ select {
 }
 /* ===== end Add Service Page ===== */
 
+/* ===== Manage Staff Page ===== */
+.staff-manager {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.staff-title {
+  margin-bottom: 10px;
+}
+
+.staff-line {
+  width: 140px;
+  height: 2px;
+  background-color: #009dff;
+  border: none;
+}
+
+/* ===== Staff Cards ===== */
+.staff-container {
+  background-color: #1c2541;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  padding: 25px 25px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.staff-card-Man {
+  display: flex;
+  align-items: center;
+  background-color: #253156;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  transition: 0.2s;
+}
+
+.staff-card-Man:hover {
+  background-color: #163266;
+  transform: translateY(-3px);
+}
+
+.staff-checkbox {
+  width: 22px;
+  height: 22px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.staff-photo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.staff-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== Add Form Section ===== */
+.add-section {
+  background-color: #1c2541;
+  border-radius: 15px;
+  max-width: 700px;
+  margin-top: 10px;
+  padding: 30px 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.manage-hr {
+  width: 140px;
+  height: 2px;
+  margin: 10px auto 0;
+  border: none;
+  background: #00aaff;
+}
+
+.add-staff-container {
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.add-staff-title {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.add-form input {
+  width: auto;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #3e4960;
+  background-color: #041127;
+  color: white;
+  font-size: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row div {
+  flex: 1;
+}
+
+.add-btn {
+  background-color: #00aaff;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  align-self: center;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #0090dd;
+}
+
+.staff-divider-Man {
+  width: 200px;     
+  height: 2px;
+  background-color: #fdfdfd;
+  border: none;
+  margin: 40px auto 50px;
+}
+
+.delete-btn-Man {
+  background-color: #d84343;
+  border: none;
+  padding: 10px 22px;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+  margin-right: 550px;
+  display: inline-block; 
+  text-align: left;
+}
+
+.delete-btn-Man:hover {
+  background-color: #b73232;
+}
+/* ===== end Manage Staff Page ===== */
