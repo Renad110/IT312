@@ -932,7 +932,7 @@ select {
 
 .join-btn {
   display: inline-block;
-  width: min(520px, 90%);
+  width: min(200px, 60%);
   padding: 14px 28px;
   background: #00aaff;
   color: #e5e7eb;
