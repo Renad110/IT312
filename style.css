@@ -175,9 +175,12 @@ header {
 .testi-nav:hover {
   background: #1d4ed8;
 }
-.testi-nav.left { left: -60px; } 
-.testi-nav.right { right: -60px; }
-
+.testi-nav.left { 
+  left: -60px; 
+}
+.testi-nav.right { 
+  right: -60px; 
+}
 /*  الصف الأفقي للكروت */
 .testi-list {
   display: flex;
@@ -187,7 +190,10 @@ header {
   width: 100%;
 }
 
-
+/*  شريط التمرير */
+.testi-list::-webkit-scrollbar {
+  display: none; 			/* يخفيه في كروم وسفاري */
+}
 
 /*  الكروت بنفس حجم بطاقات الخدمات */
 .testi-card {
@@ -815,6 +821,7 @@ select {
     }
 }
 /* End of PageSer-RegForm styles */
+
 /* ===== ABOUT US PAGE ===== */
 .about-section {
   width: 85%;
