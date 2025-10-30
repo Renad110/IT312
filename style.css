@@ -255,7 +255,7 @@ header {
 
 /* اسم الخدمه */
 .service-name {
-  color: #2b6ef2; 
+  color: #0090dd; 
   font-weight: bold;
   margin: 15px 0px -2px 0px;
   font-size: 0.8rem;
@@ -295,7 +295,7 @@ header {
   transition: 0.3s;
 }
 .dot.active {
-  background: #2b6ef2; 
+  background: #0090dd; 
 }
 
 /* ===== FAQ ===== */
