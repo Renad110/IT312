@@ -151,7 +151,7 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 95%;          /* نفس عرض الخدمات ffffffffffffffffffffff*/
+  width: 95%;          /* ffffffffffffffffffffff*/
   max-width: 940px;
   margin: 0 auto;
 }
@@ -183,28 +183,10 @@ header {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  scroll-behavior: smooth;
   padding: 15px 5px;
   width: 100%;
 }
 
-/*  شريط التمرير */
-.testi-list::-webkit-scrollbar {
-  display: none; 			/* يخفيه في كروم وسفاري */
-}
-
-  /*height: 8px;
-
-}
-.testi-list::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 10px;
-}
-.testi-list::-webkit-scrollbar-track {
-  background: var(--primary);
-}
-
-*/
 
 
 /*  الكروت بنفس حجم بطاقات الخدمات */
@@ -1253,7 +1235,6 @@ select {
   border-radius: 6px;
   padding: 10px 24px;
   font-weight: 600;
-  cursor: pointer;
 }
 
 .req-actions button:hover {
