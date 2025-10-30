@@ -715,7 +715,7 @@ select {
 
 .price {
   font-weight: bold;
-  color: #00aaff;
+  color: #ffffff;
   font-size: 1.1rem;
 }
 
@@ -1147,7 +1147,7 @@ select {
   color: #eee;
 }
 
-.cdb-table td.price       { color: #00aaff; }
+.cdb-table td.price       { color: #ffffff; }
 .cdb-table td.status-ok   { color: #22c55e; }
 .cdb-table td.status-no   { color: #ef4444; }
 
