@@ -47,7 +47,7 @@ header {
 }
 
 .center-nav a.active , .center-nav a:hover , .right-nav a.active,  .right-nav a:hover {
-  color: #0090dd; 
+  color: #0091dd; 
 }
 
 /* ===== BANNER ===== */
@@ -255,7 +255,7 @@ header {
 
 /* اسم الخدمه */
 .service-name {
-  color: #00aaff; 
+  color: #2b6ef2; 
   font-weight: bold;
   margin: 15px 0px -2px 0px;
   font-size: 0.8rem;
@@ -295,7 +295,7 @@ header {
   transition: 0.3s;
 }
 .dot.active {
-  background: #0090dd; 
+  background: #2b6ef2; 
 }
 
 /* ===== FAQ ===== */
@@ -715,7 +715,7 @@ select {
 
 .price {
   font-weight: bold;
-  color: #fafafa;
+  color: #00aaff;
   font-size: 1.1rem;
 }
 
@@ -1260,9 +1260,17 @@ select {
 /* ===== end Request a Service Page ===== */
 
 /* ===== Add Service Page ===== */
-.form-header {
+.add-title {
   text-align: center;
-  margin-bottom: 20px;
+   margin-top: 40px;
+}
+
+.service-hr {
+  width: 140px;
+  height: 2px;
+  margin: 10px auto 0;
+  border: none;
+  background: #00aaff;
 }
 
 .req-section textarea {
@@ -1270,6 +1278,14 @@ select {
   border: 1px #3e4960  solid  ;
   border-radius: 10px;
   color: white;
+}
+.container.add-service {
+  background-color: #1c2541;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 700px; 
+  margin: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 .spdb-buttons .spdb-btn {
@@ -1282,3 +1298,4 @@ select {
   display: inline-block; 
   text-decoration: none; 
 }
+/* ===== end Add Service Page ===== */
