@@ -956,9 +956,16 @@ select {
   margin-bottom: 25px; 
 }
 .join-title { 
-  font-size: 1.9rem; 
-  font-weight: 700; 
-  color: #e5e7eb; 
+  text-align: center;
+  margin-top: 40px;
+}
+
+.join-hr{
+  width: 140px; 
+  height: 2px; 
+  border: none;
+  background: #00aaff; 
+  margin: 10px auto 0; 
 }
 
 .join-row {
