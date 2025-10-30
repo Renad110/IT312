@@ -47,7 +47,7 @@ header {
 }
 
 .center-nav a.active , .center-nav a:hover , .right-nav a.active,  .right-nav a:hover {
-  color: #2b6ef2; 
+  color: #0090dd; 
 }
 
 /* ===== BANNER ===== */
@@ -157,7 +157,7 @@ header {
 
 /*  أزرار الأسهم */
 .testi-nav {
-  background: #2b6ef2; 
+  background: #00aaff; 
   color: white;
   border: none;
   border-radius: 10%;
@@ -172,7 +172,7 @@ header {
   transition: 0.3s;
 }
 .testi-nav:hover {
-  background: #1d4ed8;
+  background: #0090dd;
 }
 .testi-nav.left { 
   left: -60px; 
@@ -255,7 +255,7 @@ header {
 
 /* اسم الخدمه */
 .service-name {
-  color: #2b6ef2; 
+  color: #00aaff; 
   font-weight: bold;
   margin: 15px 0px -2px 0px;
   font-size: 0.8rem;
@@ -295,7 +295,7 @@ header {
   transition: 0.3s;
 }
 .dot.active {
-  background: #2b6ef2; 
+  background: #0090dd; 
 }
 
 /* ===== FAQ ===== */
@@ -339,7 +339,7 @@ header {
   right: 5px;
   top: 50%;
   transform: translateY(-50%) rotate(0deg);
-  color: #2b6ef2; 
+  color: #00aaff; 
   transition: transform 0.3s ease;
 }
 
@@ -401,7 +401,7 @@ footer {
 .footer-left h4,
 .footer-right h4 {
   font-size: 1.1rem;
-  color: #2b6ef2; 
+  color: #00aaff; 
   margin-bottom: 0.8rem;
 }
 
@@ -416,7 +416,7 @@ footer {
 .footer-center a:hover,
 .footer-left a:hover,
 .footer-right a:hover {
-  color: #2b6ef2;
+  color: #0090dd;
   transform: scale(1.05);
 }
 
@@ -434,7 +434,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #2b6ef2; 
+  color: #0090dd; 
 }
 
 .footer-line {
@@ -576,27 +576,20 @@ footer {
   margin-top: 45px;
 }
 
-.spdb-buttons button {
-  background-color: #00aaff; /*erfrfr*/
+.spdb-btn {
+  background-color: #00aaff;
   color: white;
-  border: none solid #ffff;
-  
   padding: 10px 22px;
-  margin: 0 20px;
+  margin: 0 20px; 
   font-size: 15px;
   font-weight: 600;
   border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s; /**/
-}
-
-.spdb-buttons button:hover {
-  background-color: #0090dd;
-}
-
-.spdb-buttons a {
+  display: inline-block; 
   text-decoration: none;
-  color: #ffff;
+}
+
+.spdb-btn:hover {
+  background-color: #0090dd;
 }
 /* End of Sp-dp Page */
 
@@ -722,7 +715,7 @@ select {
 
 .price {
   font-weight: bold;
-  color: #00aaff;
+  color: #fafafa;
   font-size: 1.1rem;
 }
 
@@ -844,7 +837,7 @@ select {
 }
 
 .breadcrumb span {
-  color: #2b6ef2;
+  color: #00aaff;
 }
 
 .about-section h2 {
@@ -908,7 +901,7 @@ select {
 
 .profile-btn {
   display: inline-block;
-  background:  #4a7fc1;
+  background:  #00aaff;
   border: none;
   color: #ffffff;
   padding: 6px 14px;
@@ -919,7 +912,7 @@ select {
 }
 
 .profile-btn:hover {
-  background-color: #3b6da8;
+  background-color: #0090dd;
 }
 
 /* === JOIN BUTTON === */
@@ -933,7 +926,7 @@ select {
   display: inline-block;
   width: min(520px, 90%);
   padding: 14px 28px;
-  background: #1d4ed8;
+  background: #00aaff;
   color: #e5e7eb;
   border-radius: 12px;
   text-decoration: none;
@@ -943,7 +936,7 @@ select {
 }
 
 .join-btn:hover {
-   background-color: #3b6da8;
+   background-color: #0090dd;
 }
 
 
@@ -1118,7 +1111,7 @@ select {
   height: 2px;
   margin: 10px auto 0;
   border: none;
-  background: #2b6ef2;
+  background: #00aaff;
 }
 
 .cdb-table-wrap {
@@ -1178,7 +1171,7 @@ select {
 
 .eval-hr {
   width: 140px; height: 2px; border: none;
-  background: #2b6ef2; margin: 10px auto 0;
+  background: #00aaff; margin: 10px auto 0;
 }
 
 .rating-types .service-option {
@@ -1195,7 +1188,7 @@ select {
 
 .rating-types .service-option input[type="range"] {
   width: 250px;
-  accent-color: #2b6ef2;
+  accent-color: #00aaff;
 }
 
 #ratingValue {
@@ -1237,7 +1230,7 @@ select {
   width: 160px; 
   height: 2px; 
   border: none;
-  background: #2b6ef2; 
+  background: #00aaff; 
   margin: 10px auto 0;
 }
 .req-section textarea {
@@ -1266,5 +1259,26 @@ select {
 }
 /* ===== end Request a Service Page ===== */
 
+/* ===== Add Service Page ===== */
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
+.req-section textarea {
+  background-color: #041127;
+  border: 1px #3e4960  solid  ;
+  border-radius: 10px;
+  color: white;
+}
 
+.spdb-buttons .spdb-btn {
+  color: white;
+  padding: 16px 30px;
+  margin: 0 20px; 
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-block; 
+  text-decoration: none; 
+}

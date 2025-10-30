@@ -20,7 +20,7 @@
 
       <nav class="center-nav">
         <a href="HomePage.html">Home</a>
-        <a href="Services.html" class="active">Services</a>
+        <a href="PageServices.html" class="active">Services</a>
         <a href="AboutUs.html">About Us</a>
       </nav>
 
@@ -39,28 +39,30 @@
 
     <form class="service-form">
       <div class="form-group">
-        <label for="serviceName">Service Name :</label>
-        <input type="text" id="serviceName" name="serviceName" placeholder="Enter service name">
-      </div>
-
-      <div class="form-group">
-        <label for="servicePhoto">Service Photo :</label>
-        <input type="file" id="servicePhoto" name="servicePhoto">
-      </div>
-
-      <div class="form-group">
-        <label for="servicePrice">Service Price :</label>
-        <input type="text" id="servicePrice" name="servicePrice" placeholder="Enter service price">
-      </div>
-
-      <div class="form-group">
-        <label for="serviceDescription">Service Description :</label>
-        <textarea id="serviceDescription" name="serviceDescription" placeholder="Write in details about the service..."></textarea>
-      </div>
-
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
+    <label for="serviceName">Service Name:</label>
+    <input type="text" id="serviceName" name="serviceName" placeholder="Enter service name" required>
   </div>
+
+  <div class="form-group">
+    <label for="servicePhoto">Service Photo:</label>
+    <input type="file" id="servicePhoto" name="servicePhoto" required>
+  </div>
+
+  <div class="form-group">
+    <label for="servicePrice">Service Price:</label>
+    <input type="text" id="servicePrice" name="servicePrice" placeholder="Enter service price" required>
+  </div>
+
+  <div class="form-group req-section">
+    <label for="serviceDescription">Service Description:</label>
+    <textarea id="serviceDescription" name="serviceDescription" rows="12" placeholder="Write in details about the service..." required></textarea>
+  </div>
+
+  <div class="spdb-buttons req-actions">
+    <button type="submit" class="spdb-btn">Submit</button>
+  </div>
+</form>
+</div>
 
   <!-- ===== FOOTER ===== -->
   <footer>
