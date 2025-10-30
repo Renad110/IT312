@@ -845,6 +845,14 @@ select {
   margin-bottom: 1rem;
   color: #e5e7eb;
 }
+.about-us-hr{
+  width: 140px; 
+  height: 2px; 
+  border: none;
+  background: #00aaff; 
+  margin: 10px auto 0; 
+
+}
 
 .about-desc {
   font-size: 1rem;
