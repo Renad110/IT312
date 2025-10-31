@@ -1181,15 +1181,15 @@ select {
 
 /* ===== Request a Service Page ===== */
 
-.req-section {
+.req-section { /* add space around the section  */
    margin: 40px auto 60px; 
   }
 
-.req-title { 
+.req-title { /* center the title and add a small space under it */
   text-align: center; 
   margin-bottom: 14px; 
 }
-.req-hr {
+.req-hr { /*  blue line under the title */
   width: 160px; 
   height: 2px; 
   border: none;
@@ -1203,21 +1203,21 @@ select {
   color: white;
 }
 
-.req-actions button {
+.req-actions button { /* Submit and Reset botton */
   background-color: #00aaff;
   color: white;
   border: none;
   border-radius: 6px;
   padding: 10px 24px;
   font-weight: 600;
-  cursor: pointer;
+  cursor: pointer; /* change mouse to hand when hovering */
 }
 
-.req-actions button:hover {
+.req-actions button:hover { /* make button color darker when hover */
   background-color: #0090dd;
 }
 
-.req-actions { 
+.req-actions { /* center the buttons and add some space above them */
   margin-top: 20px; 
   text-align: center; 
 }
