@@ -801,7 +801,7 @@ select {
   display: flex; /* Aligns items in a row */
   flex-wrap: nowrap;     /* Keeps cards in one line */  
   gap: 25px; /* Space between cards */
-  overflow-x: auto;      /* Allows horizontal scrolling */
+  overflow : scroll;  
   padding: 1rem;
   justify-content: center;
   margin: 0 8rem ;  /* Adds left and right margin */
