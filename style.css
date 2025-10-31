@@ -1126,21 +1126,21 @@ select {
 /* ===== end C-DB (Customer Dashboard) ===== */
 
 /* ===== Evaluation Page ===== */
-.eval-title {
+.eval-title { /* center the title and add some space under it */
   text-align: center;
 }
 
-.eval-hr {
+.eval-hr { /* the blue line under the title */
   width: 140px; height: 2px; border: none;
   background: #00aaff; margin: 10px auto 0;
 }
 
-.rating-types .service-option {
+.rating-types .service-option { /*  to make the rating line useing flex val */
   display: flex;
   align-items: center;
   gap: 10px;
 }
-#feedback {
+#feedback { /* feedback box will be dark background and white text */
   background-color: #041127;
   border: 1px #3e4960  solid  ;
   border-radius: 6px;
@@ -1156,7 +1156,7 @@ select {
   font-weight: bold;
 }
 
-/* === (Submit and Reset botton ) === */
+/* Submit and Reset botton */
 .eval-actions button {
   background-color: #00aaff;
   color: white;
@@ -1164,13 +1164,13 @@ select {
   border-radius: 6px;
   padding: 10px 24px;
   font-weight: 600;
-  cursor: pointer;
+  cursor: pointer; /* change mouse to hand when hover */
 }
 
-.eval-actions button:hover {
+.eval-actions button:hover { /* make button darker when hovering */
   background-color: #0090dd;
 }
-.eval-section textarea {
+.eval-section textarea { /* style the feedback textarea box */
   background-color: #041127;
   border: 1px #3e4960  solid  ;
   border-radius: 10px;
