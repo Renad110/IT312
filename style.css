@@ -314,7 +314,6 @@ header {
   border-radius: 6px;
   width: 90%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  /*border: 1px solid #777;  يضيف خط حول كل سؤال */
   transition: 0.3s ease;
 }
 
@@ -341,9 +340,9 @@ header {
 
 /* السهم عند الفتح */
 .faq details[open] summary::after {
-  transform: translateY(-50%) rotate(180deg); /* سهم للأعلى */
+transform: translateY(-50%) rotate(180deg); /* سهم للأعلى */
 }
-
+  
 .faq details p {
   margin-top: 10px;
   padding: 10px 12px;
@@ -438,7 +437,7 @@ footer {
   margin-top: 0.5rem;
 }
 
-/* End of Home Page */
+/* End of Home-Page */
 
 /* ===== SP-DB Page Styling Amani Page ===== */
 
