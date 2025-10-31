@@ -874,8 +874,6 @@ select {
 
 }
 
-
-
 .team-card img {
   width: 120px;
   height: 120px;
@@ -927,7 +925,6 @@ select {
 .join-btn:hover {
    background-color: #0090dd;
 }
-
 
 /* ===== JOIN OUR TEAM PAGE ===== */
 
@@ -1094,6 +1091,7 @@ select {
 
 
 /* ===== C-DB (Customer Dashboard) ===== */
+
 .cdb-section {
   margin: 40px auto 60px;
 }
