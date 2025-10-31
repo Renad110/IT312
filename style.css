@@ -1275,7 +1275,7 @@ select {
 
 .spdb-buttons .spdb-btn {
   color: white;
-  padding: 16px 30px;
+  padding: 10px 22px;
   margin: 0 20px; 
   font-size: 16px;
   font-weight: 600;
@@ -1407,20 +1407,7 @@ select {
   flex: 1;
 }
 
-.add-btn {
-  background-color: #00aaff;
-  border: none;
-  padding: 12px 25px;
-  color: white;
-  font-weight: 600;
-  border-radius: 6px;
-  margin-top: 10px;
-  cursor: pointer;
-  align-self: center;
-  transition: 0.3s;
-}
-
-.add-btn:hover {
+.add-btn:hover , .reset-btn:hover {
   background-color: #0090dd;
 }
 
