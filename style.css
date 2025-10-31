@@ -51,13 +51,40 @@ header {
 
 /* ===== BANNER ===== */
 
-.banner img {
+.banner {
+  position: relative;
   width: 90%;
   max-width: 1000px;
-  height: auto;
-  display: block;
   margin: 4rem auto;
-  border-radius: 12px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.banner:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(43,110,242,0.4);
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.7;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
 }
 
 /* ===== SERVICES ===== */
