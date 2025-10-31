@@ -84,7 +84,7 @@ header {
   font-weight: 600;
   text-align: left;
   line-height: 1.7;
-  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  text-shadow: 0 0 8px rgb(0, 0, 0);
 }
 
 /* ===== SERVICES ===== */
