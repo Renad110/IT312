@@ -597,8 +597,6 @@ footer {
 
 /* ======= Service page styles ======== */
 
-
-
 .container {
   width: 90%;
   max-width: 1000px;
@@ -792,8 +790,6 @@ select {
     background-color: #0091dd;
 }
 
-
-
 /* Form row for gender and age */
 .form-row {
     display: flex;
@@ -825,8 +821,6 @@ select {
   text-align: center;
   color: #e5e7eb;
 }
-
-
 
 .about-section h2 {
   font-size: 2rem;
@@ -860,8 +854,6 @@ select {
 
   
 }
-
-
 
 .team-card {
   background: #1c253a;
@@ -1121,7 +1113,7 @@ select {
 .cdb-table thead th {
   text-align: left;
   padding: 12px;
-  background: #0e1630; 
+  background: #1c253a; 
   color: #ccc;
 }
 
