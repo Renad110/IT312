@@ -37,6 +37,7 @@
     <h1>Staff Member’s Profile</h1>
 
     <table class="profile-table">
+           <!-- Table Header Row -->
       <tr>
         <th>Name</th>
         <th>Photo</th>
@@ -46,15 +47,16 @@
         <th>Skills</th>
         <th>Education</th>
       </tr>
-
+      <!-- Staff Info Row -->
       <tr>
-        <!-- rowspan: يمتد عمود الاسم والصورة والبريد والتاريخ على 3 صفوف -->
+        <!-- rowspan: يمتد عمود الاسم والصورة والبريد والتاريخ على 3 صفوف --> 
         <td rowspan="3">Ahmed Salem</td>
         <td rowspan="3"><div class="profile-photo"><img src ="images/Staff1.PNG" alt ="Ahmed salem"></div></td>
         <td rowspan="3">Ahmed44@gmail.com</td>
         <td rowspan="3">17 June 1999</td>
-
+      <!-- First expertise -->
         <td>Strategy</td>
+         <!-- Skills (using nested list) -->
         <td rowspan="3">
           <ul>
             <li>Aim Training
@@ -71,6 +73,7 @@
 			</li>
           </ul>
         </td>
+         <!-- Education (nested list) -->
         <td rowspan="3">
           <ul>
             <li>2016–2020:
@@ -87,7 +90,7 @@
           </ul>
         </td>
       </tr>
-
+   <!-- Next two rows for other areas of expertise -->
       <tr><td>Coaching</td></tr>
       <tr><td>Organizing</td></tr>
     </table>
