@@ -1017,7 +1017,7 @@ select {
 .profile-photo img {
   width: 90px;
   height: 125px;
-  display: flex;
+ 
 }
 
 /* ==== STAFF PROFILE (nested table) ==== */
