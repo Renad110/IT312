@@ -185,14 +185,10 @@ header {
 .testi-list {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
+  overflow: auto;
+  scrollbar-width: none;
   padding: 15px 5px;
   width: 100%;
-}
-
-/*  شريط التمرير */
-.testi-list::-webkit-scrollbar {
-  display: none; 			/* يخفيه في كروم وسفاري */
 }
 
 /*  الكروت بنفس حجم بطاقات الخدمات */
