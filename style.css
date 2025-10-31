@@ -29,7 +29,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -185,14 +184,10 @@ header {
 .testi-list {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
+  overflow: auto;
+  scrollbar-width: none;
   padding: 15px 5px;
   width: 100%;
-}
-
-/*  شريط التمرير */
-.testi-list::-webkit-scrollbar {
-  display: none; 			/* يخفيه في كروم وسفاري */
 }
 
 /*  الكروت بنفس حجم بطاقات الخدمات */
@@ -319,7 +314,6 @@ header {
   border-radius: 6px;
   width: 90%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  /*border: 1px solid #777;  يضيف خط حول كل سؤال */
   transition: 0.3s ease;
 }
 
@@ -346,9 +340,9 @@ header {
 
 /* السهم عند الفتح */
 .faq details[open] summary::after {
-  transform: translateY(-50%) rotate(180deg); /* سهم للأعلى */
+transform: translateY(-50%) rotate(180deg); /* سهم للأعلى */
 }
-
+  
 .faq details p {
   margin-top: 10px;
   padding: 10px 12px;
@@ -443,7 +437,7 @@ footer {
   margin-top: 0.5rem;
 }
 
-/* End of Home Page */
+/* End of Home-Page */
 
 /* ===== SP-DB Page Styling Amani Page ===== */
 
@@ -573,8 +567,6 @@ footer {
   margin: 40px auto;
 }
 
-
-
 /* sort bar */
 .sort-bar {
   display: flex;
@@ -584,8 +576,6 @@ footer {
   flex-wrap: wrap;
   gap: 10px;/* Add fixed space between items */
 }
-
-
 
 select {
   background-color: #1c2541;
@@ -684,7 +674,7 @@ select {
 }
 
 
-/* ====== PageSer-RegForm styles ======= */
+/* ====== Form styles ======= */
 
 .registration-form {
     background-color: #1c2541;
@@ -774,7 +764,7 @@ select {
         flex-direction: column;
     }
 }
-/* End of PageSer-RegForm styles */
+/* End Form styles */
 
 /* ===== ABOUT US PAGE ===== */
 
@@ -1021,7 +1011,7 @@ select {
 .profile-photo img {
   width: 90px;
   height: 125px;
-  display: flex;
+ 
 }
 
 /* ==== STAFF PROFILE (nested table) ==== */
