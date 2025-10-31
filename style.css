@@ -84,7 +84,7 @@ header {
   font-weight: 600;
   text-align: left;
   line-height: 1.7;
-  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  text-shadow: 0 0 8px rgb(0, 0, 0);
 }
 
 /* ===== SERVICES ===== */
@@ -829,8 +829,9 @@ select {
   flex-wrap: nowrap;     /* Keeps cards in one line */  
   gap: 25px; /* Space between cards */
   overflow : scroll;  
+  scrollbar-width: none;
   padding: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 8rem ;  /* Adds left and right margin */
 }
 
