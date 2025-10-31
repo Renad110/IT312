@@ -831,47 +831,45 @@ select {
   width: 140px; 
   height: 2px; 
   border: none;
-  background: #00aaff; 
-  margin: 10px auto 0; 
+  background: #00aaff; /* Blue line under title */
+  margin: 10px auto 0;  /* Centered horizontally */
 
 }
-
+/* ===== SHORT DESCRIPTION ===== */
 .about-desc {
   font-size: 1rem;
   margin-bottom: 3rem;
-  color: #9ca3af;
+  color: #9ca3af; /* Light gray text */
 }
 
-/* === FLEXBOX مثل السلايد === */
+/* === FLEXBOX === */
 .team-flex {
-  display: flex;
-  flex-wrap: nowrap;      /* يمنع نزول البطاقات لسطر جديد */
-  gap: 25px;
-  overflow-x: auto;       /* يسمح بالتمرير الأفقي */
+  display: flex; /* Aligns items in a row */
+  flex-wrap: nowrap;     /* Keeps cards in one line */  
+  gap: 25px; /* Space between cards */
+  overflow-x: auto;      /* Allows horizontal scrolling */
   padding: 1rem;
   justify-content: center;
-  margin: 0 8rem ;
-
-  
+  margin: 0 8rem ;  /* Adds left and right margin */
 }
 
 .team-card {
   background: #1c253a;
   border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 10px;
+  border-radius: 10px; /* Rounded corners */
   padding: 20px;
   width: 240px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: center; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Shadow under card */
 
 }
 
 .team-card img {
   width: 120px;
   height: 120px;
-  object-fit: cover;
-  border-radius: 15%;
-  margin-bottom: 15px;
+  object-fit: cover; /* Keeps image proportioned */
+  border-radius: 15%; /* Slightly rounded edges */
+  margin-bottom: 15px; /* Space under image */
 }
 
 .team-card h3 {
@@ -884,11 +882,11 @@ select {
   background:  #00aaff;
   border: none;
   color: #ffffff;
-  padding: 6px 14px;
+  padding: 6px 14px; 
   border-radius: 6px;
-  text-decoration: none;
+  text-decoration: none;  /* Removes underline */
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+ 
 }
 
 .profile-btn:hover {
@@ -897,15 +895,15 @@ select {
 
 /* === JOIN BUTTON === */
 .join-btn-container {
-  display: flex;
+  display: flex; /* enables flexbox layout*/
   justify-content: center;
   margin: 60px 0;
 }
 
 .join-btn {
-  display: inline-block;
+  display: inline-block; /*makes the button fits its corner*/
   width: min(200px, 60%);
-  padding: 14px 28px;
+  padding: 14px 28px; /*adds inner spaceing around the text*/
   background: #00aaff;
   color: #e5e7eb;
   border-radius: 12px;
@@ -915,7 +913,7 @@ select {
 }
 
 .join-btn:hover {
-   background-color: #0090dd;
+ background-color: #0090dd;
 }
 
 /* ===== JOIN OUR TEAM PAGE ===== */
