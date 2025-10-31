@@ -961,9 +961,8 @@ select {
   background:#0090dd; }
 /* ===== END JOIN PAGE ===== */
 
-/* ===============================
-   STAFF PROFILE PAGE
-   =============================== */
+/* ===== STAFF PROFILE PAGE ======= */
+
 .staff-profile {
   width: 85%; /* Takes 85% of the page width */
   max-width: 1200px;
@@ -977,7 +976,7 @@ select {
   color: #e5e7eb;
 }
 
-/* ==== TABLE ==== */
+/* -- TABLE -- */
 .profile-table {
   width: 100%;
   border-collapse: collapse; /* Removes gaps between table borders */
