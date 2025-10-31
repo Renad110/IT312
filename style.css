@@ -1058,15 +1058,15 @@ select {
 
 /* ===== C-DB (Customer Dashboard) ===== */
 
-.cdb-section {
+.cdb-section { /* add some space around the page */
   margin: 40px auto 60px;
 }
 
-.cdb-title {
+.cdb-title { /* centers the title and adds a little space below it */
   text-align: center;
   margin-bottom: 14px;
 }
-.cdb-hr {
+.cdb-hr { /* the blue line under the title for decoration */
   width: 120px;
   height: 2px;
   margin: 10px auto 0;
@@ -1074,51 +1074,52 @@ select {
   background: #00aaff;
 }
 
-.cdb-table-wrap {
+.cdb-table-wrap { /* if the table is too wide this makes it scroll sideways */
   overflow-x: auto;
 }
 
-.cdb-table {
+.cdb-table {/* sets the table size and adds space between rows*/
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 12px; 
 }
 
-.cdb-table thead th {
+.cdb-table thead th { /* styles the table header with dark background and light text */
   text-align: left;
   padding: 12px;
   background: #1c253a; 
   color: #ccc;
 }
 
-.cdb-table tbody tr {
+.cdb-table tbody tr { /* dark background for table row */
   background: #111c3b;
 }
 
-.cdb-table tbody td {
+.cdb-table tbody td { /* adds some padding for the cell  */
   padding: 16px 14px;
   color: #eee;
 }
 
+/* green color means the request was successful, red means it failed */
 .cdb-table td.price       { color: #ffffff; }
 .cdb-table td.status-ok   { color: #22c55e; }
 .cdb-table td.status-no   { color: #ef4444; }
 
-.cdb-actions {
+.cdb-actions { /*controls the buttons under the table */
   margin-top: 28px;
   text-align: center;
 }
-.cdb-actions button {
+.cdb-actions button { /* styles the buttons mekt blue color, smooth corners, and pointer cursor */
   background-color: #00aaff;
   color: white;
   border: none;
   border-radius: 6px;
   padding: 10px 24px;
   font-weight: 600;
-  cursor: pointer;
+  cursor: pointer; /* makes the mouse turn into a hand when hovering  */
 }
 
-.cdb-actions button:hover {
+.cdb-actions button:hover {/* when hovering over the button, make the color slightly darker */
   background-color: #0090dd;
 }
 
