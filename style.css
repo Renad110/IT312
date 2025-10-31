@@ -153,6 +153,8 @@ header {
   position: relative;
   width: 95%;          /* ffffffffffffffffffffff*/
   max-width: 940px;
+  margin: auto;
+
 }
 
 /*  أزرار الأسهم */
