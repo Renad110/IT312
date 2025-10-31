@@ -1,17 +1,9 @@
 /* Home Page Styles */
-:root {
-  --primary: #0a1f44;
-  --secondary: #132c5b;
-  --accent: #2b6ef2;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --card-bg: #1c253a;
-  --bg: #0b1629;
-}
 
+/* ===== BODY ===== */
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #0b1629; 
+  color: #e5e7eb; 
   font-family: "Tajawal", "Poppins", sans-serif;
   margin: 0;
   padding: 0;
@@ -22,7 +14,7 @@ body {
 /* ===== HEADER ===== */
 
 header {
-  background: var(--primary);
+  background: #0a1f44; 
   padding: 1rem 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
@@ -32,6 +24,7 @@ header {
   max-width: 1200px;
   margin: auto;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -46,7 +39,7 @@ header {
 }
 
 .center-nav a, .right-nav a {
-  color: var(--text);
+  color: #e5e7eb; 
   text-decoration: none;
   margin: 0 10px;
   font-size: 18px;
@@ -54,17 +47,17 @@ header {
 }
 
 .center-nav a.active , .center-nav a:hover , .right-nav a.active,  .right-nav a:hover {
-  color: var(--accent);
+  color: #0091dd; 
 }
 
 /* ===== BANNER ===== */
 
 .banner img {
-  width: 100%;
+  width: 90%;
   max-width: 1000px;
   height: auto;
   display: block;
-  margin: 4em auto 0 auto;
+  margin: 4rem auto;
   border-radius: 12px;
 }
 
@@ -77,19 +70,40 @@ header {
 
 .services h2 {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+}
+
+/* ===== خطوط تحت عناوين الأقسام ===== */
+.services hr{
+  width: 100%;
+  height: 1.5px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 5px;
+  margin: -.5rem auto 1rem auto;
+}
+
+.testimonials hr,
+.faq hr {
+  width: 100%;
+  height: 1.5px;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 5px;
+  margin: 2rem auto 1rem auto;
 }
 
 .service-cards {
-  margin-top: 2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 3rem;
   gap: 20px;
 }
 
 .card {
-  background: var(--card-bg);
+  background: #1c253a; 
   border-radius: 8px;
   width: 300px;
   overflow: hidden;
@@ -113,13 +127,14 @@ header {
 }
 
 .card-body p {
-  color: var(--muted);
+  color: #9ca3af;
   font-size: 0.9rem;
 }
 
 /* ===============================
    Testimonials
    =============================== */
+
 .testimonials {
   margin-top: 3rem;
   text-align: left
@@ -136,14 +151,15 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 77.5%;          /* نفس عرض الخدمات ffffffffffffffffffffff*/
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 95%;          /* ffffffffffffffffffffff*/
+  max-width: 940px;
+  margin: auto;
+
 }
 
-/* ✅ أزرار الأسهم */
+/*  أزرار الأسهم */
 .testi-nav {
-  background: var(--accent);
+  background: #00aaff; 
   color: white;
   border: none;
   border-radius: 10%;
@@ -158,46 +174,33 @@ header {
   transition: 0.3s;
 }
 .testi-nav:hover {
-  background: #1d4ed8;
+  background: #0090dd;
 }
-.testi-nav.left { left: -60px; } 
-.testi-nav.right { right: -60px; }
-
-/* ✅ الصف الأفقي للكروت */
+.testi-nav.left { 
+  left: -60px; 
+}
+.testi-nav.right { 
+  right: -60px; 
+}
+/*  الصف الأفقي للكروت */
 .testi-list {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  scroll-behavior: smooth;
   padding: 15px 5px;
   width: 100%;
 }
 
-/* ✅ شريط التمرير */
+/*  شريط التمرير */
 .testi-list::-webkit-scrollbar {
-    display: none; 			/* يخفيه في كروم وسفاري */
+  display: none; 			/* يخفيه في كروم وسفاري */
 }
 
-  /*height: 8px;
-
-}
-.testi-list::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 10px;
-}
-.testi-list::-webkit-scrollbar-track {
-  background: var(--primary);
-}
-
-*/
-
-
-
-/* ✅ الكروت بنفس حجم بطاقات الخدمات */
+/*  الكروت بنفس حجم بطاقات الخدمات */
 .testi-card {
-  width: 265px; 			/*fffffffffffffffff*/
+  width: 265px;
   height: 190px;
-  background: var(--card-bg);
+  background: #1c253a; 
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -254,7 +257,7 @@ header {
 
 /* اسم الخدمه */
 .service-name {
-  color: var(--accent);
+  color: #0090dd; 
   font-weight: bold;
   margin: 15px 0px -2px 0px;
   font-size: 0.8rem;
@@ -263,7 +266,7 @@ header {
 /* النص داخل الكرت */
 .testi-text {
   margin-top: 10px;
-  color: var(--text);
+  color: #e5e7eb; 
   border: 1px dashed #ccc;
   border-radius: 6px;
   padding: 10px;
@@ -294,12 +297,10 @@ header {
   transition: 0.3s;
 }
 .dot.active {
-  background: var(--accent);
+  background: #0090dd; 
 }
 
-
 /* ===== FAQ ===== */
-
 .faq {
   margin-top: 4em;
   text-align: left;
@@ -310,20 +311,20 @@ header {
   margin-bottom: 1rem;
 }
 
-/* ✅ تصميم كل سؤال */
+/*  تصميم كل سؤال */
 .faq details {
-  background: var(--card-bg);
-  color: var(--text);
+  background: #1c253a; 
+  color: #e5e7eb; 
   margin: 15px auto;
   padding: 12px 10px;
   border-radius: 6px;
-  width: 75%;
+  width: 90%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   /*border: 1px solid #777;  يضيف خط حول كل سؤال */
   transition: 0.3s ease;
 }
 
-/* ✅ شكل السهم باليمين */
+/*  شكل سهم الاسئلة باليمين */
 .faq summary {
   font-weight: bold;
   font-size: 1.05rem;
@@ -340,7 +341,7 @@ header {
   right: 5px;
   top: 50%;
   transform: translateY(-50%) rotate(0deg);
-  color: var(--accent);
+  color: #00aaff; 
   transition: transform 0.3s ease;
 }
 
@@ -353,17 +354,15 @@ header {
   margin-top: 10px;
   padding: 10px 12px;
   border-radius: 5px;
-  color: var(--muted);
-  background: var(--card-bg); 
+  color: #9ca3af; 
+  background: #1c253a; 
 }
 
-
 /* ===== FOOTER ===== */
-
 footer {
   margin-top: 4em;
-  background-color: var(--primary);
-  color: var(--text);
+  background-color: #0a1f44; 
+  color: #e5e7eb; 
   padding: 2rem 0;
   text-align: center;
   width: 100%;
@@ -374,7 +373,7 @@ footer {
 
 .footer-sections {
   display: flex;
-  justify-content: center;        /* توسيط الأقسام */
+  justify-content: center; /* توسيط الأقسام */
   align-items: flex-start;
   flex-wrap: wrap;
   width: 80%;
@@ -404,14 +403,14 @@ footer {
 .footer-left h4,
 .footer-right h4 {
   font-size: 1.1rem;
-  color: var(--accent);
+  color: #00aaff; 
   margin-bottom: 0.8rem;
 }
 
 .footer-center a,
 .footer-left a,
 .footer-right a {
-  color: var(--text);
+  color: #e5e7eb; 
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -419,7 +418,7 @@ footer {
 .footer-center a:hover,
 .footer-left a:hover,
 .footer-right a:hover {
-  color: var(--accent);
+  color: #0090dd;
   transform: scale(1.05);
 }
 
@@ -431,13 +430,13 @@ footer {
 }
 
 .social-icons a {
-  color: var(--text);
+  color: #e5e7eb; 
   font-size: 1.3rem;
   transition: 0.3s;
 }
 
 .social-icons a:hover {
-  color: var(--accent);
+  color: #0090dd; 
 }
 
 .footer-line {
@@ -454,8 +453,8 @@ footer {
   margin-top: 0.5rem;
 }
 
-
 /* End of Home Page */
+
 /* ===== SP-DB Page Styling Amani Page ===== */
 
 .spdb-header {
@@ -474,83 +473,129 @@ footer {
   margin-bottom: 15px;
 }
 
+.spdb-table-content {
+  margin-top: 30px;  
+  border-radius: 12px;        
+  overflow: hidden;           
+  margin-bottom: 25px;        
+}
+
+
+.service-card{
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(43,110,242,0.3);
+}
+
 .service-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 20px; /* 🔹 يفصل كل صف عن الثاني بمسافة */
+  border-collapse: collapse;
 }
 
 .service-table th {
+  color: #ffffff;
   text-align: left;
-  background-color: #0e1630;
-  padding: 14px;
-  font-size: 16px;
-  color: #ccc;
+  font-size: 19px;
+  padding-left: 30px;
 }
 
-.service-table tr {
-  background-color: #111c3b; /* 🔹 لون الخلفية لكل كرت */
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.service-table tr:hover {
-  background-color: #16244d;
+.service-table tr:hover th{
+  background-color: #24304d;
+  
 }
 
 .service-table td {
-  padding: 28px 20px; /* 🔹 زدت المساحة الداخلية عشان يصير الكرت أطول */
+  font-size: 18px;
+  color: #ffffff;
+  padding: 22px 20px;
   vertical-align: middle;
-  color: #eee;
+  text-align: justify;
+}
+
+/* To make sure that the column widths are consistent across all tables */
+.service-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* To ensure consistent column widths */
+.service-table th:nth-child(1),
+.service-table td:nth-child(1) {
+  width: 40%;
+}
+
+.service-table th:nth-child(2),
+.service-table td:nth-child(2) {
+  width: 15%;
+}
+
+.service-table th:nth-child(3),
+.service-table td:nth-child(3) {
+  width: 45%;
+}
+
+/* To control text alignment within the header */
+
+/* The second column (Price) */
+.service-table th:nth-child(2) {
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* The third column (Description) */
+.service-table th:nth-child(3) {
+  text-align: left;
+}
+
+.service-table tr:hover td {
+  background-color: #24304d;
+  transition: 0.3s;
+  
+}
+
+.service-table tr:hover {
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(43,110,242,0.3);
 }
 
 .service-table img {
-  width: 110px;   /* 🔹 كبرت الصورة */
-  height: 110px;  /* 🔹 كبرت الصورة */
+  width: 100px;  
+  height: 100px; 
   object-fit: cover;
   margin-right: 20px;
   border-radius: 10px;
   vertical-align: middle;
 }
 
-
 .spdb-buttons {
   text-align: center;
   margin-top: 45px;
 }
 
-.spdb-buttons button {
-  background-color: transparent;
-  border: 1.5px solid #fff;
-  color: #fff;
+.spdb-btn {
+  background-color: #00aaff;
+  color: white;
   padding: 10px 22px;
-  margin: 0 20px;
+  margin: 0 20px; 
   font-size: 15px;
+  font-weight: 600;
   border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.spdb-buttons button:hover {
-  background-color: #f54e00;
-  border-color: #f54e00;
-}
-
-.spdb-buttons a {
+  display: inline-block; 
   text-decoration: none;
-  color: inherit;
+}
+
+.spdb-btn:hover {
+  background-color: #0090dd;
 }
 /* End of Sp-dp Page */
 
 /* ======= Service page styles ======== */
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #0b132b;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
 
 .container {
   width: 90%;
@@ -558,19 +603,27 @@ body {
   margin: 40px auto;
 }
 
-
+/* breadcrumb */
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 25px;
+}
 
 /* sort bar */
 .sort-bar {
   display: flex;
-  justify-content: space-between;/* Spread items across the container */
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 35px;
   flex-wrap: wrap;
-  gap: 10px;/* Add fixed space between items */
+  gap: 10px;/* شيكككككككككككككككككي*/
 }
 
-
+.sort-left label {
+  margin-right: 8px;
+  color: #ccc;
+}
 
 select {
   background-color: #1c2541;
@@ -579,27 +632,19 @@ select {
   padding: 7px 12px;
   border-radius: 6px;
   font-size: 0.9rem;
-  cursor: pointer;/* Change mouse cursor to a hand when hovering (clickable) */
+  cursor: pointer;
 }
 
 .bookmark-btn {
   background-color: #1c2541;
-  text-decoration: none;
   border: 1px solid #3a506b;
   color: #fff;
   padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease; /* شيكككككككككككككككككي*/
 }
-.bookmark-btn-active {
-  background-color: #3a506b;
-  text-decoration: none;
-  border: 1px solid #3a506b;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-}
+
 .bookmark-btn:hover {
   background-color: #3a506b;
 }
@@ -608,18 +653,18 @@ select {
 .services {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* fixed space between service cards */
+  gap: 30px; /* شيكككككككككككككككككي*/
 }
 
 .service-card {
   background-color: #1c2541;
   border-radius: 14px;
   padding: 20px;
-  transition: 0.3s ease;/* Smooth animation on hover */
+  transition: 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-3px); /* Move the button up slightly on hover */
+  transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
@@ -639,7 +684,8 @@ select {
 .service-header i {
   font-size: 1.1rem;
   color: #00aaff;
-  cursor: pointer;
+  cursor: pointer;  /* شيكككككككككككككككككي*/
+  transition: color 0.3s ease;
 }
 
 .service-header i:hover {
@@ -649,8 +695,8 @@ select {
 .service-card img {
   width: 100%;
   height: 230px;
-  object-fit: cover;
-  border-radius: 10px; 
+  object-fit: cover;  /* شيكككككككككككككككككي*/
+  border-radius: 10px; /* شيكككككككككككككككككي*/
   margin-bottom: 15px;
 }
 
@@ -661,10 +707,15 @@ select {
   line-height: 1.5;
 }
 
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .price {
   font-weight: bold;
-  color: #00aaff;
+  color: #ffffff;
   font-size: 1.1rem;
 }
 
@@ -739,8 +790,6 @@ select {
     background-color: #0091dd;
 }
 
-
-
 /* Form row for gender and age */
 .form-row {
     display: flex;
@@ -761,211 +810,210 @@ select {
         flex-direction: column;
     }
 }
-
+/* End of PageSer-RegForm styles */
 
 /* ===== ABOUT US PAGE ===== */
+
 .about-section {
   width: 85%;
   max-width: 1200px;
   margin: 3rem auto 5rem auto;
   text-align: center;
-  color: var(--text);
-}
-
-.breadcrumb {
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
-
-.breadcrumb a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.breadcrumb span {
-  color: var(--accent);
+  color: #e5e7eb;
 }
 
 .about-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--text);
+  color: #e5e7eb;
 }
+.about-us-hr{
+  width: 140px; 
+  height: 2px; 
+  border: none;
+  background: #00aaff; /* Blue line under title */
+  margin: 10px auto 0;  /* Centered horizontally */
 
+}
+/* ===== SHORT DESCRIPTION ===== */
 .about-desc {
   font-size: 1rem;
   margin-bottom: 3rem;
-  color: var(--muted);
+  color: #9ca3af; /* Light gray text */
 }
 
-/* === FLEXBOX مثل السلايد === */
+/* === FLEXBOX === */
 .team-flex {
-  display: flex;
+  display: flex; /* Aligns items in a row */
+  flex-wrap: nowrap;     /* Keeps cards in one line */  
+  gap: 25px; /* Space between cards */
+  overflow-x: auto;      /* Allows horizontal scrolling */
+  padding: 1rem;
   justify-content: center;
-  flex-wrap: wrap;  /* يسمح لهم ينزلون صف ثاني لو ضاق المكان */
-  gap: 25px;        /* المسافة بين الكروت */
+  margin: 0 8rem ;  /* Adds left and right margin */
 }
 
 .team-card {
-  background: var(--card-bg);
+  background: #1c253a;
   border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 10px;
+  border-radius: 10px; /* Rounded corners */
   padding: 20px;
   width: 240px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
+  text-align: center; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Shadow under card */
 
-.team-card:hover {
-  transform: translateY(-5px);
 }
 
 .team-card img {
   width: 120px;
   height: 120px;
-  object-fit: cover;
-  border-radius: 15%;
-  margin-bottom: 15px;
+  object-fit: cover; /* Keeps image proportioned */
+  border-radius: 15%; /* Slightly rounded edges */
+  margin-bottom: 15px; /* Space under image */
 }
 
 .team-card h3 {
   margin-bottom: 10px;
-  color: var(--text);
+  color: #e5e7eb;
 }
 
 .profile-btn {
   display: inline-block;
-  background:  #4a7fc1;  ;
+  background:  #00aaff;
   border: none;
   color: #ffffff;
-  padding: 6px 14px;
+  padding: 6px 14px; 
   border-radius: 6px;
-  text-decoration: none;
+  text-decoration: none;  /* Removes underline */
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+ 
 }
 
 .profile-btn:hover {
-  background-color: #3b6da8;
+  background-color: #0090dd;
 }
 
 /* === JOIN BUTTON === */
 .join-btn-container {
-  display: flex;
+  display: flex; /* enables flexbox layout*/
   justify-content: center;
   margin: 60px 0;
 }
 
 .join-btn {
-  display: inline-block;
-  width: min(520px, 90%);
-  padding: 14px 28px;
-  background: #1d4ed8;
-  color: var(--text);
-
- 
+  display: inline-block; /*makes the button fits its corner*/
+  width: min(200px, 60%);
+  padding: 14px 28px; /*adds inner spaceing around the text*/
+  background: #00aaff;
+  color: #e5e7eb;
   border-radius: 12px;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
-  transition: background-color .2s ease, border-color .2s ease;
 }
 
 .join-btn:hover {
-   background-color: #3b6da8;
-  
-}
-/* ===============================
-   JOIN OUR TEAM PAGE
-   =============================== */
-
-.join-team {
-  width: 85%;
-  max-width: 800px;
-  margin: 3rem auto 5rem auto;
-  text-align: left;
-  color: var(--text);
+ background-color: #0090dd;
 }
 
-.join-team h1 {
+/* ===== JOIN OUR TEAM PAGE ===== */
+
+.join-wrapper {
+  margin: 40px auto 60px;
+  background: #1a2240;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  max-width: 900px;
+}
+
+.join-header { 
+  text-align: center; 
+  margin-bottom: 25px; 
+}
+.join-title { 
   text-align: center;
-  margin-bottom: 2rem;
-  color: var(--text);
-  font-size: 1.8rem;
+  margin-top: 40px;
 }
 
-/* ===== FORM ===== */
-.join-form {
-  background: var(--card-bg); /* نفس خلفية الكرت في About Us */
-  padding: 2.5rem;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.join-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text);
-}
-
-/* ===== INPUT FIELDS ===== */
-.join-form input[type="text"],
-.join-form input[type="email"],
-.join-form input[type="date"],
-.join-form input[type="file"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: rgba(255,255,255,0.1);
-  color: white;
-  margin-bottom: 20px;
-}
-
-.join-form input::placeholder {
-  color: rgba(255,255,255,0.6);
-}
-
-/* ===== ROWS (SPACING) ===== */
-.form-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  flex: 1;
-}
-
-/* ===== SUBMIT BUTTON ===== */
-.submit-btn {
-  display: block;
-  margin: 2rem auto 0 auto;
-  background: #1d4ed8 ;
-  color: white;
+.join-hr{
+  width: 140px; 
+  height: 2px; 
   border: none;
-  padding: 10px 45px;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+  background: #00aaff; 
+  margin: 10px auto 0; 
 }
 
-.submit-btn:hover {
-  background-color: #3b6da8;
+.join-row {
+  display:flex; 
+  gap:25px; 
+  flex-wrap:wrap;
+  margin-bottom:20px; 
+  justify-content:space-between;
 }
+
+.join-group { 
+  flex:1; 
+  min-width:250px; 
+}
+
+.join-group label { 
+  display:block; 
+  margin-bottom:6px; 
+  color:#e5e7eb; }
+
+.join-group input,
+.join-group textarea,
+.join-group select {
+  width:100%; 
+  background:#0e1426; 
+  color:#fff;
+  border:1.5px solid #3e4960; 
+  border-radius:6px;
+  padding:12px; 
+  font-size:13px; 
+  box-sizing:border-box;
+}
+
+.join-group input:focus,
+.join-group textarea:focus {
+  outline:none; 
+  border-color:#ffff;
+}
+
+
+.join-group textarea { 
+  resize:vertical; 
+  min-height:100px; 
+}
+
+/* Buttons */
+.join-actions { 
+  text-align:center; 
+  margin-top:25px;
+ }
+ 
+.join-actions button {
+  background:#00aaff; 
+  color:#fff; 
+  border:none;
+  border-radius:6px; 
+  padding:10px 24px;
+  font-weight:600; 
+  margin:0 8px;
+  font-size:16px; 
+  transition:0.3s;
+}
+.join-actions button:hover { 
+  background:#0090dd; }
+
+/* ===== END JOIN PAGE ===== */
+
 
 /* ===============================
    STAFF PROFILE PAGE
    =============================== */
+
 .staff-profile {
   width: 85%;
   max-width: 1200px;
@@ -976,7 +1024,7 @@ select {
 .staff-profile h1 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
-  color: var(--text);
+  color: #e5e7eb;
 }
 
 /* ==== TABLE ==== */
@@ -997,8 +1045,8 @@ select {
 }
 
 .profile-table th {
-  background: var(--secondary);
-  color: var(--text);
+  background: #132c5b;
+  color: #e5e7eb;
   font-weight: 600;
   text-align: center;
 }
@@ -1033,6 +1081,7 @@ select {
 
 
 /* ===== C-DB (Customer Dashboard) ===== */
+
 .cdb-section {
   margin: 40px auto 60px;
 }
@@ -1046,7 +1095,7 @@ select {
   height: 2px;
   margin: 10px auto 0;
   border: none;
-  background: var(--accent); 
+  background: #00aaff;
 }
 
 .cdb-table-wrap {
@@ -1062,7 +1111,7 @@ select {
 .cdb-table thead th {
   text-align: left;
   padding: 12px;
-  background: #0e1630; 
+  background: #1c253a; 
   color: #ccc;
 }
 
@@ -1075,7 +1124,7 @@ select {
   color: #eee;
 }
 
-.cdb-table td.price       { color: #00aaff; }
+.cdb-table td.price       { color: #ffffff; }
 .cdb-table td.status-ok   { color: #22c55e; }
 .cdb-table td.status-no   { color: #ef4444; }
 
@@ -1106,7 +1155,7 @@ select {
 
 .eval-hr {
   width: 140px; height: 2px; border: none;
-  background: var(--accent); margin: 10px auto 0;
+  background: #00aaff; margin: 10px auto 0;
 }
 
 .rating-types .service-option {
@@ -1114,10 +1163,16 @@ select {
   align-items: center;
   gap: 10px;
 }
+#feedback {
+  background-color: #041127;
+  border: 1px #3e4960  solid  ;
+  border-radius: 6px;
+  color: white;
+}
 
 .rating-types .service-option input[type="range"] {
   width: 250px;
-  accent-color: var(--accent); 
+  accent-color: #00aaff;
 }
 
 #ratingValue {
@@ -1126,7 +1181,7 @@ select {
 
 /* === (Submit and Reset botton ) === */
 .eval-actions button {
-  background-color: #00aaff; 
+  background-color: #00aaff;
   color: white;
   border: none;
   border-radius: 6px;
@@ -1136,32 +1191,39 @@ select {
 }
 
 .eval-actions button:hover {
-  background-color: #0090dd; 
+  background-color: #0090dd;
 }
 .eval-section textarea {
-  background-color: var(--input-bg, #111c3b);
+  background-color: #111c3b;
   color: white;
 }
-
-
-
 
 /* ===== end Evaluation Page ===== */
 
-
-
 /* ===== Request a Service Page ===== */
-.req-section { margin: 40px auto 60px; }
 
-.req-title { text-align: center; margin-bottom: 14px; }
+.req-section {
+   margin: 40px auto 60px; 
+  }
+
+.req-title { 
+  text-align: center; 
+  margin-bottom: 14px; 
+}
 .req-hr {
-  width: 160px; height: 2px; border: none;
-  background: var(--accent); margin: 10px auto 0;
+  width: 160px; 
+  height: 2px; 
+  border: none;
+  background: #00aaff; 
+  margin: 10px auto 0;
 }
 .req-section textarea {
-  background-color: var(--input-bg, #111c3b);
+  background-color: #041127;
+  border: 1px #3e4960  solid  ;
+  border-radius: 10px;
   color: white;
 }
+
 .req-actions button {
   background-color: #00aaff;
   color: white;
@@ -1176,7 +1238,216 @@ select {
   background-color: #0090dd;
 }
 
-.req-actions { margin-top: 20px; text-align: center; }
+.req-actions { 
+  margin-top: 20px; 
+  text-align: center; 
+}
 /* ===== end Request a Service Page ===== */
 
+/* ===== Add Service Page ===== */
+.add-title {
+  text-align: center;
+   margin-top: 40px;
+}
 
+.service-hr {
+  width: 140px;
+  height: 2px;
+  margin: 10px auto 0;
+  border: none;
+  background: #00aaff;
+}
+
+.req-section textarea {
+  background-color: #041127;
+  border: 1px #3e4960  solid  ;
+  border-radius: 10px;
+  color: white;
+}
+.container.add-service {
+  background-color: #1c2541;
+  padding: 35px;
+  border-radius: 12px;
+  max-width: 700px; 
+  margin: 10px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.spdb-buttons .spdb-btn {
+  color: white;
+  padding: 16px 30px;
+  margin: 0 20px; 
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  display: inline-block; 
+  text-decoration: none; 
+}
+/* ===== end Add Service Page ===== */
+
+/* ===== Manage Staff Page ===== */
+.staff-manager {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.staff-title {
+  margin-bottom: 10px;
+}
+
+.staff-line {
+  width: 140px;
+  height: 2px;
+  background-color: #009dff;
+  border: none;
+}
+
+/* ===== Staff Cards ===== */
+.staff-container {
+  background-color: #1c2541;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  padding: 25px 25px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.staff-card-Man {
+  display: flex;
+  align-items: center;
+  background-color: #253156;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  transition: 0.2s;
+}
+
+.staff-card-Man:hover {
+  background-color: #163266;
+  transform: translateY(-3px);
+}
+
+.staff-checkbox {
+  width: 22px;
+  height: 22px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.staff-photo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.staff-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== Add Form Section ===== */
+.add-section {
+  background-color: #1c2541;
+  border-radius: 15px;
+  max-width: 700px;
+  margin-top: 10px;
+  padding: 30px 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.manage-hr {
+  width: 140px;
+  height: 2px;
+  margin: 10px auto 0;
+  border: none;
+  background: #00aaff;
+}
+
+.add-staff-container {
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.add-staff-title {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.add-form input {
+  width: auto;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #3e4960;
+  background-color: #041127;
+  color: white;
+  font-size: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row div {
+  flex: 1;
+}
+
+.add-btn {
+  background-color: #00aaff;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  align-self: center;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #0090dd;
+}
+
+.staff-divider-Man {
+  width: 200px;     
+  height: 2px;
+  background-color: #fdfdfd;
+  border: none;
+  margin: 40px auto 50px;
+}
+
+.delete-btn-Man {
+  background-color: #d84343;
+  border: none;
+  padding: 10px 22px;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+  margin-right: 550px;
+  display: inline-block; 
+  text-align: left;
+}
+
+.delete-btn-Man:hover {
+  background-color: #b73232;
+}
+/* ===== end Manage Staff Page ===== */

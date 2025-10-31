@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KSArena | SP-DB</title>
+  <title>KSArena | Provider</title>
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -14,7 +14,7 @@
   <header>
     <div class="container nav">
       <div class="logo">
-        <img src="images/LongLogo.png" width="170" height="65" alt="Logo">
+        <img src="images/LongLogo.png" width="170" height="65" alt="Logo KSArena">
       </div>
 
       <nav class="center-nav">
@@ -24,8 +24,8 @@
       </nav>
 
       <nav class="right-nav">
-        <a href="sp-db.html" class="active">SP-DB</a> |
-        <a href="C-DB.html">C-DB</a>
+        <a href="C-DB.html">Customer</a> |
+        <a href="sp-dp.html" class="active">Provider</a>
       </nav>
     </div>
   </header>
@@ -34,13 +34,13 @@
   <!-- Content -->
   <section class="container" style="margin-bottom: 80px;">
     <div class="spdb-header" style="margin-bottom: 25px;">
-      <h2>Service Provider Dashboard</h2>
-      <h3>List of Tournaments and Sessions</h3>
+      <h2 style="text-align: center;">List of Tournaments and Sessions</h2><br><br>
       <hr>
     </div>
 
-    <div class="spdb-content" style="margin-top: 30px;">
-      <table class="service-table" style="width: 100%; border-spacing: 0 15px;">
+    <div class="spdb-table-content">
+      <div class="service-card">
+      <table class="service-table">
         <thead>
           <tr>
             <th>Service Name</th>
@@ -48,39 +48,58 @@
             <th>Description</th>
           </tr>
         </thead>
+        </table>
+      </div>
+
+      <div class="service-card">
+      <table class="service-table">
         <tbody>
           <tr>
             <td>
-              <img src="images/service1.png" alt="Service 1" width="100"><br>
-              <strong>Card title</strong>
+              <strong>Tournaments</strong><br><br>
+              <img src="images/tourtment.renad.jpg" alt="Tournament">
             </td>
-            <td>$$$</td>
-            <td>Greyhound divisively hello coldly wonderfully marginally far upon excluding.</td>
+            <td> <strong>300SR</strong></td>
+            <td>Join the action! Explore exciting tournaments and sign up to compete against other players. Test your skills, climb the ranks, and become a champion in the esports community.</td>
           </tr>
+        </table>
+      </div>
+
+      <div class="service-card">
+      <table class="service-table">
+        <tbody>
           <tr>
             <td>
-              <img src="images/service2.png" alt="Service 2" width="100"><br>
-              <strong>Card title</strong>
+              <strong>Training Sessions</strong><br><br>
+              <img src="images/training.renad.jpg" alt="Training Sessions"><br>
             </td>
-            <td>$$$</td>
-            <td>Greyhound divisively hello coldly wonderfully marginally far upon excluding.</td>
-          </tr>
-          <tr>
-            <td>
-              <img src="images/service3.png" alt="Service 3" width="100"><br>
-              <strong>Card title</strong>
-            </td>
-            <td>$$$</td>
-            <td>Greyhound divisively hello coldly wonderfully marginally far upon excluding.</td>
+            <td> <strong>500SR</strong></td>
+            <td>Level up your gameplay! Book a session with professional coaches and receive personalized guidance to improve your strategies, reactions, and overall performance.</td>
           </tr>
         </tbody>
       </table>
+      </div>
+
+      <div class="service-card">
+      <table class="service-table">
+        <tbody>
+          <tr>
+            <td>
+              <strong>Join a Team</strong><br><br>
+              <img src="images/joinG.renad.jpg" alt="Join a Team"><br>
+            </td>
+            <td> <strong>250SR</strong></td>
+            <td>Team up and play together! Join a team, and participate in tournaments as a united squad.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
     </div>
 
     <div class="spdb-buttons" style="margin-top: 50px; text-align: center;">
-      <button><a href="add-service.html">Add a New Service</a></button>
-      <button><a href="manage-staff.html">Manage Staff Members</a></button>
-    </div>
+  <a href="AddServices.html" class="spdb-btn">Add a New Service</a>
+  <a href="ManageStaff.html" class="spdb-btn">Manage Staff Members</a>
+</div>
   </section>
 
 
@@ -88,14 +107,14 @@
   <footer>
     <div class="container footer-sections">
       <div class="footer-left">
-        <img src="images/Logo2.png" width="100" height="105" alt="Logo">
+        <img src="images/Logo2.png" width="100" height="105" alt="KSArena logo">
       </div>
 
       <div class="footer-divider"></div>
 
       <div class="footer-center">
         <h3>Contact Us</h3>
-        <a href="#">📞 +966xxxxxxxx</a><br>
+        <p>📞 +966xxxxxxxx</p>
         <a href="mailto:KSArena@gmail.com">📧 KSArena@gmail.com</a>
       </div>
 
