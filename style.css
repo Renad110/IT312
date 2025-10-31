@@ -829,8 +829,9 @@ select {
   flex-wrap: nowrap;     /* Keeps cards in one line */  
   gap: 25px; /* Space between cards */
   overflow : scroll;  
+  scrollbar-width: none;
   padding: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 8rem ;  /* Adds left and right margin */
 }
 
