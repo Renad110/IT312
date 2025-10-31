@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arena KSA | Join Our Team</title>
+  <title>KSArena | Join Our Team</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
@@ -36,22 +36,24 @@
         <h2 class="join-title">Join Our Team</h2>
         <hr class ="join-hr">
       </div>
+        <!-- Outer container (card-style wrapper for the form) -->
        <section class="container join-wrapper">
 
       <form class="join-form" action="#" method="post" enctype="multipart/form-data">
-
+      <!-- Row 1: Full Name + Email -->
         <div class="join-row">
+       <!-- join-group: holds label + input for full name  -->
           <div class="join-group">
             <label for="joinName">Full Name:</label>
             <input type="text" id="joinName" name="joinName" placeholder="Enter your full name" required>
           </div>
-
+          <!-- join-group: holds label + input for full email  -->
           <div class="join-group">
             <label for="joinEmail">Email:</label>
             <input type="email" id="joinEmail" name="joinEmail" placeholder="example@domain.com" required>
           </div>
         </div>
-
+       <!-- Row 2: DoB + Photo -->
         <div class="join-row">
           <div class="join-group">
             <label for="joinDob">Date of Birth (DoB):</label>
@@ -63,7 +65,7 @@
             <input type="file" id="joinPhoto" name="joinPhoto" accept="image/*" required>
           </div>
         </div>
-
+      <!-- Row 3: Area of Expertise + Skills -->
         <div class="join-row">
           <div class="join-group">
             <label for="joinExpertise">Area of Expertise:</label>
@@ -75,21 +77,21 @@
             <input type="text" id="joinSkills" name="joinSkills" placeholder="e.g., HTML, CSS, Teamwork"  required>
           </div>
         </div>
-
+        <!-- Full-width field: Education -->
         <div class="join-group">
           <label for="joinEducation">Education:</label>
           <input type="text" id="joinEducation" name="joinEducation" placeholder="Your highest qualification" required>
         </div>
         <br>
-
+         <!-- Full-width field: Message -->
         <div class="join-group">
           <label for="joinMessage">Message:</label>
           <textarea id="joinMessage" name="joinMessage" rows="5" placeholder="Write a short message about why you want to join..." required ></textarea>
         </div>
 
-        <div class="join-actions">
-          <button type="submit">Submit</button>
-          <button type="reset">Reset</button>
+        <div class="spdb-buttons req-actions">
+          <button type="submit" class="spdb-btn">Submit</button>
+          <button type="reset" class="spdb-btn">Reset</button>
         </div>
       </form>
     </section>

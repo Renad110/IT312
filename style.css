@@ -145,7 +145,6 @@ header {
   margin-bottom: 1rem;
 }
 
-/* ✅ الحاوية العامة */
 .testi-wrap {
   display: flex;
   align-items: center;
@@ -157,7 +156,7 @@ header {
 
 }
 
-/*  أزرار الأسهم */
+/*  Pointer Navigation */
 .testi-nav {
   background: #00aaff; 
   color: white;
@@ -382,15 +381,6 @@ footer {
   position: relative;
 }
 
-/* الخط الفاصل الأنيق */
-.footer-divider {
-  width: 1.5px; /* تخليه أنحف أو أسمك حسب رغبتك */
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.723); /* أبيض شفاف واضح */
-  margin: 0 35px;
-  border-radius: 2px;
-}
-
 .footer-left,
 .footer-center,
 .footer-right {
@@ -493,21 +483,36 @@ footer {
   box-shadow: 0 6px 20px rgba(43,110,242,0.3);
 }
 
+/* ==== Service Table Column Layout ==== */
+
+.col-name {
+  width: 40%;
+  text-align: left;
+}
+
+.col-price {
+  width: 15%;
+  text-align: center;
+}
+
+.col-desc {
+  width: 45%;
+  text-align: left;
+}
+
+/* ===== Service Table ===== */
 .service-table {
   width: 100%;
   border-collapse: collapse;
+  color: #fff;
+  table-layout: fixed;
 }
 
-.service-table th {
-  color: #ffffff;
-  text-align: left;
-  font-size: 19px;
-  padding-left: 30px;
-}
-
-.service-table tr:hover th{
-  background-color: #24304d;
-  
+.service-table th { 
+  color: #ffffff; 
+  text-align: left; 
+  font-size: 19px; 
+  padding-left: 30px; 
 }
 
 .service-table td {
@@ -517,62 +522,26 @@ footer {
   vertical-align: middle;
   text-align: justify;
 }
-
-/* To make sure that the column widths are consistent across all tables */
-.service-table {
-  table-layout: fixed;
-  width: 100%;
-}
-
-/* To ensure consistent column widths */
-.service-table th:nth-child(1),
-.service-table td:nth-child(1) {
-  width: 40%;
-}
-
-.service-table th:nth-child(2),
-.service-table td:nth-child(2) {
-  width: 15%;
-}
-
-.service-table th:nth-child(3),
-.service-table td:nth-child(3) {
-  width: 45%;
-}
-
-/* To control text alignment within the header */
-
-/* The second column (Price) */
-.service-table th:nth-child(2) {
-  text-align: left;
-  padding-left: 10px;
-}
-
-/* The third column (Description) */
-.service-table th:nth-child(3) {
-  text-align: left;
-}
-
-.service-table tr:hover td {
-  background-color: #24304d;
-  transition: 0.3s;
-  
-}
-
-.service-table tr:hover {
-  cursor: pointer;
+.service-table tr:hover { 
+  cursor: pointer; 
   box-shadow: 0 6px 20px rgba(43,110,242,0.3);
 }
+/* Hover effect */
+.service-table tr:hover td{
+  background-color: #24304d;
+  transition: 0.3s;
+}
 
+/*The images inside the table*/
 .service-table img {
   width: 100px;  
   height: 100px; 
   object-fit: cover;
-  margin-right: 20px;
-  border-radius: 10px;
-  vertical-align: middle;
+  margin-top: 8px;
+  border-radius: 8px;
 }
 
+/* ===== Buttons Section ===== */
 .spdb-buttons {
   text-align: center;
   margin-top: 45px;
@@ -593,6 +562,7 @@ footer {
 .spdb-btn:hover {
   background-color: #0090dd;
 }
+
 /* End of Sp-dp Page */
 
 /* ======= Service page styles ======== */
@@ -911,14 +881,14 @@ select {
 }
 
 /* ===== JOIN OUR TEAM PAGE ===== */
-
+/* ===== JOIN PAGE WRAPPER (card container) ===== */
 .join-wrapper {
-  margin: 40px auto 60px;
+  margin: 40px auto 60px;  /* Top/bottom spacing, center horizontally */
   background: #1a2240;
-  padding: 35px;
+  padding: 35px;  /* Inner padding around the form */
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  max-width: 900px;
+  max-width: 900px; /* Limit the max width of the card */
 }
 
 .join-header { 
@@ -929,7 +899,7 @@ select {
   text-align: center;
   margin-top: 40px;
 }
-
+/* Blue underline below the title */
 .join-hr{
   width: 140px; 
   height: 2px; 
@@ -937,28 +907,28 @@ select {
   background: #00aaff; 
   margin: 10px auto 0; 
 }
-
+/* A row that holds two columns (left/right) */
 .join-row {
-  display:flex; 
+  display:flex;  /* Arrange children in a row */
   gap:25px; 
-  flex-wrap:wrap;
-  margin-bottom:20px; 
-  justify-content:space-between;
+  flex-wrap:wrap; /* Wrap on small screens (stack vertically) */
+  margin-bottom:20px; /* Vertical spacing between rows */
+  justify-content:space-between;  /* Spread columns across the row */
 }
-
+/* One field group: label + input/textarea */
 .join-group { 
-  flex:1; 
-  min-width:250px; 
+  flex:1;   /* Take equal space with siblings */
+  min-width:250px; /* Prevent too-narrow fields on small screens */
 }
-
+/* Field label (above the input) */
 .join-group label { 
   display:block; 
   margin-bottom:6px; 
   color:#e5e7eb; }
-
+/* Inputs and textarea share the same styling */
 .join-group input,
-.join-group textarea,
-.join-group select {
+.join-group textarea
+ {
   width:100%; 
   background:#0e1426; 
   color:#fff;
@@ -966,19 +936,19 @@ select {
   border-radius:6px;
   padding:12px; 
   font-size:13px; 
-  box-sizing:border-box;
+  box-sizing:border-box; /* Include padding/border in width calculation */
 }
 
 .join-group input:focus,
 .join-group textarea:focus {
   outline:none; 
-  border-color:#ffff;
+  border-color:#ffff; /* White border on focus (active field) */
 }
 
 
 .join-group textarea { 
-  resize:vertical; 
-  min-height:100px; 
+  resize:vertical;  /* Allow vertical resize only */
+  min-height:100px; /* Minimum height for the message box */
 }
 
 /* Buttons */
@@ -996,22 +966,18 @@ select {
   font-weight:600; 
   margin:0 8px;
   font-size:16px; 
-  transition:0.3s;
 }
 .join-actions button:hover { 
   background:#0090dd; }
-
 /* ===== END JOIN PAGE ===== */
-
 
 /* ===============================
    STAFF PROFILE PAGE
    =============================== */
-
 .staff-profile {
-  width: 85%;
+  width: 85%; /* Takes 85% of the page width */
   max-width: 1200px;
-  margin: 3rem auto 5rem auto;
+  margin: 3rem auto 5rem auto; /* Centers the content vertically with spacing */ 
   text-align: center;
 }
 
@@ -1024,10 +990,10 @@ select {
 /* ==== TABLE ==== */
 .profile-table {
   width: 100%;
-  border-collapse: collapse;
-  background: var;
+  border-collapse: collapse; /* Removes gaps between table borders */
+  background: #0f162e;  
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  overflow: hidden;
+  overflow: hidden;  /* Hides overflowing content */
 }
 
 .profile-table th,
@@ -1061,18 +1027,18 @@ select {
 /* ==== STAFF PROFILE (nested table) ==== */
 .profile-table ul {
   list-style-type: disc;
-  margin-left: 20px;
+  margin-left: 20px; /* Adds space on the left for bullet points */
 }
 
 .profile-table ul ul {
-  list-style-type: circle;
+  list-style-type: circle; /* Hollow circle bullets for nested list */
   margin-left: 20px;
 }
 
 .profile-table td:nth-child(6), .profile-table th:nth-child(6) {
-  width: 200px; 
+  width: 200px; /* This makes the 6th column (Skills) a bit wider */
 }
-
+/*end staff page */
 
 /* ===== C-DB (Customer Dashboard) ===== */
 
@@ -1188,7 +1154,9 @@ select {
   background-color: #0090dd;
 }
 .eval-section textarea {
-  background-color: #111c3b;
+  background-color: #041127;
+  border: 1px #3e4960  solid  ;
+  border-radius: 10px;
   color: white;
 }
 
@@ -1269,7 +1237,7 @@ select {
 
 .spdb-buttons .spdb-btn {
   color: white;
-  padding: 16px 30px;
+  padding: 10px 22px;
   margin: 0 20px; 
   font-size: 16px;
   font-weight: 600;
@@ -1401,20 +1369,7 @@ select {
   flex: 1;
 }
 
-.add-btn {
-  background-color: #00aaff;
-  border: none;
-  padding: 12px 25px;
-  color: white;
-  font-weight: 600;
-  border-radius: 6px;
-  margin-top: 10px;
-  cursor: pointer;
-  align-self: center;
-  transition: 0.3s;
-}
-
-.add-btn:hover {
+.add-btn:hover , .reset-btn:hover {
   background-color: #0090dd;
 }
 
