@@ -826,21 +826,7 @@ select {
   color: #e5e7eb;
 }
 
-.breadcrumb {
-  color: #9ca3af;
-  font-size: 0.9rem;
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
 
-.breadcrumb a {
-  color: #9ca3af;
-  text-decoration: none;
-}
-
-.breadcrumb span {
-  color: #00aaff;
-}
 
 .about-section h2 {
   font-size: 2rem;
@@ -872,13 +858,9 @@ select {
   justify-content: center;
   margin: 0 8rem ;
 
-  /*scrollbar-width: none;       يخفي الشريط في فايرفوكس */
-   /*-ms-overflow-style: none;   يخفيه في المتصفحات القديمة */
+  
 }
-/* 
-.team-flex::-webkit-scrollbar {
-  display: none;              /* يخفي الشريط في كروم وسفاري 
-}*/
+
 
 
 .team-card {
@@ -889,12 +871,10 @@ select {
   width: 240px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+
 }
 
-.team-card:hover {
-  transform: translateY(-5px);
-}
+
 
 .team-card img {
   width: 120px;
@@ -942,7 +922,6 @@ select {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
-  transition: background-color .2s ease, border-color .2s ease;
 }
 
 .join-btn:hover {
