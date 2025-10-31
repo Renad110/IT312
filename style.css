@@ -145,7 +145,6 @@ header {
   margin-bottom: 1rem;
 }
 
-/* ✅ الحاوية العامة */
 .testi-wrap {
   display: flex;
   align-items: center;
@@ -157,7 +156,7 @@ header {
 
 }
 
-/*  أزرار الأسهم */
+/*  Pointer Navigation */
 .testi-nav {
   background: #00aaff; 
   color: white;
@@ -382,15 +381,6 @@ footer {
   position: relative;
 }
 
-/* الخط الفاصل الأنيق */
-.footer-divider {
-  width: 1.5px; /* تخليه أنحف أو أسمك حسب رغبتك */
-  height: 60px;
-  background-color: rgba(255, 255, 255, 0.723); /* أبيض شفاف واضح */
-  margin: 0 35px;
-  border-radius: 2px;
-}
-
 .footer-left,
 .footer-center,
 .footer-right {
@@ -493,21 +483,36 @@ footer {
   box-shadow: 0 6px 20px rgba(43,110,242,0.3);
 }
 
+/* ==== Service Table Column Layout ==== */
+
+.col-name {
+  width: 40%;
+  text-align: left;
+}
+
+.col-price {
+  width: 15%;
+  text-align: center;
+}
+
+.col-desc {
+  width: 45%;
+  text-align: left;
+}
+
+/* ===== Service Table ===== */
 .service-table {
   width: 100%;
   border-collapse: collapse;
+  color: #fff;
+  table-layout: fixed;
 }
 
-.service-table th {
-  color: #ffffff;
-  text-align: left;
-  font-size: 19px;
-  padding-left: 30px;
-}
-
-.service-table tr:hover th{
-  background-color: #24304d;
-  
+.service-table th { 
+  color: #ffffff; 
+  text-align: left; 
+  font-size: 19px; 
+  padding-left: 30px; 
 }
 
 .service-table td {
@@ -517,62 +522,26 @@ footer {
   vertical-align: middle;
   text-align: justify;
 }
-
-/* To make sure that the column widths are consistent across all tables */
-.service-table {
-  table-layout: fixed;
-  width: 100%;
-}
-
-/* To ensure consistent column widths */
-.service-table th:nth-child(1),
-.service-table td:nth-child(1) {
-  width: 40%;
-}
-
-.service-table th:nth-child(2),
-.service-table td:nth-child(2) {
-  width: 15%;
-}
-
-.service-table th:nth-child(3),
-.service-table td:nth-child(3) {
-  width: 45%;
-}
-
-/* To control text alignment within the header */
-
-/* The second column (Price) */
-.service-table th:nth-child(2) {
-  text-align: left;
-  padding-left: 10px;
-}
-
-/* The third column (Description) */
-.service-table th:nth-child(3) {
-  text-align: left;
-}
-
-.service-table tr:hover td {
-  background-color: #24304d;
-  transition: 0.3s;
-  
-}
-
-.service-table tr:hover {
-  cursor: pointer;
+.service-table tr:hover { 
+  cursor: pointer; 
   box-shadow: 0 6px 20px rgba(43,110,242,0.3);
 }
+/* Hover effect */
+.service-table tr:hover td{
+  background-color: #24304d;
+  transition: 0.3s;
+}
 
+/*The images inside the table*/
 .service-table img {
   width: 100px;  
   height: 100px; 
   object-fit: cover;
-  margin-right: 20px;
-  border-radius: 10px;
-  vertical-align: middle;
+  margin-top: 8px;
+  border-radius: 8px;
 }
 
+/* ===== Buttons Section ===== */
 .spdb-buttons {
   text-align: center;
   margin-top: 45px;
@@ -593,6 +562,7 @@ footer {
 .spdb-btn:hover {
   background-color: #0090dd;
 }
+
 /* End of Sp-dp Page */
 
 /* ======= Service page styles ======== */
