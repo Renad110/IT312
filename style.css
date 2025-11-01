@@ -73,7 +73,6 @@ header {
   margin-bottom: .1rem;
 }
 
-/* ===== خطوط تحت عناوين الأقسام ===== */
 .services hr{
   width: 100%;
   height: 1.5px;
@@ -149,7 +148,7 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 95%;          /* ffffffffffffffffffffff*/
+  width: 95%;          
   max-width: 940px;
   margin: auto;
 
@@ -180,7 +179,6 @@ header {
 .testi-nav.right { 
   right: -60px; 
 }
-/*  الصف الأفقي للكروت */
 .testi-list {
   display: flex;
   gap: 20px;
@@ -190,7 +188,6 @@ header {
   width: 100%;
 }
 
-/*  الكروت بنفس حجم بطاقات الخدمات */
 .testi-card {
   width: 265px;
   height: 190px;
@@ -212,7 +209,6 @@ header {
   box-shadow: 0 6px 20px rgba(43,110,242,0.3);
 }
 
-/* القسم العلوي للأفتار والاسم */
 .testi-header {
   display: flex;
   align-items: center;
@@ -249,7 +245,6 @@ header {
   font-size: 0.8rem;
 }
 
-/* اسم الخدمه */
 .service-name {
   color: #0090dd; 
   font-weight: bold;
@@ -257,7 +252,6 @@ header {
   font-size: 0.8rem;
 }
 
-/* النص داخل الكرت */
 .testi-text {
   margin-top: 10px;
   color: #e5e7eb; 
@@ -268,7 +262,6 @@ header {
   font-size: 0.9rem;
 }
 
-/* ي الأسفل */
 .stars {
   color: gold;
   text-align: center;
@@ -276,7 +269,6 @@ header {
   margin-top: 8px;
 }
 
-/* النقاط السفلية */
 .testi-dots {
   display: flex;
   justify-content: center;
@@ -305,7 +297,6 @@ header {
   margin-bottom: 1rem;
 }
 
-/*  تصميم كل سؤال */
 .faq details {
   background: #1c253a; 
   color: #e5e7eb; 
@@ -317,19 +308,18 @@ header {
   transition: 0.3s ease;
 }
 
-/*  شكل سهم الاسئلة باليمين */
 .faq summary {
   font-weight: bold;
   font-size: 1.05rem;
   position: relative;
-  list-style: none; /* يخفي السهم الافتراضي */
-  padding-right: 25px; /* مساحة للسهم */
+  list-style: none; 
+  padding-right: 25px;
   cursor: pointer;
 }
 
-/* السهم المغلق */
+
 .faq summary::after {
-  content: "\25BC"; /* سهم ▼ */
+  content: "\25BC"; 
   position: absolute;
   right: 5px;
   top: 50%;
@@ -338,9 +328,8 @@ header {
   transition: transform 0.3s ease;
 }
 
-/* السهم عند الفتح */
 .faq details[open] summary::after {
-transform: translateY(-50%) rotate(180deg); /* سهم للأعلى */
+transform: translateY(-50%) rotate(180deg);
 }
   
 .faq details p {
@@ -366,7 +355,7 @@ footer {
 
 .footer-sections {
   display: flex;
-  justify-content: center; /* توسيط الأقسام */
+  justify-content: center; 
   align-items: flex-start;
   flex-wrap: wrap;
   width: 80%;
