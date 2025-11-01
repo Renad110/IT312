@@ -383,7 +383,7 @@ footer {
 
 .footer-sections {
   display: flex;
-  justify-content: center; /* توسيط الأقسام */
+  justify-content: center; 
   align-items: flex-start;
   flex-wrap: wrap;
   width: 80%;
@@ -392,11 +392,10 @@ footer {
   position: relative;
 }
 
-/* الخط الفاصل الأنيق */
 .footer-divider {
-  width: 1.5px; /* تخليه أنحف أو أسمك حسب رغبتك */
+  width: 1.5px; 
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.723); /* أبيض شفاف واضح */
+  background-color: rgba(255, 255, 255, 0.723); 
   margin: 0 35px;
   border-radius: 2px;
 }
