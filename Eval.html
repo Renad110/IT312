@@ -33,13 +33,13 @@
   <!-- ===== MAIN ===== -->
   <main>
     <section class="container eval-section">
-      <div class="eval-title">
+      <div class="eval-title"><!-- title of the page -->
         <h2>Evaluate a Service</h2>
         <hr class="eval-hr">
       </div>
 
-      <form class="registration-form" action="Eval.html" method="get">
-        <!-- select a service-->
+      <form class="registration-form" action="Eval.html" method="get"> <!-- form that lets the customer rate a service -->
+        <!-- select a servicefrom dropdown -->
         <div class="form-group">
           <label for="service">Choose Service:</label>
           <select id="service" name="service" required>
@@ -50,7 +50,7 @@
           </select>
         </div>
 
-      <!-- rang -->
+      <!-- rang  to choose rating between 1 and 5 and select min and max val-->
 <div class="form-group">
   <label for="ratingRange">Rating (1–5):</label>
   <div class="service-types rating-types">
@@ -59,7 +59,7 @@
         type="range" 
         id="ratingRange" 
         name="rating" 
-        min="1" 
+        min="1"   
         max="5" 
         step="1" 
         value="3" 
@@ -75,7 +75,7 @@
           <textarea id="feedback" name="feedback" rows="4" placeholder=" Write your notes here..."></textarea>
         </div>
 
-        <div class="spdb-buttons eval-actions">
+        <div class="spdb-buttons eval-actions"><!-- buttons to submit or reset the form -->
           <button type="submit" class="spdb-btn">Submit</button>
           <button type="reset" class="spdb-btn">Reset</button>
         </div>
