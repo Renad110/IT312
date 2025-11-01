@@ -33,14 +33,14 @@
   <!-- ===== MAIN ===== -->
   <main>
     <section class="container eval-section">
-      <div class="req-title">
+      <div class="req-title"><!-- title section for the page -->
         <h2>Request a Service</h2>
         <hr class="req-hr">
       </div>
 
-      <form class="registration-form" action="NewServiceReq.html" method="get">
+      <form class="registration-form" action="NewServiceReq.html" method="get"><!-- form that lets the customer to send a new service request -->
 
-        <div class="form-group">
+        <div class="form-group"><!-- choose the type of service from a dropdown -->
           <label for="service">Choose Service:</label>
           <select id="service" name="service" required>
             <option value="">-- Select a service --</option>
@@ -50,7 +50,7 @@
           </select>
         </div>
 
-        <div class="form-row">
+        <div class="form-row"><!--2 inputs name &due date-->
           <div class="form-group">
             <label for="fullName">Customer Name:</label>
             <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <div class="form-row">
+        <div class="form-row"><!--2 inputs phone &email-->
           <div class="form-group">
             <label for="phone">Phone Number (optional):</label>
             <input type="tel" id="phone" name="phone" placeholder="+9665XXXXXXXX">
@@ -79,7 +79,7 @@
           <textarea id="desc" name="desc" rows="5" placeholder=" Write details about your request..." required></textarea>
         </div>
 
-        <div class="spdb-buttons">
+        <div class="spdb-buttons"><!-- buttons to submit or reset the form -->
           <button type="submit" class="spdb-btn">Submit</button>
           <button type="reset" class="spdb-btn">Reset</button>
         </div>

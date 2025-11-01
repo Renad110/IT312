@@ -484,6 +484,14 @@ footer {
   margin-bottom: 15px;
 }
 
+.spdp-hr {
+  width: 140px;
+  height: 2px;
+  margin: -30px auto 30px;
+  border: none;
+  background: #00aaff;
+}
+
 .spdb-table-content {
   margin-top: 30px;  
   border-radius: 12px;        
@@ -829,8 +837,9 @@ select {
   flex-wrap: nowrap;     /* Keeps cards in one line */  
   gap: 25px; /* Space between cards */
   overflow : scroll;  
+  scrollbar-width: none;
   padding: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 8rem ;  /* Adds left and right margin */
 }
 
@@ -1232,7 +1241,7 @@ select {
 .service-hr {
   width: 140px;
   height: 2px;
-  margin: 10px auto 0;
+  margin: -10px auto 0;
   border: none;
   background: #00aaff;
 }
@@ -1248,7 +1257,7 @@ select {
   padding: 35px;
   border-radius: 12px;
   max-width: 700px; 
-  margin: 10px auto;
+  margin: 20px auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
@@ -1266,7 +1275,7 @@ select {
 
 /* ===== Manage Staff Page ===== */
 .staff-manager {
-  padding: 50px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -1277,6 +1286,7 @@ select {
 .staff-line {
   width: 140px;
   height: 2px;
+  margin: 10px auto 0;
   background-color: #009dff;
   border: none;
 }
@@ -1286,7 +1296,7 @@ select {
   background-color: #1c2541;
   border-radius: 15px;
   max-width: 700px;
-  margin: 0 auto 50px;
+  margin: 20px auto 60px;
   padding: 25px 25px 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
@@ -1331,7 +1341,7 @@ select {
   background-color: #1c2541;
   border-radius: 15px;
   max-width: 700px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 30px 30px 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
