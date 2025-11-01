@@ -367,6 +367,7 @@ transform: translateY(-50%) rotate(180deg);
   background: #1c253a; 
 }
 
+
 /* ===== FOOTER ===== */
 footer {
   margin-top: 4em;
@@ -382,13 +383,22 @@ footer {
 
 .footer-sections {
   display: flex;
-  justify-content: center; 
+  justify-content: center; /* توسيط الأقسام */
   align-items: flex-start;
   flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
   gap: 40px;
   position: relative;
+}
+
+/* الخط الفاصل الأنيق */
+.footer-divider {
+  width: 1.5px; /* تخليه أنحف أو أسمك حسب رغبتك */
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.723); /* أبيض شفاف واضح */
+  margin: 0 35px;
+  border-radius: 2px;
 }
 
 .footer-left,
@@ -403,7 +413,7 @@ footer {
 .footer-left h4,
 .footer-right h4 {
   font-size: 1.1rem;
-  color: #00aaff; 
+  color: #2b6ef2; 
   margin-bottom: 0.8rem;
 }
 
@@ -418,7 +428,7 @@ footer {
 .footer-center a:hover,
 .footer-left a:hover,
 .footer-right a:hover {
-  color: #0090dd;
+  color: #2b6ef2;
   transform: scale(1.05);
 }
 
@@ -436,7 +446,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #0090dd; 
+  color: #2b6ef2; 
 }
 
 .footer-line {
