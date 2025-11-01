@@ -466,9 +466,10 @@ footer {
 
 /* End of Home-Page */
 
-/* ===== SP-DB Page Styling Amani Page ===== */
+/* ===== SP-DB Page ===== */
 
-.spdb-header {
+.spdb-header { 
+/* space below the page header */
   margin-bottom: 30px;
 }
 
@@ -478,13 +479,8 @@ footer {
   color: #fff;
 }
 
-.spdb-header h3 {
-  font-size: 18px;
-  color: #b8b8b8;
-  margin-bottom: 15px;
-}
-
 .spdp-hr {
+  /* blue line under title and lift it higher with negative margin */
   width: 140px;
   height: 2px;
   margin: -30px auto 30px;
@@ -493,6 +489,7 @@ footer {
 }
 
 .spdb-table-content {
+  /* wrapper for the service table */
   margin-top: 30px;  
   border-radius: 12px;        
   overflow: hidden;           
@@ -501,6 +498,7 @@ footer {
 
 
 .service-card{
+  /* card container around each row */
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 25px;
@@ -530,7 +528,9 @@ footer {
 }
 
 /* ===== Service Table ===== */
+
 .service-table {
+  /* full width table + fixed layout for equal spacing */
   width: 100%;
   border-collapse: collapse;
   color: #fff;
@@ -1234,6 +1234,7 @@ select {
 
 /* ===== Add Service Page ===== */
 .add-title {
+  /* center the title and add some space below it */
   text-align: center;
    margin-top: 40px;
 }
@@ -1253,6 +1254,7 @@ select {
   color: white;
 }
 .container.add-service {
+  /* Form container style */
   background-color: #1c2541;
   padding: 35px;
   border-radius: 12px;
@@ -1274,25 +1276,27 @@ select {
 /* ===== end Add Service Page ===== */
 
 /* ===== Manage Staff Page ===== */
+
 .staff-manager {
-  padding: 20px 20px;
-  text-align: center;
+  padding: 20px 20px; /* add spacing around page content */
+  text-align: center; /* center text inside section */
 }
 
 .staff-title {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* small spacing below title */
 }
 
 .staff-line {
   width: 140px;
   height: 2px;
-  margin: 10px auto 0;
+  margin: 10px auto 0; /* center line & add top margin */
   background-color: #009dff;
   border: none;
 }
 
 /* ===== Staff Cards ===== */
 .staff-container {
+  /* main box wrapping staff list */
   background-color: #1c2541;
   border-radius: 15px;
   max-width: 700px;
@@ -1302,6 +1306,7 @@ select {
 }
 
 .staff-card-Man {
+   /* each staff row style */
   display: flex;
   align-items: center;
   background-color: #253156;
@@ -1324,6 +1329,7 @@ select {
 }
 
 .staff-photo {
+  /* circular staff photo style */
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -1337,7 +1343,9 @@ select {
 }
 
 /* ===== Add Form Section ===== */
+
 .add-section {
+  /* container box for add form */
   background-color: #1c2541;
   border-radius: 15px;
   max-width: 700px;
@@ -1355,6 +1363,7 @@ select {
 }
 
 .add-staff-container {
+  /* wrapper to position title above the card */
   position: relative;
   width: 700px;
   margin: 0 auto;
@@ -1371,6 +1380,7 @@ select {
 
 
 .add-form {
+  /* stack input rows vertically */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1388,11 +1398,13 @@ select {
 }
 
 .form-row {
+  /* put two fields next to each other */
   display: flex;
   gap: 20px;
 }
 
 .form-row div {
+  /* make both input containers equal width */
   flex: 1;
 }
 
