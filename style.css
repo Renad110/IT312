@@ -619,7 +619,7 @@ select {
   padding: 7px 12px;
   border-radius: 6px;
   font-size: 0.9rem;
-  cursor: pointer;/* Change mouse cursor to a hand when hovering (clickable) */
+  cursor: pointer;/* Change mouse cursor to a hand when hovering */
 }
 
 .bookmark-btn {
