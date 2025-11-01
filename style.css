@@ -1015,7 +1015,7 @@ select {
   border-collapse: collapse; /* Removes gaps between table borders */
   background: #0f162e;  
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  overflow: hidden;  /* Hides overflowing content */
+  overflow: auto;  
 }
 
 .profile-table th,
@@ -1060,7 +1060,8 @@ select {
 .profile-table td:nth-child(6), .profile-table th:nth-child(6) {
   width: 200px; /* This makes the 6th column (Skills) a bit wider */
 }
-/*end staff page */
+
+/*End staff page */
 
 /* ===== C-DB (Customer Dashboard) ===== */
 
