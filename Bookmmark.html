@@ -4,24 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>KSArena | Services Page</title>
+  <title>KSArena | Bookmarked Services</title>
 
   <link rel="stylesheet" href="Style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
- <!-- ===== HEADER ===== -->
+  <!-- ===== HEADER ===== -->
   <header>
     <div class="container nav">
       <div class="logo">
         <img src="images/LongLogo.png" width="170" height="65" alt="KSArena logo">
-        
       </div>
 
       <nav class="center-nav">
         <a href="HomePage.html">Home</a>
-        <a href="PageServices.html"  class="active">Services</a>
+        <a href="PageServices.html" class="active">Services</a>
         <a href="AboutUs.html">About Us</a>
       </nav>
 
@@ -34,70 +32,82 @@
 
   <div class="container">
 
-  <!-- sort bar -->
     <div class="sort-bar">
       <div class="sort-left">
-        <label for="sort">Sort by:</label>
-        <select id="sort" name="sort">
-          <optgroup label="Price">
-            <option>Low → High</option>
-            <option>High → Low</option>
-          </optgroup>
-          <optgroup label="Name">
-            <option>A → Z</option>
-            <option>Z → A</option>
-          </optgroup>
-        </select>
+        <h2>My Bookmarked Services</h2>
       </div>
-      <a href="PageServices.html" class="bookmark-btn-active">
-       <i class="fa-solid fa-bookmark"></i> Bookmarks
+
+      <!-- Back to Services page -->
+      <a href="PageServices.html" class="bookmark-btn">
+        <i class="fa-solid fa-arrow-left"></i> Back to Services
       </a>
-
     </div>
-         
 
-  <!-- Services -->
-  <div class="services">
+    <!-- Message shown when there are no bookmarked services -->
+    <p id="no-bookmarks">No bookmarked services yet.</p>
 
-    <div class="service-card">
-      <div class="service-header">
-        <h3>Book Training Sessions</h3>
-        <i class="fa-solid fa-bookmark saved"></i>
+    <!-- Same service cards as the Services page -->
+    <!-- JavaScript will show only the saved ones -->
+    <div class="services">
+
+      <div class="service-card">
+        <div class="service-header">
+          <h3>Tournaments</h3>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+        <img src="images/tourtment.renad.jpg" alt="Tournaments">
+        <p class="description">
+          Join the action! Explore exciting tournaments and sign up to compete against other players.
+          Test your skills, climb the ranks, and become a champion in the esports community.
+        </p>
+        <div class="price">300SR</div>
       </div>
 
-      <img src="images/training.renad.jpg" alt="Book Training Sessions">
-
-      <p class="description">
-        Level up your gameplay! Book a session with professional coaches and receive personalized guidance to improve your strategies, reactions, and overall performance.
-      </p>
-
+      <div class="service-card">
+        <div class="service-header">
+          <h3>Training Sessions</h3>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+        <img src="images/training.renad.jpg" alt="Training Sessions">
+        <p class="description">
+          Level up your gameplay! Book a session with professional coaches and receive personalized
+          guidance to improve your strategies, reactions, and overall performance.
+        </p>
         <div class="price">500SR</div>
-      
-    </div>
+      </div>
 
+      <div class="service-card">
+        <div class="service-header">
+          <h3>Join a Team</h3>
+          <i class="fa-regular fa-bookmark"></i>
+        </div>
+        <img src="images/joinG.renad.jpg" alt="Join a Team">
+        <p class="description">
+          Team up and play together! Join a team, and participate in tournaments as a united squad.
+        </p>
+        <div class="price">250SR</div>
+      </div>
+
+    </div>
   </div>
 
-</div>
-
-
-   <!-- ===== FOOTER ===== -->
- <footer>
+  <!-- ===== FOOTER ===== -->
+  <footer>
     <div class="container footer-sections">
       <div class="footer-left">
         <img src="images/Logo2.png" width="100" height="105" alt="KSArena logo">
       </div>
-	  
-	<div class="footer-divider"></div>    
+
+      <div class="footer-divider"></div>
 
       <div class="footer-center">
         <h3>Contact Us</h3>
         <p>📞 +966512345678</p>
         <a href="mailto:KSArena@gmail.com">📧 KSArena@gmail.com</a>
-
       </div>
-	  
-	<div class="footer-divider"></div>  
-	
+
+      <div class="footer-divider"></div>
+
       <div class="footer-right">
         <h3>Follow Us</h3>
         <div class="social-icons">
@@ -109,9 +119,11 @@
     </div>
 
     <hr class="footer-line">
-	
+
     <p class="copyright">Copyright © 2025 KSArena</p>
-	
   </footer>
+
+  <!-- Main JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>
