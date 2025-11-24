@@ -1437,3 +1437,40 @@ select {
   background-color: #b73232;
 }
 /* ===== end Manage Staff Page ===== */
+
+
+/*responseive design */
+/* Flexible images (from slide #10) */
+.homepage img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for mobile (from slide #11–12) */
+@media screen and (max-width: 768px) {
+
+  .nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .footer-sections {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-divider {
+    display: none;
+  }
+}
+/*end responsive design */
