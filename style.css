@@ -1528,25 +1528,25 @@ end responsive design */
    ========================================================= */
 
             
-            /* ========  TABLET ADJUSTMENT — to fix arrow size & position ======== */
-          @media (max-width: 900px) {
+  /* ========  TABLET ADJUSTMENT — to fix arrow size & position ======== */
+@media (max-width: 900px) {
 
-            body.homepage .testi-nav {
-              width: 32px;
-              height: 32px;
-              font-size: 1.1rem;
-              top: 50%;
-              transform: translateY(-50%);
-            }
+  body.homepage .testi-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-            body.homepage .testi-nav.left {
-              left: 0;
-            }
+  body.homepage .testi-nav.left {
+    left: 0;
+  }
 
-            body.homepage .testi-nav.right {
-              right: 0;
-            }
-          }
+  body.homepage .testi-nav.right {
+    right: 0;
+  }
+}
 
 
 /* ========  1) PHONE — Small Screens (iPhone & small devices) ======== */
