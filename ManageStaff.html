@@ -32,7 +32,7 @@
     <h2 class="staff-title">Manage Staff Members</h2>
     <hr class="staff-line">
 
-    <form action="ManageStaff.html" method="get">
+    <form class="delete-form">
       
     <div class="staff-container"> <!-- staff cards container -->
 
@@ -66,37 +66,37 @@
 
   <hr class="manage-hr">
   <div class="add-section">
-    <form class="add-form" action="ManageStaff.html" method="get">
+    <form class="add-form">
       <label>Name:</label>
-      <input type="text" placeholder="Enter full name" required>
+      <input type="text" id="staffName" placeholder="Enter full name" required>
 
       <label>Photo:</label>
-      <input type="file" required>
+      <input type="file" id="staffPhoto" required>
 
       <div class="form-row">
         <div>
           <label>Date of Birth (DoB):</label><br><br>
-          <input type="date" required>
+          <input type="date" id="staffDOB" required>
         </div>
         <div>
           <label>Email:</label><br><br>
-          <input type="email" placeholder="example@email.com" required>
+          <input type="email" id="staffEmail" placeholder="example@email.com" required>
         </div>
       </div>
 
       <div class="form-row">
         <div>
           <label>Area of Expertise:</label><br><br>
-          <input type="text" placeholder="e.g., Marketing" required>
+          <input type="text" id="staffExpert" placeholder="e.g., Marketing" required>
         </div>
         <div>
           <label>Skills:</label><br><br>
-          <input type="text" placeholder="e.g., Communication" required>
+          <input type="text" id="staffSkills" placeholder="e.g., Communication" required>
         </div>
       </div>
 
       <label>Education:</label>
-      <input type="text" placeholder="Enter education background" required>
+      <input type="text" id="staffEdu" placeholder="Enter education background" required>
 
      <div class="spdb-buttons req-actions">
       <button type="submit" class="spdb-btn">Add Staff</button>
@@ -137,6 +137,6 @@
     <hr class="footer-line">
     <p class="copyright">Copyright © 2025 KSArena</p>
   </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

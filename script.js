@@ -301,8 +301,168 @@ function handleAddService(event) {
     document.querySelector(".service-form").reset();
 }
 
-
 // End of Add Services Form Page Script
+
+//Manage Staff Page Script
+
+if (window.location.pathname.includes("ManageStaff.html")) {
+
+    window.onload = function () {
+        loadMembers();
+
+        document.querySelector(".delete-form").onsubmit = handleDelete;
+        document.querySelector(".add-form").onsubmit = handleAdd;
+    };
+
+
+    // Load members into the page
+    function loadMembers() {
+        var members = JSON.parse(localStorage.getItem("members"));
+
+        // Default members if empty
+        if (members === null) {
+            members = [
+                { name: "Ahmed Salem", image: "images/Staff1.PNG" },
+                { name: "Fahad Nasser", image: "images/Staff2.PNG" },
+                { name: "Sarah Omar", image: "images/Staff3.PNG" }
+            ];
+            localStorage.setItem("members", JSON.stringify(members));
+        }
+
+        var container = document.querySelector(".staff-container");
+
+        // Clear only the cards, NOT the delete button
+        var buttonHTML = container.querySelector(".delete-btn-Man").outerHTML;
+        container.innerHTML = "";
+
+        // Rebuild the cards
+        for (var i = 0; i < members.length; i++) {
+            container.innerHTML +=
+                '<div class="staff-card-Man">' +
+                '<input type="checkbox" class="staff-checkbox" data-index="' + i + '">' +
+                '<img src="' + members[i].image + '" class="staff-photo">' +
+                '<p class="staff-name">' + members[i].name + '</p>' +
+                '</div>';
+        }
+
+        // Add the button back
+        container.innerHTML += buttonHTML;
+    }
+
+
+
+    // Delete selected staff
+    function handleDelete(event) {
+        event.preventDefault();
+
+        var checkboxes = document.querySelectorAll(".staff-checkbox");
+        var members = JSON.parse(localStorage.getItem("members"));
+        var selected = [];
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                selected.push(parseInt(checkboxes[i].getAttribute("data-index")));
+            }
+        }
+
+        if (selected.length === 0) {
+            alert("Please select at least one member.");
+            return;
+        }
+
+        if (!confirm("Are you sure you want to delete selected members?")) {
+            return;
+        }
+
+        var newList = [];
+
+        for (var j = 0; j < members.length; j++) {
+            if (!selected.includes(j)) {
+                newList.push(members[j]);
+            }
+        }
+
+        localStorage.setItem("members", JSON.stringify(newList));
+        loadMembers();
+    }
+
+
+
+    // Add a new staff member
+function handleAdd(event) {
+    event.preventDefault();
+
+    var name = document.getElementById("staffName").value.trim();
+    var photoFile = document.getElementById("staffPhoto").files[0];
+    var dob = document.getElementById("staffDOB").value;
+    var email = document.getElementById("staffEmail").value.trim();
+    var expert = document.getElementById("staffExpert").value.trim();
+    var skills = document.getElementById("staffSkills").value.trim();
+    var edu = document.getElementById("staffEdu").value.trim();
+
+    // Validation check
+    if (!name || !dob || !email || !expert || !skills || !edu || !photoFile) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    // Name must not start with number
+    if (!isNaN(name.charAt(0))) {
+        alert("Name cannot start with a number.");
+        return;
+    }
+
+    // Expert must be text (not start with number)
+    if (!isNaN(expert.charAt(0))) {
+        alert("Expertise cannot start with a number.");
+        return;
+    }
+
+    // Skills must be text (not start with number)
+    if (!isNaN(skills.charAt(0))) {
+        alert("Skills cannot start with a number.");
+        return;
+    }
+
+    // Education must be text (not start with number)
+    if (!isNaN(edu.charAt(0))) {
+        alert("Education cannot start with a number.");
+        return;
+    }
+
+    // Email check
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    var photoURL = URL.createObjectURL(photoFile);
+
+    var members = JSON.parse(localStorage.getItem("members"));
+    if (members === null) members = [];
+
+    var newMember = {
+        name: name,
+        image: photoURL,
+        dob: dob,
+        email: email,
+        expert: expert,
+        skills: skills,
+        education: edu
+    };
+
+    members.push(newMember);
+    localStorage.setItem("members", JSON.stringify(members));
+
+    alert(name + " has been added!");
+
+    document.querySelector(".add-form").reset();
+    loadMembers();
+}
+
+}
+
+// End of Manage Staff Page Script
 
 //start of join form script 
 document.addEventListener('DOMContentLoaded', () => {
