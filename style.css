@@ -1439,15 +1439,15 @@ select {
 /* ===== end Manage Staff Page ===== */
 
 
-/*responseive design */
+/*responseive design 
 
-/* Flexible images (from slide #10) */
+Flexible images (from slide #10) 
 .homepage img {
   max-width: 100%;
   height: auto;
 }
 
-/* Media query for mobile (from slide #11–12) */
+/* Media query for mobile (from slide #11–12) 
 @media screen and (max-width: 768x) {
 
   .nav {
@@ -1464,7 +1464,7 @@ select {
   .card {
     width: 90%;
   }
-    /* خلي صورة البانر تفتح على عرض الشاشة */
+    /* خلي صورة البانر تفتح على عرض الشاشة 
   .banner {
     width: 100%;
     height: auto;
@@ -1479,7 +1479,7 @@ select {
 
   }
 
-  /* النص فوق الصورة */
+  /* النص فوق الصورة 
   .banner-text {
     position: absolute;
     bottom: 12%;
@@ -1503,9 +1503,153 @@ select {
   }
 
 }
-/*end responsive design */
+end responsive design */
 
 
+
+/* =========================================================
+   RESPONSIVE DESIGN — HOME PAGE ONLY (Laptop > iPad > Phone)
+   ========================================================= */
+
+
+/* ========  1) PHONE — Small Screens (iPhone & small devices) ======== */
+@media screen and (max-width: 600px) {
+
+  /* الهيدر */
+  body.homepage .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  body.homepage .logo img {
+    width: 130px;
+    height: auto;
+  }
+
+  /* ===== BANNER ===== */
+  body.homepage .banner {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+  }
+
+  body.homepage .banner img {
+    width: 100%;
+    height: 360px;         /* مساحة أكبر للنص */
+    object-fit: cover;
+  }
+
+  body.homepage .banner-text {
+    position: absolute;    
+    width: 90%;
+    left: 50%;
+    bottom: 12%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;    /* يناسب الجوال */
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* ===== SERVICES ===== */
+  body.homepage .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body.homepage .card {
+    width: 90%;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  body.homepage .testi-nav {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  body.homepage .testi-nav.left {
+    left: 5px;
+  }
+
+  body.homepage .testi-nav.right {
+    right: 5px;
+  }
+
+  /* ===== FOOTER ===== */
+  body.homepage .footer-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  body.homepage .footer-divider {
+    display: none;
+  }
+}
+
+
+
+
+/* ========  2) TABLET — Medium Screens (iPad & Tablets) ======== */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+  body.homepage .container {
+    width: 95%;
+  }
+
+  /* Header stays horizontal */
+  body.homepage .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body.homepage .logo img {
+    width: 150px;
+  }
+
+  /* Banner */
+  body.homepage .banner img {
+    height: 420px;
+  }
+
+  body.homepage .banner-text {
+    bottom: 10%;
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  /* Services — 2 per row */
+  body.homepage .service-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  body.homepage .card {
+    width: 45%;
+  }
+
+  /* Testimonials */
+  body.homepage .testi-nav.left {
+    left: -30px;
+  }
+
+  body.homepage .testi-nav.right {
+    right: -30px;
+  }
+
+  /* Footer stays horizontal */
+  body.homepage .footer-sections {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+}
   
   
   
