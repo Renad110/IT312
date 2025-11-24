@@ -237,3 +237,70 @@ function initBookmarkPage() {
     }
   });
 }
+
+
+//Add Service Page Form Script
+
+// Run when the page finishes loading
+window.onload = function () {
+    var form = document.querySelector(".service-form");
+    form.onsubmit = handleAddService;
+};
+
+// Handle adding a new service
+function handleAddService(event) {
+    event.preventDefault();
+
+    // Get form values
+    var name = document.getElementById("serviceName").value.trim();
+    var price = document.getElementById("servicePrice").value.trim();
+    var desc = document.getElementById("serviceDescription").value.trim();
+    var photoInput = document.getElementById("servicePhoto");
+
+    // Validation
+    if (name === "" || price === "" || desc === "" || photoInput.files.length === 0) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    if (!isNaN(name.charAt(0))) {
+        alert("Service name cannot start with a number.");
+        return;
+    }
+
+    if (isNaN(price)) {
+        alert("Price must be a number.");
+        return;
+    }
+
+    // Store image URL
+    var photo = photoInput.files[0];
+    var photoURL = URL.createObjectURL(photo);
+
+    // Retrieve old services
+    var services = JSON.parse(localStorage.getItem("services"));
+    if (services === null) {
+        services = [];
+    }
+
+    // Create new service object
+    var newService = {
+        name: name,
+        price: price,
+        description: desc,
+        image: photoURL
+    };
+
+    // Save service
+    services.push(newService);
+    localStorage.setItem("services", JSON.stringify(services));
+
+    alert(name + " has been added successfully!");
+
+    // Clear the form
+    document.querySelector(".service-form").reset();
+}
+
+
+// End of Add Services Form Page Script
+
