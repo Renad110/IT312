@@ -462,7 +462,80 @@ function handleAdd(event) {
 }
 
 }
-
-
-
 // End of Manage Staff Page Script
+
+//start of join form script 
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Get references to the form and submit button
+    const form = document.querySelector('.join-form'); 
+    const submitButton = form.querySelector('button[type="submit"]'); 
+
+    // Get references to input fields
+    const fullNameInput = document.getElementById('joinName');
+    const dobInput = document.getElementById('joinDob');
+    const photoInput = document.getElementById('joinPhoto');
+
+    // Attach an event listener to the form's submit event
+    form.addEventListener('submit', (event) => {
+        
+        // Prevent default form submission and page refresh
+        event.preventDefault(); 
+        
+        if (validateForm()) {
+            // Show success alert and sender's name if validation passes
+            const senderName = fullNameInput.value.trim();
+            alert(`Submission Successful!\n\nThank you, ${senderName}, for your interest in joining our team. We will be in touch shortly.`);
+        }
+    });
+
+   
+    function validateForm() {
+        let isValid = true;
+
+        // Check for basic HTML 'required' fields
+        if (!form.checkValidity()) {
+            form.reportValidity(); 
+            return false;
+        }
+        
+        // Requirement: Name cannot start with numbers
+        const nameValue = fullNameInput.value.trim();
+        if (/^\d/.test(nameValue)) {
+            alert("Error: Full Name cannot start with a number.");
+            fullNameInput.focus();
+            isValid = false;
+            return isValid;
+        }
+
+        // Requirement: DOB should not be after 2008
+        const dobValue = dobInput.value; 
+        if (dobValue) {
+            const dobDate = new Date(dobValue);
+            // Use Jan 1st, 2009 as the cutoff date
+            const cutoffDate = new Date('2009-01-01'); 
+
+            if (dobDate >= cutoffDate) {
+                alert("Error: Date of Birth must be on or before 2008.");
+                dobInput.focus();
+                isValid = false;
+                return isValid;
+            }
+        }
+        
+        // Requirement: Photo field accepts only images
+        const photoFile = photoInput.files[0];
+        if (photoFile) {
+            if (!photoFile.type.startsWith('image/')) {
+                alert("Error: Photo field must contain an image file (e.g., JPEG, PNG).");
+                photoInput.value = ''; 
+                isValid = false;
+                return isValid;
+            }
+        }
+
+        // Return true if all checks pass
+        return isValid;
+    }
+});
+//end join form script 
