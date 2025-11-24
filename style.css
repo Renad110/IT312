@@ -215,6 +215,8 @@ header {
   width: 100%;
 }
 
+
+
 .testi-card {
   width: 265px;
   height: 190px;
@@ -229,7 +231,21 @@ header {
   flex-direction: column;
   justify-content: space-between;
   transition: 0.3s;
+}         
+
+.testi-card {
+  outline: none;
 }
+
+.testi-card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(43,110,242,0.3);
+  }
+
+.testi-card:focus-visible {
+  outline: none;
+}
+
 
 .testi-card:hover {
   transform: translateY(-6px);
@@ -1448,7 +1464,7 @@ Flexible images (from slide #10)
 }
 
 /* Media query for mobile (from slide #11–12) 
-@media screen and (max-width: 768x) {
+@media screen and (max-width: 768px) {
 
   .nav {
     flex-direction: column;
@@ -1510,6 +1526,27 @@ end responsive design */
 /* =========================================================
    RESPONSIVE DESIGN — HOME PAGE ONLY (Laptop > iPad > Phone)
    ========================================================= */
+
+            
+            /* ========  TABLET ADJUSTMENT — to fix arrow size & position ======== */
+          @media (max-width: 900px) {
+
+            body.homepage .testi-nav {
+              width: 32px;
+              height: 32px;
+              font-size: 1.1rem;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            body.homepage .testi-nav.left {
+              left: 0;
+            }
+
+            body.homepage .testi-nav.right {
+              right: 0;
+            }
+          }
 
 
 /* ========  1) PHONE — Small Screens (iPhone & small devices) ======== */
