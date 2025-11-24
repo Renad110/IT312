@@ -237,70 +237,123 @@ function initBookmarkPage() {
     }
   });
 }
+// End of Bookmark Page Script
 
+
+
+//Provider Page Script
+if (window.location.pathname.includes("sp-dp.html")) {
+
+    window.onload = function () {
+        loadProviderServices();
+    };
+
+    function loadProviderServices() {
+        var services = JSON.parse(localStorage.getItem("services"));
+        var container = document.getElementById("provider-services");
+
+        if (!services || services.length === 0) {
+            container.innerHTML = "<p style='text-align:center; color:#ccc; margin-top:40px;'>No services added yet.</p>";
+            return;
+        }
+
+        container.innerHTML = "";
+
+        for (var i = 0; i < services.length; i++) {
+            var s = services[i];
+
+            var card =
+                '<div class="service-card">' +
+                    '<table class="service-table">' +
+                        '<tbody>' +
+                            '<tr>' +
+                                '<td class="col-name">' +
+                                    '<strong>' + s.name + '</strong><br><br>' +
+                                    '<img src="' + s.image + '" alt="' + s.name + '">' +
+                                '</td>' +
+                                '<td class="col-price"><strong>' + s.price + 'SR</strong></td>' +
+                                '<td class="col-desc">' + s.description + '</td>' +
+                            '</tr>' +
+                        '</tbody>' +
+                    '</table>' +
+                '</div>';
+
+            container.innerHTML += card;
+        }
+    }
+}
+
+// End of Provider Page Script
 
 //Add Service Page Form Script
 
 // Run when the page finishes loading
-window.onload = function () {
-    var form = document.querySelector(".service-form");
-    form.onsubmit = handleAddService;
-};
+if (window.location.pathname.includes("AddServices.html")) {
 
-// Handle adding a new service
-function handleAddService(event) {
-    event.preventDefault();
-
-    // Get form values
-    var name = document.getElementById("serviceName").value.trim();
-    var price = document.getElementById("servicePrice").value.trim();
-    var desc = document.getElementById("serviceDescription").value.trim();
-    var photoInput = document.getElementById("servicePhoto");
-
-    // Validation
-    if (name === "" || price === "" || desc === "" || photoInput.files.length === 0) {
-        alert("Please fill all fields.");
-        return;
-    }
-
-    if (!isNaN(name.charAt(0))) {
-        alert("Service name cannot start with a number.");
-        return;
-    }
-
-    if (isNaN(price)) {
-        alert("Price must be a number.");
-        return;
-    }
-
-    // Store image URL
-    var photo = photoInput.files[0];
-    var photoURL = URL.createObjectURL(photo);
-
-    // Retrieve old services
-    var services = JSON.parse(localStorage.getItem("services"));
-    if (services === null) {
-        services = [];
-    }
-
-    // Create new service object
-    var newService = {
-        name: name,
-        price: price,
-        description: desc,
-        image: photoURL
+    window.onload = function () {
+        var form = document.querySelector(".service-form");
+        form.onsubmit = handleAddService;
     };
 
-    // Save service
-    services.push(newService);
-    localStorage.setItem("services", JSON.stringify(services));
+    function handleAddService(event) {
+        event.preventDefault();
 
-    alert(name + " has been added successfully!");
+        // Read input values
+        var name = document.getElementById("serviceName").value.trim();
+        var price = document.getElementById("servicePrice").value.trim();
+        var desc = document.getElementById("serviceDescription").value.trim();
+        var photoInput = document.getElementById("servicePhoto");
 
-    // Clear the form
-    document.querySelector(".service-form").reset();
+        // Validation
+
+        if (name === "" || price === "" || desc === "" || photoInput.files.length === 0) {
+            alert("Please fill all fields.");
+            return;
+        }
+
+        if (!isNaN(name.charAt(0))) {
+            alert("Service name cannot start with a number.");
+            return;
+        }
+
+        if (isNaN(price)) {
+            alert("Price must be a number.");
+            return;
+        }
+
+        var photo = photoInput.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            var base64Image = e.target.result;
+
+            // Retrieve old services
+            var services = JSON.parse(localStorage.getItem("services"));
+            if (!services) {
+                services = [];
+            }
+
+            // Build service object
+            var newService = {
+                name: name,
+                price: price,
+                description: desc,
+                image: base64Image
+            };
+
+            // Save service
+            services.push(newService);
+            localStorage.setItem("services", JSON.stringify(services));
+
+            alert(name + " has been added successfully!");
+
+            // Reset form
+            document.querySelector(".service-form").reset();
+        };
+
+        reader.readAsDataURL(photo); // Convert to Base64
+    }
 }
-
 
 // End of Add Services Form Page Script
 
@@ -389,7 +442,7 @@ if (window.location.pathname.includes("ManageStaff.html")) {
 
 
 
-    // Add a new staff member
+  // Add a new staff member
 function handleAdd(event) {
     event.preventDefault();
 
@@ -465,6 +518,7 @@ function handleAdd(event) {
 // End of Manage Staff Page Script
 
 //start of join form script 
+if (window.location.pathname.includes("JoinOurTeam.html")) {
 document.addEventListener('DOMContentLoaded', () => {
     
     // Get references to the form and submit button
@@ -538,4 +592,5 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid;
     }
 });
+}
 //end join form script 
