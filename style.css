@@ -1604,11 +1604,11 @@ end responsive design */
   color: #1a1a1a !important;
 }
 
-.light-theme .banner-text p , .join-header, .cdb-section{
+.light-theme .banner-text p , .join-header, .cdb-section , .req-title , .eval-title{
   color: #ffffff !important;
 }
 
-.light-theme .footer-clock {
+.light-theme .footer-clock ,.registration-form label {
   color: #000;
 }
 
@@ -1635,7 +1635,7 @@ end responsive design */
   background: #b2b3b4fe ;  
 }
 
-.light-theme .cdb-buttons a, .join-wrapper, .join-group label ,.join-group input ,textarea {
+.light-theme .cdb-buttons a, .join-wrapper, .join-group label ,.join-group input ,textarea , .registration-form input,.registration-form , #service{
    background:  #f4f2f7fe !important ;  
    color: #000000 !important;
  }
