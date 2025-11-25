@@ -1567,6 +1567,9 @@ end responsive design */
 .light-theme a {
   color: #007ebdfe !important;
 }
+.light-theme a:hover {
+  color: #00005bfe !important;
+}
 .light-theme a.active {
   color: #000000fe !important;
 }
@@ -1580,11 +1583,15 @@ end responsive design */
 
 .light-theme .testi-nav {
   background-color: #ffffff !important;
-  color: #007bff !important;
+  color: #007ebdfe !important;
 }
 
 .light-theme hr{
   background-color: #000000 !important;
+}
+
+.light-theme summary {
+  color: #007ebdfe !important;
 }
 
 .light-theme .faq details {
