@@ -1623,7 +1623,7 @@ end responsive design */
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
-  margin-right: auto; 
+  margin: right !important ; 
 }
 
 .theme-btn:hover {
