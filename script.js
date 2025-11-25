@@ -92,26 +92,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/* ============================*/
-
 /* =============================
    Back to Top Button
    ============================= */
 
-const backToTopBtn = document.getElementById("backToTop");
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtn = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
+  if (!backToTopBtn) return;
 
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
 
@@ -121,8 +116,9 @@ backToTopBtn.addEventListener("click", () => {
 
 function updateClock() {
   const clock = document.getElementById("footer-clock");
-  const now = new Date();
+  if (!clock) return;
 
+  const now = new Date();
   const timeString = now.toLocaleString("en-SA", {
     hour: "2-digit",
     minute: "2-digit",
@@ -131,11 +127,8 @@ function updateClock() {
 
   clock.textContent = timeString;
 }
-
 setInterval(updateClock, 1000);
 updateClock();
-/* ============================*/
-
 
 /* ============================
    Renad – Services & Bookmarks Module
