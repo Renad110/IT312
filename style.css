@@ -1530,23 +1530,24 @@ end responsive design */
    ==================== */
 
 .light-theme {
-  background-color: #ffffff !important;
+  
+  background-color: #007ebdfe !important;
   color: #1a1a1a !important;
 }
 
 .light-theme header {
-  background-color: #e6f1ff !important;
+  background-color: #ffffff !important;
 }
+
+.light-theme footer {
+  background-color: #ffffff !important;
+}
+
 
 .light-theme .card,
 .light-theme .service-card,
 .light-theme .testi-card {
-  background-color: #f2f6fc !important;
-  color: #1a1a1a !important;
-}
-
-.light-theme footer {
-  background-color: #e6f1ff !important;
+  background-color: #ffffff !important;
   color: #1a1a1a !important;
 }
 
@@ -1555,7 +1556,7 @@ end responsive design */
 }
 
 .light-theme .testi-text {
-  border-color: #aaa !important;
+  color: #000000 !important;
 }
 
 .light-theme .testi-nav {
@@ -1564,16 +1565,30 @@ end responsive design */
 }
 
 .light-theme a {
-  color: #007bff !important;
+  color: #007ebdfe !important;
+}
+.light-theme a.active {
+  color: #000000fe !important;
+}
+
+.light-theme h3 , p {
+  color: #00070e !important;
+}
+
+.light-theme hr{
+  background-color: #000000 !important;
+}
+
+.light-theme .faq details {
+  background-color: #f0f0f0 !important;
+  color: #1a1a1a !important;
 }
 
 /*____________________________________*/
 
 .theme-btn {
-  background: #00aaff;
-  color: white;
+  background: none; 
   border: none;
-  border-radius: 50%;
   width: 38px;
   height: 38px;
   font-size: 18px;
@@ -1582,7 +1597,8 @@ end responsive design */
 }
 
 .theme-btn:hover {
-  background-color: #0090dd;
+    transition: 0.3s;
+
 }
 
 
