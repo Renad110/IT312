@@ -1,5 +1,39 @@
 // script.js
 
+
+/* ===== 2. Website themes CSS/JavaScript ===== */
+
+/* ====================
+   Light Theme Toggle
+   ==================== */
+
+const themeBtn = document.getElementById("theme-toggle");
+
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+
+    if (document.body.classList.contains("light-theme")) {
+      themeBtn.textContent = "☀️";
+      localStorage.setItem("theme", "light");
+    } else {
+      themeBtn.textContent = "🌙";
+      localStorage.setItem("theme", "dark");
+    }
+  });
+
+  // Load saved theme
+  if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-theme");
+    themeBtn.textContent = "☀️";
+  }
+}
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // Sorting & random order on Services page
   initServicesPage();
