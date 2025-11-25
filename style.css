@@ -1571,9 +1571,13 @@ end responsive design */
   color: #000000fe !important;
 }
 
-.light-theme h3 , p {
+.light-theme h3 {
   color: #00070e !important;
 }
+.light-theme p {
+  color: #00070e !important;
+}
+
 
 .light-theme hr{
   background-color: #000000 !important;
@@ -1582,6 +1586,15 @@ end responsive design */
 .light-theme .faq details {
   background-color: #f0f0f0 !important;
   color: #1a1a1a !important;
+}
+
+.light-theme details p{
+  background-color: #f0f0f0 !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .banner-text p{
+  color: #ffffff !important;
 }
 
 /*____________________________________*/
