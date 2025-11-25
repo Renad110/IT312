@@ -1604,7 +1604,7 @@ end responsive design */
   color: #1a1a1a !important;
 }
 
-.light-theme .banner-text p{
+.light-theme .banner-text p , .join-header, .cdb-section{
   color: #ffffff !important;
 }
 
@@ -1612,9 +1612,9 @@ end responsive design */
   color: #000;
 }
 
-.light-theme #sort, .bookmark-btn {
-    background-color: #f0f0f0 ;
-  color: #1a1a1a ;
+.light-theme .bookmark-btn , .light-theme #sort {
+  background-color: #f0f0f0 ;
+  color: #1a1a1a !important;
 }
 
 .light-theme .team-card  {
@@ -1626,16 +1626,33 @@ end responsive design */
   color: #1a1a1a !important;
 }
 
-.light-theme .join-btn {
+.light-theme .join-btn , a.join-btn:hover {
   background: #e7e8e9fe ;
   color: #1a1a1a !important;
   
 }
-.light-theme{
-  
+.light-theme a.join-btn:hover {
+  background: #b2b3b4fe ;  
 }
-.light-theme{
-  
+
+.light-theme .cdb-buttons a, .join-wrapper, .join-group label ,.join-group input ,textarea {
+   background:  #f4f2f7fe !important ;  
+   color: #000000 !important;
+ }
+  .light-theme .profile-table th {
+  background-color: #023c7b !important;
+  color: white !important;
+  border-color: #000000 !important;
+}
+.light-theme .profile-table td  {
+  background-color: #fefffffe !important;
+  color: #1a1a1a !important;
+  border-color: #000000 !important;
+} 
+
+.light-theme .cdb-section th,td{
+  background-color: #f4f2f7fe !important;
+  color: #1a1a1a !important;
 }
 
 /*____________________________________*/
@@ -1647,13 +1664,7 @@ end responsive design */
   height: 38px;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.3s;
   margin: right !important ; 
-}
-
-.theme-btn:hover {
-    transition: 0.3s;
-
 }
 
 
