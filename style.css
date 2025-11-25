@@ -1604,7 +1604,7 @@ end responsive design */
   color: #1a1a1a !important;
 }
 
-.light-theme .banner-text p , .join-header, .cdb-section , .req-title , .eval-title , .add-title{
+.light-theme .banner-text p , .join-header, .cdb-section , .req-title , .eval-title , .add-title ,.staff-title{
   color: #ffffff !important;
 }
 
@@ -1621,7 +1621,7 @@ end responsive design */
   background: #f0f0f0 ;
 }
 
-.light-theme ,a.profile-btn {
+.light-theme ,a.profile-btn ,.staff-card-Man{
   background:  #007ebdfe ; 
   color: #1a1a1a !important;
 }
@@ -1635,7 +1635,7 @@ end responsive design */
   background: #b2b3b4fe ;  
 }
 
-.light-theme .cdb-buttons a, .join-wrapper, .join-group label ,.join-group input ,textarea , .registration-form input,.registration-form , #service , .spdb-buttons a , .add-service input, div.add-service   {
+.light-theme .cdb-buttons a, .join-wrapper, .join-group label ,.join-group input ,textarea , .registration-form input,.registration-form , #service , .spdb-buttons a , .add-service input, div.add-service ,.staff-container ,.add-section ,.add-form input{
    background:  #f4f2f7fe !important ;  
    color: #000000 !important;
  }
