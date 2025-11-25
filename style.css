@@ -1650,7 +1650,7 @@ end responsive design */
   border-color: #000000 !important;
 } 
 
-.light-theme .cdb-section th,td{
+.light-theme .cdb-section th,.cdb-section  td{
   background-color: #f4f2f7fe !important;
   color: #1a1a1a !important;
 }
