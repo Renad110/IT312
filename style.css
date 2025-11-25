@@ -1522,6 +1522,71 @@ Flexible images (from slide #10)
 end responsive design */
 
 
+ 
+/* ===== 2. Website themes CSS/JavaScript ===== */
+
+/* ====================
+   LIGHT THEME
+   ==================== */
+
+.light-theme {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme header {
+  background-color: #e6f1ff !important;
+}
+
+.light-theme .card,
+.light-theme .service-card,
+.light-theme .testi-card {
+  background-color: #f2f6fc !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme footer {
+  background-color: #e6f1ff !important;
+  color: #1a1a1a !important;
+}
+
+.light-theme .service-name {
+  color: #007bff !important;
+}
+
+.light-theme .testi-text {
+  border-color: #aaa !important;
+}
+
+.light-theme .testi-nav {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+.light-theme a {
+  color: #007bff !important;
+}
+
+/*____________________________________*/
+
+.theme-btn {
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background-color: #0090dd;
+}
+
+
+
 
 /* =========================================================
    RESPONSIVE DESIGN — HOME PAGE ONLY (Laptop > iPad > Phone)
@@ -1687,67 +1752,4 @@ end responsive design */
   }
 }
   
-  
-  
-/* ===== 2. Website themes CSS/JavaScript ===== */
-
-/* ====================
-   LIGHT THEME
-   ==================== */
-
-.light-theme {
-  background-color: #ffffff !important;
-  color: #1a1a1a !important;
-}
-
-.light-theme header {
-  background-color: #e6f1ff !important;
-}
-
-.light-theme .card,
-.light-theme .service-card,
-.light-theme .testi-card {
-  background-color: #f2f6fc !important;
-  color: #1a1a1a !important;
-}
-
-.light-theme footer {
-  background-color: #e6f1ff !important;
-  color: #1a1a1a !important;
-}
-
-.light-theme .service-name {
-  color: #007bff !important;
-}
-
-.light-theme .testi-text {
-  border-color: #aaa !important;
-}
-
-.light-theme .testi-nav {
-  background-color: #007bff !important;
-  color: white !important;
-}
-
-.light-theme a {
-  color: #007bff !important;
-}
-
-/*____________________________________*/
-
-.theme-btn {
-  background: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.theme-btn:hover {
-  background-color: #0090dd;
-}
-
+ 
