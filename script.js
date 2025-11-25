@@ -7,27 +7,35 @@
    Light Theme Toggle
    ==================== */
 
-const themeBtn = document.getElementById("theme-toggle");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (themeBtn) {
-  themeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme");
+  const themeBtn = document.getElementById("theme-toggle");
 
-    if (document.body.classList.contains("light-theme")) {
+  if (themeBtn) {
+
+    themeBtn.addEventListener("click", () => {
+
+      // toggle theme class
+      document.body.classList.toggle("light-theme");
+
+      // set icon + save theme
+      if (document.body.classList.contains("light-theme")) {
+        themeBtn.textContent = "☀️";
+        localStorage.setItem("theme", "light");
+      } else {
+        themeBtn.textContent = "🌙";
+        localStorage.setItem("theme", "dark");
+      }
+    });
+
+    // load saved theme on refresh
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-theme");
       themeBtn.textContent = "☀️";
-      localStorage.setItem("theme", "light");
-    } else {
-      themeBtn.textContent = "🌙";
-      localStorage.setItem("theme", "dark");
     }
-  });
-
-  // Load saved theme
-  if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light-theme");
-    themeBtn.textContent = "☀️";
   }
-}
+
+}); 
 
 
 /* ============================
