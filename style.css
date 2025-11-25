@@ -1612,14 +1612,28 @@ end responsive design */
   color: #000;
 }
 
+.light-theme #sort, .bookmark-btn {
+    background-color: #f0f0f0 ;
+  color: #1a1a1a ;
+}
+
+.light-theme .team-card  {
+  background: #f0f0f0 ;
+}
+
+.light-theme ,a.profile-btn {
+  background:  #007ebdfe ; 
+  color: #1a1a1a !important;
+}
+
+.light-theme .join-btn {
+  background: #e7e8e9fe ;
+  color: #1a1a1a !important;
+  
+}
 .light-theme{
   
 }
-
-.light-theme{
-  
-}
-
 .light-theme{
   
 }
