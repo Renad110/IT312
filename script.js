@@ -85,6 +85,49 @@ if (themeBtn) {
     updateDots();
   });
 });
+/* ============================
+
+/* =============================
+   Back to Top Button
+   ============================= */
+
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+/* =============================
+   Real-Time Clock in Footer
+   ============================= */
+
+function updateClock() {
+  const clock = document.getElementById("footer-clock");
+  const now = new Date();
+
+  const timeString = now.toLocaleString("en-SA", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  });
+
+  clock.textContent = timeString;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+/* ============================
 
 
 

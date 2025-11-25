@@ -1608,6 +1608,11 @@ end responsive design */
   color: #ffffff !important;
 }
 
+.light-theme .footer-clock {
+  color: #000;
+}
+
+
 /*____________________________________*/
 
 .theme-btn {
@@ -1791,5 +1796,40 @@ end responsive design */
     gap: 40px;
   }
 }
-  
  
+/* =============================
+   Back to Top Button
+   ============================= */
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: #00aaff;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #0088d6;
+}
+
+/* =============================
+   Real-Time Clock in Footer
+   ============================= */
+
+.footer-clock {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ffffff;
+}
