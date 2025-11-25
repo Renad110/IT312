@@ -1578,6 +1578,10 @@ end responsive design */
   color: #00070e !important;
 }
 
+.light-theme .testi-nav {
+  background-color: #ffffff !important;
+  color: #007bff !important;
+}
 
 .light-theme hr{
   background-color: #000000 !important;

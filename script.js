@@ -30,11 +30,67 @@ if (themeBtn) {
 }
 
 
+/* ============================
+   Home Page – TESTIMONIALS SLIDER
+   ============================ */
 
+  document.addEventListener("DOMContentLoaded", function () {
+
+  const testiList = document.getElementById("testi-list");
+  const nextBtn = document.getElementById("testi-next");
+  const prevBtn = document.getElementById("testi-prev");
+  const dots = document.querySelectorAll(".dot");
+
+  if (!testiList) return;
+
+  const cardWidth = 290; 
+
+  nextBtn?.addEventListener("click", () => {
+    testiList.scrollBy({ left: cardWidth, behavior: "smooth" });
+    updateDots();
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    testiList.scrollBy({ left: -cardWidth, behavior: "smooth" });
+    updateDots();
+  });
+
+  function updateDots() {
+    const scrollLeft = testiList.scrollLeft;
+    const maxScroll = testiList.scrollWidth - testiList.clientWidth;
+    const index = Math.round((scrollLeft / maxScroll) * (dots.length - 1));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+
+  // DRAG TO SCROLL
+  let isDown = false;
+  let startX;
+  let scrollLeftStart;
+
+  testiList.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX - testiList.offsetLeft;
+    scrollLeftStart = testiList.scrollLeft;
+  });
+
+  testiList.addEventListener("mouseleave", () => (isDown = false));
+  testiList.addEventListener("mouseup", () => (isDown = false));
+
+  testiList.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - testiList.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    testiList.scrollLeft = scrollLeftStart - walk;
+    updateDots();
+  });
+});
 
 
 
 document.addEventListener("DOMContentLoaded", function () {
+ 
+ 
   // Sorting & random order on Services page
   initServicesPage();
 
