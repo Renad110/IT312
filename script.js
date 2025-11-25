@@ -7,31 +7,30 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const themeBtn = document.getElementById("theme-toggle");
+const themeBtn = document.getElementById("theme-toggle");
 
-  if (themeBtn) {
+// Apply saved theme to ALL pages
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-theme");
 
-    themeBtn.addEventListener("click", () => {
+    if (themeBtn) themeBtn.textContent = "☀️";
+}
 
-      // toggle theme class
-      document.body.classList.toggle("light-theme");
+// If we are in homepage → allow toggling
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
 
-      // set icon + save theme
-      if (document.body.classList.contains("light-theme")) {
-        themeBtn.textContent = "☀️";
-        localStorage.setItem("theme", "light");
-      } else {
-        themeBtn.textContent = "🌙";
-        localStorage.setItem("theme", "dark");
-      }
-    });
-
-    // load saved theme on refresh
-    if (localStorage.getItem("theme") === "light") {
-      document.body.classList.add("light-theme");
+    if (document.body.classList.contains("light-theme")) {
       themeBtn.textContent = "☀️";
+      localStorage.setItem("theme", "light");
+    } else {
+      themeBtn.textContent = "🌙";
+      localStorage.setItem("theme", "dark");
     }
-  }
+  });
+}
+
 
 }); 
 
