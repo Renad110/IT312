@@ -1,5 +1,3 @@
-// script.js
-
 
 /* ===== 2. Website themes CSS/JavaScript ===== */
 
