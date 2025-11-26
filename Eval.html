@@ -42,7 +42,7 @@
         <!-- select a servicefrom dropdown -->
         <div class="form-group">
           <label for="service">Choose Service:</label>
-          <select id="service" name="service" required>
+          <select id="service" name="service" >
             <option value="">-- Select a service --</option>
             <option value="tournament">Tournament</option>
             <option value="training">Training Session</option>
@@ -51,22 +51,23 @@
         </div>
 
       <!-- rang  to choose rating between 1 and 5 and select min and max val-->
-<div class="form-group">
-  <label for="ratingRange">Rating (1–5):</label>
-  <div class="service-types rating-types">
-    <div class="service-option">
-      <input 
-        type="range" 
-        id="ratingRange" 
-        name="rating" 
-        min="1"   
-        max="5" 
-        step="1" 
-        value="3" 
-      >
+
+    <!-- ★★ Rating Stars System ★★ -->
+   <div class="form-group">
+     <label>Rating (1–5):</label>
+
+     <div class="rating-value" id="ratingValue">3</div>
+
+     <div class="star-rating" id="starRating">
+         <i class="fa-solid fa-star" data-value="1"></i>
+         <i class="fa-solid fa-star" data-value="2"></i>
+         <i class="fa-solid fa-star" data-value="3"></i>
+         <i class="fa-solid fa-star" data-value="4"></i>
+         <i class="fa-solid fa-star" data-value="5"></i>
+     </div>
+
+      <input type="hidden" name="rating" id="ratingInput" value="0">
     </div>
-  </div>
-</div>
 
 
         <div class="form-group">
@@ -110,4 +111,5 @@
   </footer>
 
 </body>
+<script src="main.js"></script>
 </html>
