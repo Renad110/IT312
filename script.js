@@ -410,24 +410,20 @@ if (window.location.pathname.includes("sp-dp.html")) {
 
 //Add Service Page Form Script
 
-// Run when the page finishes loading
 if (window.location.pathname.includes("AddServices.html")) {
 
-    window.onload = function () {
+    document.addEventListener("DOMContentLoaded", function () {
         var form = document.querySelector(".service-form");
-        form.onsubmit = handleAddService;
-    };
+        if (form) form.onsubmit = handleAddService;
+    });
 
     function handleAddService(event) {
         event.preventDefault();
 
-        // Read input values
         var name = document.getElementById("serviceName").value.trim();
         var price = document.getElementById("servicePrice").value.trim();
         var desc = document.getElementById("serviceDescription").value.trim();
         var photoInput = document.getElementById("servicePhoto");
-
-        // Validation
 
         if (name === "" || price === "" || desc === "" || photoInput.files.length === 0) {
             alert("Please fill all fields.");
@@ -450,13 +446,8 @@ if (window.location.pathname.includes("AddServices.html")) {
         reader.onload = function(e) {
             var base64Image = e.target.result;
 
-            // Retrieve old services
-            var services = JSON.parse(localStorage.getItem("services"));
-            if (!services) {
-                services = [];
-            }
+            var services = JSON.parse(localStorage.getItem("services")) || [];
 
-            // Build service object
             var newService = {
                 name: name,
                 price: price,
@@ -464,17 +455,15 @@ if (window.location.pathname.includes("AddServices.html")) {
                 image: base64Image
             };
 
-            // Save service
             services.push(newService);
+
             localStorage.setItem("services", JSON.stringify(services));
 
             alert(name + " has been added successfully!");
-
-            // Reset form
             document.querySelector(".service-form").reset();
         };
 
-        reader.readAsDataURL(photo); // Convert to Base64
+        reader.readAsDataURL(photo);
     }
 }
 
@@ -718,222 +707,182 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 //end join form script 
 
-//--------------------- Eval Page Script -----------------------
+// =============== Evaluation Page Script ===============
+if (window.location.pathname.includes("Eval.html")) {
 
-console.log("JS is connected!");
+    document.addEventListener("DOMContentLoaded", function () {
 
-const stars = document.querySelectorAll("#starRating .fa-star");
-  const ratingValue = document.getElementById("ratingValue");
-  const ratingInput = document.getElementById("ratingInput");
+        // --- Star Rating ---
+        let stars = document.querySelectorAll("#starRating .fa-star");
+        let ratingValue = document.getElementById("ratingValue");
+        let ratingInput = document.getElementById("ratingInput");
 
-  stars.forEach(star => {
-    star.addEventListener("click", function () {
-      const selected = this.getAttribute("data-value");
+        stars.forEach(star => {
+            star.addEventListener("click", function () {
+                let value = this.getAttribute("data-value");
 
-      ratingValue.textContent = selected;
-      ratingInput.value = selected;
+                ratingValue.textContent = value;
+                ratingInput.value = value;
 
-      stars.forEach(s => {
-        s.classList.remove("active");
-        if (s.getAttribute("data-value") <= selected) {
-          s.classList.add("active");
-        }
-      });
-    });
-  });
-
-  // ===== Evaluation Page JS =====
-
-  //to select stars and set rating value
-window.onload = function () {
-    let stars = document.querySelectorAll("#starRating .fa-star");
-    let ratingValue = document.getElementById("ratingValue");
-    let ratingInput = document.getElementById("ratingInput");
-
-    stars.forEach(star => {
-        star.addEventListener("click", function () {
-            let value = this.getAttribute("data-value");
-
-            ratingValue.textContent = value;
-            ratingInput.value = value;
-
-            stars.forEach(s => {
-                s.classList.remove("active");
-                if (s.getAttribute("data-value") <= value) {
-                    s.classList.add("active");
-                }
+                stars.forEach(s => {
+                    s.classList.remove("active");
+                    if (parseInt(s.getAttribute("data-value")) <= value) {
+                        s.classList.add("active");
+                    }
+                });
             });
         });
+
+        // --- Form Submission ---
+        let form = document.querySelector("form");
+
+        if (form) {
+            form.onsubmit = function (event) {
+
+                event.preventDefault();
+
+                let service = document.getElementById("service").value;
+                let rating = document.getElementById("ratingInput").value;
+                let feedback = document.getElementById("feedback").value.trim();
+
+                if (service === "") {
+                    alert("Please select a service.");
+                    return;
+                }
+
+                if (rating === "" || rating === "0") {
+                    alert("Please add a rating.");
+                    return;
+                }
+
+                if (feedback.length === 0) {
+                    alert("Please write your feedback.");
+                    return;
+                }
+
+                // Messages
+                if (rating >= 4) {
+                    alert("Thank you for your positive feedback!");
+                } else if (rating <= 2) {
+                    alert("We are sorry, we will try to improve.");
+                } else {
+                    alert("Thank you for your evaluation.");
+                }
+
+                window.location.href = "C-DB.html";
+            };
+        }
     });
-
-    document.querySelector("form").onsubmit = handleSubmit;
-};
-
-
-// ===== Validation =====
-function handleSubmit(event) {
-
-    event.preventDefault(); //prvent form from submitting
-
-    let service = document.getElementById("service").value;
-    let rating = document.getElementById("ratingInput").value;
-    let feedback = document.getElementById("feedback").value.trim();
-
-    // tchecking the service selection
-    if (service === "") {
-        alert("Please select a service.");
-        return;
-    }
-
-    // tchecking the rating
-    if (rating === "" || rating === "0") {
-        alert("Please add a rating.");
-        return;
-    }
-
-    // tchecking the feedback
-    if (feedback.length === 0) {
-        alert("Please write your feedback.");
-        return;
-    }
-
-    // ==== Messages Based on Rating ====
-    if (rating >= 4) {
-        alert("Thank you for your positive feedback!");
-    } else if (rating <= 2) {
-        alert("We are sorry, we will try to improve.");
-    } else {
-        alert("Thank you for your evaluation.");
-    }
-
-    // move to the database page after submission
-    window.location.href = "C-DB.html";
 }
-//-----------------end Eval Page Script -------------------
 
+// =============== End Evaluation Page Script ===============
 
 //--------------------- New Service Request Page Script -----------------------
 // ====== Request Service JS ======
-console.log("JS is connected!");
+// =============== New Service Request Page Script ===============
+if (window.location.pathname.includes("NewServiceReq.html")) {
 
-// store all requests here
-let requestsList = [];
+    let requestsList = [];
 
-//  Validation Functions 
-
-function validateService() {
-    let service = document.getElementById("service").value;
-    return service !== "";
-}
-
-function validateName() {
-    let name = document.getElementById("fullName").value.trim();
-
-    //the name must contain at least two words
-    let regex = /^[A-Za-z]+\s+[A-Za-z]+$/;
-
-    // no numbers or special characters
-    let badChars = /[0-9?!@]/;
-
-    if (!regex.test(name)) return false;
-    if (badChars.test(name)) return false;
-
-    return true;
-}
-function validateDate() {
-    let userDate = document.getElementById("dueDate").value;
-    if (!userDate) return false;
-
-    let chosen = new Date(userDate);
-    let today = new Date();
-
-    // the chosen date must be at least 5 days from today
-    let minAllowed = new Date();
-    minAllowed.setDate(today.getDate() + 5);
-
-    return chosen >= minAllowed;
-}
-
-
-function validateDesc() {
-    let desc = document.getElementById("desc").value.trim();
-    return desc.length >= 100;
-}
-
-//  Add Requests to Page 
-
-function showRequests() {
-    let container = document.getElementById("reqResults");
-    container.innerHTML = "";
-
-    for (let req of requestsList) {
-        let box = document.createElement("div");
-        box.className = "req-box";
-
-        box.innerHTML = `
-            <p><strong>Service:</strong> ${req.service}</p>
-            <p><strong>Name:</strong> ${req.name}</p>
-            <p><strong>Due Date:</strong> ${req.date}</p>
-            <p><strong>Description:</strong> ${req.desc}</p>
-            <hr>
-        `;
-
-        container.appendChild(box);
-    }
-}
-
-//  Main Submit Function 
-
-function handleServiceRequest(event) {
-
-    // stop the form from submitting normally
-    event.preventDefault();
-
-    // start validation
-    if (!validateService()) {
-        alert("Please select a service.");
-        return;
+    // Validation functions
+    function validateService() {
+        let service = document.getElementById("service").value;
+        return service !== "";
     }
 
-    if (!validateName()) {
-        alert("Full name is invalid. Make sure it has two words and no numbers or symbols.");
-        return;
+    function validateName() {
+        let name = document.getElementById("fullName").value.trim();
+        let regex = /^[A-Za-z]+\s+[A-Za-z]+$/;
+        let badChars = /[0-9?!@]/;
+
+        if (!regex.test(name)) return false;
+        if (badChars.test(name)) return false;
+        return true;
     }
 
-    if (!validateDate()) {
-        alert("Due date must be at least 5 days from today.");
-        return;
+    function validateDate() {
+        let userDate = document.getElementById("dueDate").value;
+        if (!userDate) return false;
+
+        let chosen = new Date(userDate);
+        let today = new Date();
+
+        let minAllowed = new Date();
+        minAllowed.setDate(today.getDate() + 5);
+
+        return chosen >= minAllowed;
     }
 
-    if (!validateDesc()) {
-        alert("Description is too short. Minimum 100 characters.");
-        return;
+    function validateDesc() {
+        let desc = document.getElementById("desc").value.trim();
+        return desc.length >= 100;
     }
 
-    // if all validations pass
-    let confirmMsg = confirm("Your request has been sent.\nDo you want to stay on this page?");
+    function showRequests() {
+        let container = document.getElementById("reqResults");
+        container.innerHTML = "";
 
-    if (confirmMsg) {
-        // add the new request to the list and show it
-        let newReq = {
-            service: document.getElementById("service").value,
-            name: document.getElementById("fullName").value,
-            date: document.getElementById("dueDate").value,
-            desc: document.getElementById("desc").value
-        };
-
-        requestsList.push(newReq);
-        showRequests();
-
-        // reset the form
-    } else {
-        window.location.href = "C-DB.html"; // dashboard
+        for (let req of requestsList) {
+            let box = document.createElement("div");
+            box.className = "req-box";
+            box.innerHTML = `
+                <p><strong>Service:</strong> ${req.service}</p>
+                <p><strong>Name:</strong> ${req.name}</p>
+                <p><strong>Due Date:</strong> ${req.date}</p>
+                <p><strong>Description:</strong> ${req.desc}</p>
+                <hr>
+            `;
+            container.appendChild(box);
+        }
     }
+
+    function handleServiceRequest(event) {
+        event.preventDefault();
+
+        if (!validateService()) {
+            alert("Please select a service.");
+            return;
+        }
+
+        if (!validateName()) {
+            alert("Full name is invalid. Make sure it has two words and no numbers or symbols.");
+            return;
+        }
+
+        if (!validateDate()) {
+            alert("Due date must be at least 5 days from today.");
+            return;
+        }
+
+        if (!validateDesc()) {
+            alert("Description is too short. Minimum 100 characters.");
+            return;
+        }
+
+        let stay = confirm("Your request has been sent.\nDo you want to stay on this page?");
+
+        if (stay) {
+            let newReq = {
+                service: document.getElementById("service").value,
+                name: document.getElementById("fullName").value,
+                date: document.getElementById("dueDate").value,
+                desc: document.getElementById("desc").value
+            };
+
+            requestsList.push(newReq);
+            showRequests();
+
+        } else {
+            window.location.href = "C-DB.html";
+        }
+    }
+
+    // Register the event safely
+    document.addEventListener("DOMContentLoaded", function () {
+        let form = document.querySelector("form");
+        if (form) form.onsubmit = handleServiceRequest;
+    });
 }
 
-//  Register Event 
-window.onload = function () {
-    document.querySelector("form").onsubmit = handleServiceRequest;
-};
 //---------------------end New Service Request Page Script -----------------------
 
