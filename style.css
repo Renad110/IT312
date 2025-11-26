@@ -1577,7 +1577,7 @@ end responsive design */
 .light-theme h3 {
   color: #00070e !important;
 }
-.light-theme p {
+.light-theme p , .light-theme .price {
   color: #00070e !important;
 }
 
@@ -1604,11 +1604,11 @@ end responsive design */
   color: #1a1a1a !important;
 }
 
-.light-theme .banner-text p , .join-header, .cdb-section , .req-title , .eval-title , .add-title ,.staff-title{
+.light-theme .banner-text p , .join-header, .light-theme .cdb-section , .light-theme .req-title , .eval-title , .add-title ,.staff-title{
   color: #ffffff !important;
 }
 
-.light-theme .footer-clock ,.registration-form label ,.add-service label  {
+.light-theme .footer-clock ,.light-theme .registration-form label ,.light-theme .add-service label  {
   color: #000;
 }
 
@@ -1635,22 +1635,29 @@ end responsive design */
   background: #b2b3b4fe ;  
 }
 
-.light-theme .cdb-buttons a, .join-wrapper, .join-group label ,.join-group input ,textarea , .registration-form input,.registration-form , #service , .spdb-buttons a , .add-service input, div.add-service ,.staff-container ,.add-section ,.add-form input{
+.light-theme .cdb-buttons a, .light-theme .registration-form input, .light-theme .registration-form ,.light-theme .spdb-buttons a ,.light-theme .add-service input ,.light-theme .staff-container ,.light-theme .add-section ,.light-theme .add-form input ,.light-theme  div.add-service , .light-theme #service{
    background:  #f4f2f7fe !important ;  
    color: #000000 !important;
  }
+
+  .light-theme .join-wrapper ,  .light-theme .join-group input , .light-theme textarea, .light-theme .join-group label {
+   background:  #f4f2f7fe !important ;  
+   color: #000000 !important;
+  }
+
+
   .light-theme .profile-table th {
   background-color: #023c7b !important;
   color: white !important;
   border-color: #000000 !important;
 }
-.light-theme .profile-table td , .service-table th{
+.light-theme .profile-table td , .light-theme .service-table th{
   background-color: #fefffffe !important;
   color: #1a1a1a !important;
   border-color: #000000 !important;
 } 
 
-.light-theme .cdb-section th,.cdb-section td{
+.light-theme .cdb-section th,.light-theme .cdb-section td{
   background-color: #f4f2f7fe !important;
   color: #1a1a1a !important;
 }
@@ -1658,6 +1665,10 @@ end responsive design */
 .light-theme .service-table td{
   background-color: #fefffffe !important;
   color: #1a1a1a !important;
+}
+
+.light-theme .footer-divider{
+  background-color: #000000 !important;
 }
 
 /*____________________________________*/
