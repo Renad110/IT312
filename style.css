@@ -1199,8 +1199,27 @@ select {
   border-radius: 10px;
   color: white;
 }
+.star-rating {
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 22px;
+  color: #ccc;
+}
 
-/* ===== end Evaluation Page ===== */
+.star-rating .fa-star.active {
+  color: #f4c430; 
+}
+
+.rating-value {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+
+/* ===== end Evaluation Page ===== */
+
 
 /* ===== Request a Service Page ===== */
 
@@ -1453,75 +1472,6 @@ select {
   background-color: #b73232;
 }
 /* ===== end Manage Staff Page ===== */
-
-
-/*responseive design 
-
-Flexible images (from slide #10) 
-.homepage img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Media query for mobile (from slide #11–12) 
-@media screen and (max-width: 768px) {
-
-  .nav {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .service-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-    /* خلي صورة البانر تفتح على عرض الشاشة 
-  .banner {
-    width: 100%;
-    height: auto;
-    overflow: visible;
-    position: relative;
-  }
-  .banner img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-    display: block;
-
-  }
-
-  /* النص فوق الصورة 
-  .banner-text {
-    position: absolute;
-    bottom: 12%;
-    width: 90%;
-    font-size: 0.9rem;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    line-height: 1.5;
-  }
-   
-  
-
-  .footer-sections {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer-divider {
-    display: none;
-  }
-
-}
-end responsive design */
-
-
  
 /* ===== 2. Website themes CSS/JavaScript ===== */
 
@@ -1886,3 +1836,6 @@ end responsive design */
   font-size: 16px;
   color: #ffffff;
 }
+
+
+
