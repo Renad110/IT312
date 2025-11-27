@@ -426,17 +426,17 @@ if (window.location.pathname.includes("AddServices.html")) {
         var photoInput = document.getElementById("servicePhoto");
 
         if (name === "" || price === "" || desc === "" || photoInput.files.length === 0) {
-            alert("Please fill all fields.");
+            alert("Please fill in all fields before submitting.");
             return;
         }
 
         if (!isNaN(name.charAt(0))) {
-            alert("Service name cannot start with a number.");
+            alert("Service name must start with a letter, not a number.");
             return;
         }
 
         if (isNaN(price)) {
-            alert("Price must be a number.");
+            alert("Price must contain numbers only.");
             return;
         }
 
@@ -459,7 +459,7 @@ if (window.location.pathname.includes("AddServices.html")) {
 
             localStorage.setItem("services", JSON.stringify(services));
 
-            alert(name + " has been added successfully!");
+            alert(name + " has been successfully added!");
             document.querySelector(".service-form").reset();
         };
 
@@ -532,11 +532,11 @@ if (window.location.pathname.includes("ManageStaff.html")) {
         }
 
         if (selected.length === 0) {
-            alert("Please select at least one member.");
+            alert("Please select at least one staff member.");
             return;
         }
 
-        if (!confirm("Are you sure you want to delete selected members?")) {
+        if (!confirm("Are you sure you want to delete selected staff members?")) {
             return;
         }
 
@@ -568,31 +568,31 @@ function handleAdd(event) {
 
     // Validation check
     if (!name || !dob || !email || !expert || !skills || !edu || !photoFile) {
-        alert("Please fill all fields.");
+        alert("Please fill in all fields before submitting.");
         return;
     }
 
     // Name must not start with number
     if (!isNaN(name.charAt(0))) {
-        alert("Name cannot start with a number.");
+        alert("The staff name cannot start with a number..");
         return;
     }
 
     // Expert must be text (not start with number)
     if (!isNaN(expert.charAt(0))) {
-        alert("Expertise cannot start with a number.");
+        alert("Expertise must start with a letter, not a number.");
         return;
     }
 
     // Skills must be text (not start with number)
     if (!isNaN(skills.charAt(0))) {
-        alert("Skills cannot start with a number.");
+        alert("Skills must start with a letter, not a number.");
         return;
     }
 
     // Education must be text (not start with number)
     if (!isNaN(edu.charAt(0))) {
-        alert("Education cannot start with a number.");
+        alert("Education must start with a letter, not a number.");
         return;
     }
 
@@ -620,7 +620,7 @@ function handleAdd(event) {
     members.push(newMember);
     localStorage.setItem("members", JSON.stringify(members));
 
-    alert(name + " has been added!");
+    alert(name + " has been successfully added!");
 
     document.querySelector(".add-form").reset();
     loadMembers();
