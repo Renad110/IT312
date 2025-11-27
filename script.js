@@ -426,7 +426,7 @@ if (window.location.pathname.includes("AddServices.html")) {
         var photoInput = document.getElementById("servicePhoto");
 
         if (name === "" || price === "" || desc === "" || photoInput.files.length === 0) {
-            alert("fields cannot contain empty values. Please fill in all fields before submitting.");
+            alert("Fields cannot contain empty values. Please fill in all fields before submitting.");
             return;
         }
 
@@ -532,11 +532,11 @@ if (window.location.pathname.includes("ManageStaff.html")) {
         }
 
         if (selected.length === 0) {
-            alert("Please select at least one staff member.");
+            alert("Please select at least one offer to delete.");
             return;
         }
 
-        if (!confirm("Are you sure you want to delete selected staff members?")) {
+        if (!confirm("Are you sure you want to delete selected offers?")) {
             return;
         }
 
