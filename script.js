@@ -426,7 +426,7 @@ if (window.location.pathname.includes("AddServices.html")) {
         var photoInput = document.getElementById("servicePhoto");
 
         if (name === "" || price === "" || desc === "" || photoInput.files.length === 0) {
-            alert("Please fill in all fields before submitting.");
+            alert("fields cannot contain empty values. Please fill in all fields before submitting.");
             return;
         }
 
