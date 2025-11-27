@@ -220,8 +220,6 @@ updateClock();
       renderServices(servicesContainer, sortedCards);
     });
 
-    // Note: we do NOT call initServiceBookmarks here,
-    // because initBookmarks handles icon behavior + localStorage.
   }
 
   /* ===== Helper Functions for Services Sorting ===== */
@@ -315,8 +313,7 @@ updateClock();
       });
     });
 
-    // Note: We removed filtering behavior from the top "Bookmarks" button
-    // because in this design, the bookmarks are shown on a separate page (Bookmmark.html).
+    
   }
 
   /* ============================
