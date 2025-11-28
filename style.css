@@ -11,8 +11,6 @@ body {
   text-align: left;
 }
 
-.team-flex {
-}
 /* ===== HEADER ===== */
 
 header {
@@ -1659,6 +1657,11 @@ select {
 .light-theme .footer-divider {
   background-color: #000;
 }
+
+.light-theme h2{
+  color: #000000fe;
+}
+
 
 /*____________________________________*/
 
