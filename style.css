@@ -9,8 +9,9 @@ body {
   padding: 0;
   direction: ltr;
   text-align: left;
+  
 }
-
+.logo
 /* ===== HEADER ===== */
 
 header {
@@ -22,7 +23,7 @@ header {
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin: 40px auto;
 }
 
 .nav {
@@ -50,7 +51,6 @@ header {
 }
 
 /* ===== BANNER ===== */
-
 .banner {
   position: relative;
   width: 90%;
@@ -609,12 +609,6 @@ footer {
 /* End of Sp-dp Page */
 
 /* ======= Service page styles ======== */
-
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 40px auto;
-}
 
 /* sort bar */
 .sort-bar {
@@ -1708,6 +1702,7 @@ a,
   body.homepage .testi-nav.right {
     right: 0;
   }
+  
 }
 
 
@@ -1735,7 +1730,7 @@ a,
 
   body.homepage .banner img {
     width: 100%;
-    height: 360px;         /* مساحة أكبر للنص */
+    height: 360px;         
     object-fit: cover;
   }
 
@@ -1745,7 +1740,7 @@ a,
     left: 50%;
     bottom: 12%;
     transform: translateX(-50%);
-    font-size: 0.85rem;    /* يناسب الجوال */
+    font-size: 0.85rem;   
     line-height: 1.5;
     text-align: left;
   }
@@ -1787,9 +1782,8 @@ a,
   body.homepage .footer-divider {
     display: none;
   }
+   
 }
-
-
 
 
 /* ========  2) TABLET — Medium Screens (iPad & Tablets) ======== */
