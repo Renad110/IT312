@@ -11,6 +11,8 @@ body {
   text-align: left;
 }
 
+.team-flex {
+}
 /* ===== HEADER ===== */
 
 header {
@@ -842,12 +844,15 @@ select {
 .team-flex {
   display: flex; /* Aligns items in a row */
   flex-wrap: nowrap;     /* Keeps cards in one line */  
+  justify-content: center; /* Centers cards horizontally */
   gap: 25px; /* Space between cards */
-  overflow : scroll;  
-  scrollbar-width: none;
+  overflow : scroll; /* Enables horizontal scrolling */  
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
   padding: 1rem;
-  justify-content: flex-start;
-  margin: 0 8rem ;  /* Adds left and right margin */
+  margin: 0 auto ;  /* Adds left and right margin */
+  width: 100%;
+  max-width: 100%;
+
 }
 
 .team-card {
