@@ -877,6 +877,11 @@ select {
   color: #e5e7eb;
 }
 
+.profile_Tablesxx {
+  width: 100%;
+  overflow-x: auto;
+}
+
 .profile-btn {
   display: inline-block;
   background:  #00aaff;
