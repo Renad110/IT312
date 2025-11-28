@@ -575,6 +575,18 @@ function handleAdd(event) {
         return;
     }
 
+      // Photo must be an image
+    if (!photoFile.type.startsWith("image/")) {
+        alert("Photo must be an image file (JPEG, PNG, ...)");
+      return;
+    }
+
+    // DOB must not be after 2008 (must be ≤ 2008-12-31)
+    if (new Date(dob) > new Date("2008-12-31")) {
+       alert("Date of Birth must be in 2008 or earlier.");
+      return;
+  }
+  
     // Expert must be text (not start with number)
     if (!isNaN(expert.charAt(0))) {
         alert("Expertise must start with a letter, not a number.");
@@ -598,6 +610,13 @@ function handleAdd(event) {
         alert("Please enter a valid email address.");
         return;
     }
+
+     // Full name must include at least two words
+    if (name.split(" ").length < 2) {
+    alert("Please enter full name (first and last name).");
+    return;
+}
+
 
     var photoURL = URL.createObjectURL(photoFile);
 
