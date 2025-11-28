@@ -1667,9 +1667,7 @@ select {
 .theme-btn {
   background: none;
   border: none;
-  width: 38px;
-  height: 38px;
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
 }
 
