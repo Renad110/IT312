@@ -1609,6 +1609,15 @@ select {
   background: #c9c9c9;
 }
 
+.light-theme .cdb-buttons a{
+  background: #e3e3e3;
+  color: #000;  
+}
+
+.light-theme .cdb-buttons a:hover {
+  background: #c9c9c9;
+}
+
 .light-theme .cdb-buttons a,
 .light-theme .registration-form input,
 .light-theme .registration-form,
@@ -1688,10 +1697,6 @@ a,
   transition: all 0.25s ease;
 }
 
-
-.cdb-buttons a:hover {
-  background: #c9c9c9;
-}
 
 /* =========================================================
    RESPONSIVE DESIGN — HOME PAGE ONLY (Laptop > iPad > Phone)
