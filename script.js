@@ -360,8 +360,9 @@ updateClock();
   }
 })(); // End of Renad's module
 
-
+//========================
 //Provider Page Script
+//========================
 if (window.location.pathname.includes("sp-dp.html")) {
 
     window.onload = function () {
@@ -402,11 +403,13 @@ if (window.location.pathname.includes("sp-dp.html")) {
         }
     }
 }
-
+//========================
 // End of Provider Page Script
+//========================
 
+//========================
 //Add Service Page Form Script
-
+//========================
 if (window.location.pathname.includes("AddServices.html")) {
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -423,21 +426,29 @@ if (window.location.pathname.includes("AddServices.html")) {
         var photoInput = document.getElementById("servicePhoto");
 
         if (name === "" || price === "" || desc === "" || photoInput.files.length === 0) {
-            alert("Fields cannot contain empty values. Please fill in all fields before submitting.");
+            alert("Please fill all fields.");
             return;
         }
 
         if (!isNaN(name.charAt(0))) {
-            alert("Service name must start with a letter, not a number.");
+            alert("Service name cannot start with a number.");
             return;
         }
 
         if (isNaN(price)) {
-            alert("Price must contain numbers only.");
+            alert("Price must be a number.");
             return;
         }
 
         var photo = photoInput.files[0];
+
+        // ========== NEW VALIDATION (IMAGE ONLY) ==========
+        if (!photo.type.startsWith("image/")) {
+            alert("Please upload an image file only (PNG, JPG, JPEG).");
+            return;
+        }
+        // ===================================================
+
         var reader = new FileReader();
 
         reader.onload = function(e) {
@@ -456,7 +467,7 @@ if (window.location.pathname.includes("AddServices.html")) {
 
             localStorage.setItem("services", JSON.stringify(services));
 
-            alert(name + " has been successfully added!");
+            alert(name + " has been added successfully!");
             document.querySelector(".service-form").reset();
         };
 
@@ -464,10 +475,13 @@ if (window.location.pathname.includes("AddServices.html")) {
     }
 }
 
+//========================
 // End of Add Services Form Page Script
+//========================
 
+//========================
 //Manage Staff Page Script
-
+//========================
 if (window.location.pathname.includes("ManageStaff.html")) {
 
     window.onload = function () {
@@ -550,8 +564,9 @@ if (window.location.pathname.includes("ManageStaff.html")) {
     }
 
 
-
-  // Add a new staff member
+//========================
+// Add a new staff member
+//========================
 function handleAdd(event) {
     event.preventDefault();
 
@@ -643,85 +658,115 @@ function handleAdd(event) {
 }
 
 }
+//========================
 // End of Manage Staff Page Script
+//========================
 
-//start of join form script 
+//========================
+// Start of Join Form Script
+//========================
 if (window.location.pathname.includes("JoinOurTeam.html")) {
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Get references to the form and submit button
-    const form = document.querySelector('.join-form'); 
-    const submitButton = form.querySelector('button[type="submit"]'); 
 
-    // Get references to input fields
+document.addEventListener('DOMContentLoaded', () => {
+
+    const form = document.querySelector('.join-form'); 
+    
     const fullNameInput = document.getElementById('joinName');
     const dobInput = document.getElementById('joinDob');
+    const emailInput = document.getElementById('joinEmail');
+    const expertInput = document.getElementById('joinExpertise');   
+    const skillsInput = document.getElementById('joinSkills');
+    const eduInput = document.getElementById('joinEducation');      
     const photoInput = document.getElementById('joinPhoto');
+    const messageInput = document.getElementById('joinMessage');    
 
-    // Attach an event listener to the form's submit event
     form.addEventListener('submit', (event) => {
-        
-        // Prevent default form submission and page refresh
         event.preventDefault(); 
         
         if (validateForm()) {
-            // Show success alert and sender's name if validation passes
-            const senderName = fullNameInput.value.trim();
-            alert(`Submission Successful!\n\nThank you, ${senderName}, for your interest in joining our team. We will be in touch shortly.`);
+            alert(`Submission Successful!\n\nThank you, ${fullNameInput.value.trim()}, for your interest in joining our team.`);
         }
     });
 
-   
     function validateForm() {
-        let isValid = true;
 
-        // Check for basic HTML 'required' fields
-        if (!form.checkValidity()) {
-            form.reportValidity(); 
+        // Required fields
+        if (!fullNameInput.value.trim() ||
+            !dobInput.value ||
+            !emailInput.value.trim() ||
+            !expertInput.value.trim() ||
+            !skillsInput.value.trim() ||
+            !eduInput.value.trim() ||
+            !messageInput.value.trim() ||
+            !photoInput.files.length) {
+
+            alert("Please fill out all required fields before submitting.");
             return false;
         }
-        
-        // Requirement: Name cannot start with numbers
-        const nameValue = fullNameInput.value.trim();
-        if (/^\d/.test(nameValue)) {
+
+        // Name cannot start with number
+        if (/^\d/.test(fullNameInput.value.trim())) {
             alert("Error: Full Name cannot start with a number.");
             fullNameInput.focus();
-            isValid = false;
-            return isValid;
+            return false;
         }
 
-        // Requirement: DOB should not be after 2008
-        const dobValue = dobInput.value; 
-        if (dobValue) {
-            const dobDate = new Date(dobValue);
-            // Use Jan 1st, 2009 as the cutoff date
-            const cutoffDate = new Date('2009-01-01'); 
-
-            if (dobDate >= cutoffDate) {
-                alert("Error: Date of Birth must be on or before 2008.");
-                dobInput.focus();
-                isValid = false;
-                return isValid;
-            }
+        // Email must contain '@'
+        if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
+            alert("Error: Please enter a valid email address.");
+            emailInput.focus();
+            return false;
         }
-        
-        // Requirement: Photo field accepts only images
+
+        // DOB must be before 2008
+        const dobDate = new Date(dobInput.value);
+        const cutoff = new Date('2008-01-01');
+
+        if (dobDate >= cutoff) {
+            alert("Error: Date of Birth must be 2008 or earlier.");
+            dobInput.focus();
+            return false;
+        }
+
+        // Expertise cannot start with a number
+        if (/^\d/.test(expertInput.value.trim())) {
+            alert("Error: Area of Expertise must start with a letter.");
+            expertInput.focus();
+            return false;
+        }
+
+        // Skills cannot start with a number
+        if (/^\d/.test(skillsInput.value.trim())) {
+            alert("Error: Skills must start with a letter.");
+            skillsInput.focus();
+            return false;
+        }
+
+        // Education cannot start with a number
+        if (/^\d/.test(eduInput.value.trim())) {
+            alert("Error: Education must start with a letter.");
+            eduInput.focus();
+            return false;
+        }
+
+        // Photo must be an image
         const photoFile = photoInput.files[0];
-        if (photoFile) {
-            if (!photoFile.type.startsWith('image/')) {
-                alert("Error: Photo field must contain an image file (e.g., JPEG, PNG).");
-                photoInput.value = ''; 
-                isValid = false;
-                return isValid;
-            }
+        if (!photoFile.type.startsWith('image/')) {
+            alert("Error: Photo must be an image file.");
+            photoInput.value = '';
+            return false;
         }
 
-        // Return true if all checks pass
-        return isValid;
+        return true;
     }
 });
 }
-//end join form script 
+//========================
+// End of Join Form Script
+//========================
+
+
+
 
 // =============== Evaluation Page Script ===============
 if (window.location.pathname.includes("Eval.html")) {
