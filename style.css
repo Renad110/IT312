@@ -1526,7 +1526,7 @@ select {
 }
 
 .light-theme h3 {
-  color: #00070e;
+  color: #000000;
 }
 
 .light-theme p,
@@ -1567,9 +1567,11 @@ select {
 .light-theme .add-service label {
   color: #000;
 }
-.light-theme h2{
+
+.light-theme h2 {
   color: #fffffffe;
 }
+
 
 .light-theme .bookmark-btn,
 .light-theme #sort {
