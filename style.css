@@ -1763,7 +1763,7 @@ a,
     bottom: 12%;
     transform: translateX(-50%);
     font-size: 0.85rem;   
-    line-height: 1.5;
+    line-height: 1.3rem;
     text-align: left;
   }
 
@@ -1829,12 +1829,12 @@ a,
 
   /* Banner */
   body.homepage .banner img {
-    height: 420px;
+    height: 400px;
   }
 
   body.homepage .banner-text {
     bottom: 10%;
-    width: 80%;
+    width: 70%;
     font-size: 1rem;
   }
 
