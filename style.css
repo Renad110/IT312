@@ -1690,6 +1690,7 @@ select {
   border: none;
   font-size: 22px;
   cursor: pointer;
+  text-align: center;
 }
 
 button,
