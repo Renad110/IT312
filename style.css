@@ -1682,7 +1682,23 @@ select {
   color: #000000fe;
 }
 
+.light-theme abbr {
+  text-decoration: underline dotted #8ab4f8;
+  cursor: help;
+  color: #000000fe;
 
+}
+p abbr {
+ color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+abbr {
+  text-decoration: underline dotted #8ab4f8;
+  cursor: help;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
 /*____________________________________*/
 
 .theme-btn {
