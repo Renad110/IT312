@@ -1745,7 +1745,7 @@ a,
 
   /* ===== BANNER ===== */
   body.homepage .banner {
-    width: 100%;
+    width: 90%;
     position: relative;
     overflow: visible;
   }
@@ -1763,7 +1763,7 @@ a,
     bottom: 12%;
     transform: translateX(-50%);
     font-size: 0.85rem;   
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     text-align: left;
   }
 
@@ -1829,12 +1829,12 @@ a,
 
   /* Banner */
   body.homepage .banner img {
-    height: 400px;
+    height: 420px;
   }
 
   body.homepage .banner-text {
     bottom: 10%;
-    width: 70%;
+    width: 80%;
     font-size: 1rem;
   }
 
